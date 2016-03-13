@@ -1,0 +1,47 @@
+//
+//  whoCallsTheFleet.pch
+//  whoCallsTheFleet
+//
+//  Created by 苏俊良 on 16/1/27.
+//  Copyright © 2016年 LarrySue. All rights reserved.
+//
+
+#ifndef whoCallsTheFleet_pch
+#define whoCallsTheFleet_pch
+
+//Objective-C define
+#ifdef __OBJC2__
+
+//Print log
+#ifdef DEBUG
+#define LSLog(...) NSLog(__VA_ARGS__)
+#else
+#define LSLog(...)
+#endif /* print log */
+
+//Font
+#define LSFontWithSize(LSSize) [UIFont systemFontOfSize:LSSize]
+
+//Color
+#define LSColorWithRGBA(Red, Green, Blue, Alpha) [UIColor colorWithRed:Red/255.0 green:Green/255.0 blue:Blue/255.0 alpha:Alpha]
+#define LSColorRandom [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0]
+
+//Default key
+//#define LSDefaultKeyFleet0      @"镇守府等级"                //int   镇守府等级
+//#define LSDefaultKeyFleet1      @"舰载机熟练度默认为满格"      //BOOL  舰载机熟练度默认为满格（7级）
+//#define LSDefaultKeyShips0      @"仅显示同名舰娘的最终改造版本" //BOOL  仅显示同名舰娘的最终改造版本
+//#define LSDefaultKeyArsenal0    @"显示资源消耗"              //BOOL  显示资源消耗
+//#define LSDefaultKeyArsenal1    @"显示资材消耗"              //BOOL  显示资材消耗
+
+//path
+#define LSPathUserOptionPlist [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"userOption.plist"]
+
+#define LSPathUserTPCalculatorCountPlist [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"userTPCalculatorCount.plist"]
+
+//Identifier
+#define LSIdentifierEntitiesCVCell @"entitiesCVCell"
+#define LSIdentifierEntitiesIllustratorCell @"entitiesIllustratorCell"
+
+#endif /* Objective-C define */
+
+#endif /* whoCallsTheFleet_pch */
