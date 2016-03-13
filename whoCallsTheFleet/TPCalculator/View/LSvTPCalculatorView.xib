@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LSvTPCalculatorView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="JjX-O5-heA" customClass="LSvTPCalculatorView">
+            <rect key="frame" x="0.0" y="0.0" width="398" height="602"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKt-Qx-6Hz">
+                    <rect key="frame" x="13" y="401" width="372" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="D0S-ZL-HCO"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TP - 运输点数（Transportation Points）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aP-Lt-CRN">
+                    <rect key="frame" x="13" y="60" width="372" height="16"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3i-f4-4Jc" customClass="TTTAttributedLabel">
+                    <rect key="frame" x="13" y="456" width="372" height="0.0"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="lineSpacing">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xby-Vb-Xka">
+                    <rect key="frame" x="31.5" y="401" width="335" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pg9-K1-VG9">
+                    <rect key="frame" x="13" y="91" width="372" height="295"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="295" id="DOq-WJ-6L6"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="2aP-Lt-CRN" firstAttribute="leading" secondItem="JjX-O5-heA" secondAttribute="leadingMargin" constant="5" id="1Mx-Ce-cVs"/>
+                <constraint firstItem="Xby-Vb-Xka" firstAttribute="width" secondItem="gKt-Qx-6Hz" secondAttribute="width" multiplier="0.9" id="2JC-ji-rXv"/>
+                <constraint firstItem="i3i-f4-4Jc" firstAttribute="width" secondItem="gKt-Qx-6Hz" secondAttribute="width" id="5Rs-XB-uRV"/>
+                <constraint firstItem="i3i-f4-4Jc" firstAttribute="top" secondItem="gKt-Qx-6Hz" secondAttribute="bottom" constant="15" id="8ye-o6-FQc"/>
+                <constraint firstItem="Xby-Vb-Xka" firstAttribute="height" secondItem="gKt-Qx-6Hz" secondAttribute="height" id="Htb-S5-UPI"/>
+                <constraint firstItem="gKt-Qx-6Hz" firstAttribute="top" secondItem="pg9-K1-VG9" secondAttribute="bottom" constant="15" id="I75-GH-TMh"/>
+                <constraint firstItem="gKt-Qx-6Hz" firstAttribute="width" secondItem="pg9-K1-VG9" secondAttribute="width" id="Ldw-7w-fe6"/>
+                <constraint firstItem="pg9-K1-VG9" firstAttribute="centerX" secondItem="JjX-O5-heA" secondAttribute="centerX" id="NLA-bA-aHz"/>
+                <constraint firstItem="i3i-f4-4Jc" firstAttribute="centerX" secondItem="JjX-O5-heA" secondAttribute="centerX" id="QCe-aO-yJ3"/>
+                <constraint firstItem="2aP-Lt-CRN" firstAttribute="top" secondItem="JjX-O5-heA" secondAttribute="top" constant="60" id="RvP-6Z-5Uf"/>
+                <constraint firstItem="Xby-Vb-Xka" firstAttribute="centerX" secondItem="gKt-Qx-6Hz" secondAttribute="centerX" id="VkO-TR-Jnn"/>
+                <constraint firstAttribute="trailingMargin" secondItem="2aP-Lt-CRN" secondAttribute="trailing" constant="5" id="X8a-73-GBK"/>
+                <constraint firstItem="pg9-K1-VG9" firstAttribute="width" secondItem="2aP-Lt-CRN" secondAttribute="width" id="ZTJ-k9-qk7"/>
+                <constraint firstItem="pg9-K1-VG9" firstAttribute="top" secondItem="2aP-Lt-CRN" secondAttribute="bottom" constant="15" id="awa-Kk-aAN"/>
+                <constraint firstItem="gKt-Qx-6Hz" firstAttribute="centerX" secondItem="JjX-O5-heA" secondAttribute="centerX" id="t6x-hq-Wrh"/>
+                <constraint firstItem="Xby-Vb-Xka" firstAttribute="centerY" secondItem="gKt-Qx-6Hz" secondAttribute="centerY" id="vFM-6w-O8t"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bottomLabel" destination="i3i-f4-4Jc" id="JMT-if-nRP"/>
+                <outlet property="middleView" destination="pg9-K1-VG9" id="SRF-fU-GZh"/>
+                <outlet property="resultLabel" destination="Xby-Vb-Xka" id="tDv-p9-RSR"/>
+                <outlet property="topLabel" destination="2aP-Lt-CRN" id="h87-ub-sDh"/>
+            </connections>
+            <point key="canvasLocation" x="589" y="-87"/>
+        </view>
+    </objects>
+</document>
