@@ -16,7 +16,6 @@
 		1D0FBF7B1C81D501005A1D30 /* NSString+LSFilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FB54D1C81D4F6005A1D30 /* NSString+LSFilePath.m */; };
 		1D0FBF7C1C81D501005A1D30 /* LScBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FB5501C81D4F6005A1D30 /* LScBaseNavigationController.m */; };
 		1D0FBF7D1C81D501005A1D30 /* LScTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FB5521C81D4F6005A1D30 /* LScTabBarController.m */; };
-		1D0FBF7E1C81D501005A1D30 /* LSvTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FB5541C81D4F6005A1D30 /* LSvTempViewController.m */; };
 		1D0FBF7F1C81D501005A1D30 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FB5581C81D4F6005A1D30 /* UIImage+WebP.m */; };
 		1D0FBF801C81D501005A1D30 /* WebP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D0FB5591C81D4F6005A1D30 /* WebP.framework */; };
 		1D0FBF811C81D501005A1D30 /* LSmArsenalAll.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FB55E1C81D4F6005A1D30 /* LSmArsenalAll.m */; };
@@ -1832,8 +1831,6 @@
 		1D0FB5501C81D4F6005A1D30 /* LScBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScBaseNavigationController.m; sourceTree = "<group>"; };
 		1D0FB5511C81D4F6005A1D30 /* LScTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LScTabBarController.h; sourceTree = "<group>"; };
 		1D0FB5521C81D4F6005A1D30 /* LScTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScTabBarController.m; sourceTree = "<group>"; };
-		1D0FB5531C81D4F6005A1D30 /* LSvTempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvTempViewController.h; sourceTree = "<group>"; };
-		1D0FB5541C81D4F6005A1D30 /* LSvTempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvTempViewController.m; sourceTree = "<group>"; };
 		1D0FB5571C81D4F6005A1D30 /* UIImage+WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WebP.h"; sourceTree = "<group>"; };
 		1D0FB5581C81D4F6005A1D30 /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
 		1D0FB5591C81D4F6005A1D30 /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebP.framework; sourceTree = "<group>"; };
@@ -3870,8 +3867,6 @@
 				1D0FB5501C81D4F6005A1D30 /* LScBaseNavigationController.m */,
 				1D0FB5511C81D4F6005A1D30 /* LScTabBarController.h */,
 				1D0FB5521C81D4F6005A1D30 /* LScTabBarController.m */,
-				1D0FB5531C81D4F6005A1D30 /* LSvTempViewController.h */,
-				1D0FB5541C81D4F6005A1D30 /* LSvTempViewController.m */,
 				1D6FB2191C821A2B007F9A9F /* LScBaseViewController.h */,
 				1D6FB21A1C821A2B007F9A9F /* LScBaseViewController.m */,
 				1D3E411D1C858A6700FBDB77 /* LScMenuViewController.h */,
@@ -14410,7 +14405,6 @@
 				1D0FC65A1C81D8BF005A1D30 /* LScItemsViewController.m in Sources */,
 				1D0FBF851C81D501005A1D30 /* LSmEntitiesRelation.m in Sources */,
 				1D0FBF8B1C81D501005A1D30 /* LSmLink.m in Sources */,
-				1D0FBF7E1C81D501005A1D30 /* LSvTempViewController.m in Sources */,
 				1D2E91261C89B69D0072FB29 /* LSmOption.m in Sources */,
 				1D2E912F1C8AFC9C0072FB29 /* LSvOptionHeaderView.m in Sources */,
 				1D3E411C1C85853C00FBDB77 /* LScTabChildViewController.m in Sources */,
