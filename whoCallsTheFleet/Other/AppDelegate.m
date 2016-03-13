@@ -70,8 +70,8 @@
     [self.window makeKeyAndVisible];
     
     
-    //设置前景变暗淡出效果
     //设置前景图片
+    //设置前景变暗淡出效果
     __block UIImageView *backgroundImgView = [[UIImageView alloc] initWithFrame:self.window.bounds];
     backgroundImgView.image = self.backgroundImage;
     backgroundImgView.contentMode = UIViewContentModeScaleAspectFill;
