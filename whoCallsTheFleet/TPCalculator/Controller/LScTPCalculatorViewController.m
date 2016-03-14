@@ -13,7 +13,7 @@
 
 #import "LSmTPCalculatorCount.h"
 
-#import "TTTAttributedLabel.h"
+#import <TTTAttributedLabel/TTTAttributedLabel.h>
 
 @interface LScTPCalculatorViewController ()<TTTAttributedLabelDelegate>
 

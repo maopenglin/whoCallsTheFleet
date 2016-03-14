@@ -16,8 +16,6 @@
 		1D0FBF7B1C81D501005A1D30 /* NSString+LSFilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FB54D1C81D4F6005A1D30 /* NSString+LSFilePath.m */; };
 		1D0FBF7C1C81D501005A1D30 /* LScBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FB5501C81D4F6005A1D30 /* LScBaseNavigationController.m */; };
 		1D0FBF7D1C81D501005A1D30 /* LScTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FB5521C81D4F6005A1D30 /* LScTabBarController.m */; };
-		1D0FBF7F1C81D501005A1D30 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FB5581C81D4F6005A1D30 /* UIImage+WebP.m */; };
-		1D0FBF801C81D501005A1D30 /* WebP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D0FB5591C81D4F6005A1D30 /* WebP.framework */; };
 		1D0FBF811C81D501005A1D30 /* LSmArsenalAll.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FB55E1C81D4F6005A1D30 /* LSmArsenalAll.m */; };
 		1D0FBF821C81D501005A1D30 /* LSmArsenalWeekday.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FB5611C81D4F6005A1D30 /* LSmArsenalWeekday.m */; };
 		1D0FBF831C81D501005A1D30 /* LSmEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FB5641C81D4F6005A1D30 /* LSmEntities.m */; };
@@ -1788,7 +1786,6 @@
 		1DD9F4961C95F53900E72634 /* 9.webp in Resources */ = {isa = PBXBuildFile; fileRef = 1DD9EDE81C95F53900E72634 /* 9.webp */; };
 		1DD9F4971C95F53900E72634 /* 8.webp in Resources */ = {isa = PBXBuildFile; fileRef = 1DD9EDEA1C95F53900E72634 /* 8.webp */; };
 		1DD9F4981C95F53900E72634 /* 9.webp in Resources */ = {isa = PBXBuildFile; fileRef = 1DD9EDEB1C95F53900E72634 /* 9.webp */; };
-		1DE61C521C91E88000C81882 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE61C511C91E88000C81882 /* TTTAttributedLabel.m */; };
 		1DE61CA01C92A9B700C81882 /* LSvTPCalculatorCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE61C9F1C92A9B700C81882 /* LSvTPCalculatorCountView.m */; };
 		1DE61CA21C92A9C300C81882 /* LSvTPCalculatorCountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DE61CA11C92A9C300C81882 /* LSvTPCalculatorCountView.xib */; };
 		1DE61CA41C92E7B800C81882 /* LSmTPCalculatorCount.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DE61CA31C92E7B800C81882 /* LSmTPCalculatorCount.plist */; };
@@ -1799,6 +1796,7 @@
 		1DEB9D0C1C94039100EAA467 /* LSvEntitiesIllustratorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DEB9D0A1C94039100EAA467 /* LSvEntitiesIllustratorCell.xib */; };
 		1DED6C251C9152A600C90CC2 /* LSvTPCalculatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DED6C231C9152A600C90CC2 /* LSvTPCalculatorView.m */; };
 		1DED6C261C9152A600C90CC2 /* LSvTPCalculatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DED6C241C9152A600C90CC2 /* LSvTPCalculatorView.xib */; };
+		892FC1C767C6C952A512ABB9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA75D1F2C85F460D1EB48C5 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1836,9 +1834,6 @@
 		1D0FB5501C81D4F6005A1D30 /* LScBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScBaseNavigationController.m; sourceTree = "<group>"; };
 		1D0FB5511C81D4F6005A1D30 /* LScTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LScTabBarController.h; sourceTree = "<group>"; };
 		1D0FB5521C81D4F6005A1D30 /* LScTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScTabBarController.m; sourceTree = "<group>"; };
-		1D0FB5571C81D4F6005A1D30 /* UIImage+WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WebP.h"; sourceTree = "<group>"; };
-		1D0FB5581C81D4F6005A1D30 /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
-		1D0FB5591C81D4F6005A1D30 /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebP.framework; sourceTree = "<group>"; };
 		1D0FB55D1C81D4F6005A1D30 /* LSmArsenalAll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSmArsenalAll.h; sourceTree = "<group>"; };
 		1D0FB55E1C81D4F6005A1D30 /* LSmArsenalAll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSmArsenalAll.m; sourceTree = "<group>"; };
 		1D0FB5601C81D4F6005A1D30 /* LSmArsenalWeekday.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSmArsenalWeekday.h; sourceTree = "<group>"; };
@@ -3657,8 +3652,6 @@
 		1DD9EDE81C95F53900E72634 /* 9.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = 9.webp; sourceTree = "<group>"; };
 		1DD9EDEA1C95F53900E72634 /* 8.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8.webp; sourceTree = "<group>"; };
 		1DD9EDEB1C95F53900E72634 /* 9.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = 9.webp; sourceTree = "<group>"; };
-		1DE61C501C91E88000C81882 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
-		1DE61C511C91E88000C81882 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		1DE61C9E1C92A9B700C81882 /* LSvTPCalculatorCountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvTPCalculatorCountView.h; sourceTree = "<group>"; };
 		1DE61C9F1C92A9B700C81882 /* LSvTPCalculatorCountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvTPCalculatorCountView.m; sourceTree = "<group>"; };
 		1DE61CA11C92A9C300C81882 /* LSvTPCalculatorCountView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSvTPCalculatorCountView.xib; sourceTree = "<group>"; };
@@ -3674,6 +3667,9 @@
 		1DED6C221C9152A600C90CC2 /* LSvTPCalculatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvTPCalculatorView.h; sourceTree = "<group>"; };
 		1DED6C231C9152A600C90CC2 /* LSvTPCalculatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvTPCalculatorView.m; sourceTree = "<group>"; };
 		1DED6C241C9152A600C90CC2 /* LSvTPCalculatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSvTPCalculatorView.xib; sourceTree = "<group>"; };
+		4AF6838095A039A60F694CA2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		4E2A1AE2EA95BA179099EF77 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CFA75D1F2C85F460D1EB48C5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -3681,7 +3677,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D0FBF801C81D501005A1D30 /* WebP.framework in Frameworks */,
+				892FC1C767C6C952A512ABB9 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3702,6 +3698,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		020950F00042CCDD783875E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFA75D1F2C85F460D1EB48C5 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1D0FB5241C81D156005A1D30 /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -3866,7 +3870,6 @@
 				1D681D451C8305F3004B5FAE /* View */,
 				1D0FB5471C81D4F6005A1D30 /* Catagory */,
 				1D0FB54E1C81D4F6005A1D30 /* Controller */,
-				1D0FB5551C81D4F6005A1D30 /* Lib */,
 				1D0FB55A1C81D4F6005A1D30 /* Model */,
 			);
 			path = Main;
@@ -3900,25 +3903,6 @@
 				1D3E411B1C85853C00FBDB77 /* LScTabChildViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		1D0FB5551C81D4F6005A1D30 /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				1DE61C4F1C91E88000C81882 /* TTTAttributedLabel */,
-				1D0FB5561C81D4F6005A1D30 /* iOS-WebP */,
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
-		1D0FB5561C81D4F6005A1D30 /* iOS-WebP */ = {
-			isa = PBXGroup;
-			children = (
-				1D0FB5571C81D4F6005A1D30 /* UIImage+WebP.h */,
-				1D0FB5581C81D4F6005A1D30 /* UIImage+WebP.m */,
-				1D0FB5591C81D4F6005A1D30 /* WebP.framework */,
-			);
-			path = "iOS-WebP";
 			sourceTree = "<group>";
 		};
 		1D0FB55A1C81D4F6005A1D30 /* Model */ = {
@@ -4306,6 +4290,8 @@
 				1D5024271C3FCA120053FA71 /* whoCallsTheFleet */,
 				1D50244C1C3FCA120053FA71 /* whoCallsTheFleetUITests */,
 				1D5024261C3FCA120053FA71 /* Products */,
+				7034733D6421299E97600630 /* Pods */,
+				020950F00042CCDD783875E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -12522,13 +12508,13 @@
 			path = extra_9;
 			sourceTree = "<group>";
 		};
-		1DE61C4F1C91E88000C81882 /* TTTAttributedLabel */ = {
+		7034733D6421299E97600630 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1DE61C501C91E88000C81882 /* TTTAttributedLabel.h */,
-				1DE61C511C91E88000C81882 /* TTTAttributedLabel.m */,
+				4AF6838095A039A60F694CA2 /* Pods.debug.xcconfig */,
+				4E2A1AE2EA95BA179099EF77 /* Pods.release.xcconfig */,
 			);
-			path = TTTAttributedLabel;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -12538,9 +12524,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D5024521C3FCA120053FA71 /* Build configuration list for PBXNativeTarget "whoCallsTheFleet" */;
 			buildPhases = (
+				371214AECDB706AB95C9F93A /* Check Pods Manifest.lock */,
 				1D5024211C3FCA120053FA71 /* Sources */,
 				1D5024221C3FCA120053FA71 /* Frameworks */,
 				1D5024231C3FCA120053FA71 /* Resources */,
+				38C758AB52F8A1D2F0E38AE4 /* Embed Pods Frameworks */,
+				8794A6632A53410B191AFA89 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -14387,6 +14376,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		371214AECDB706AB95C9F93A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		38C758AB52F8A1D2F0E38AE4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8794A6632A53410B191AFA89 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1D5024211C3FCA120053FA71 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -14439,11 +14476,9 @@
 				1D4019E91C871842003D71D3 /* LSvOptionTableView.m in Sources */,
 				1D0FBF8D1C81D501005A1D30 /* LSmShipClasses.m in Sources */,
 				1D0FBF891C81D501005A1D30 /* LSmItemTypeCollections.m in Sources */,
-				1D0FBF7F1C81D501005A1D30 /* UIImage+WebP.m in Sources */,
 				1D9AEAC01C96A8310030FCEE /* LSvEntitiesCollectionView.m in Sources */,
 				1D0FBF781C81D501005A1D30 /* LScFleetViewController.m in Sources */,
 				1D0FBF791C81D501005A1D30 /* NSArray+LSJson.m in Sources */,
-				1DE61C521C91E88000C81882 /* TTTAttributedLabel.m in Sources */,
 				1D3E41311C8593B400FBDB77 /* LScOptionViewController.m in Sources */,
 				1DED6C251C9152A600C90CC2 /* LSvTPCalculatorView.m in Sources */,
 				1DE61CA71C92E8BD00C81882 /* LSmTPCalculatorCount.m in Sources */,
@@ -14565,6 +14600,7 @@
 		};
 		1D5024531C3FCA120053FA71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AF6838095A039A60F694CA2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -14589,6 +14625,7 @@
 		};
 		1D5024541C3FCA120053FA71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E2A1AE2EA95BA179099EF77 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
