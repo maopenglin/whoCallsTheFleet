@@ -39,6 +39,7 @@
 #define LSPathUserTPCalculatorCountPlist [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"userTPCalculatorCount.plist"]
 
 //Identifier
+#define LSIdentifierEntitiesMainCell @"entitiesMainCell"
 #define LSIdentifierEntitiesCVCell @"entitiesCVCell"
 #define LSIdentifierEntitiesIllustratorCell @"entitiesIllustratorCell"
 

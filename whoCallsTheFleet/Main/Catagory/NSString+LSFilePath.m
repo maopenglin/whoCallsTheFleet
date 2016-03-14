@@ -12,7 +12,7 @@
 
 +(instancetype)ls_filePathInFolder:(NSString *)folder andFile:(NSString *)fileName andType:(NSString *)type
 {
-    return [NSString stringWithFormat:@"%@%@/%@.%@",[NSBundle mainBundle].bundlePath,folder,fileName,type];
+    return [NSString stringWithFormat:@"%@/%@/%@.%@",[NSBundle mainBundle].bundlePath,folder,fileName,type];
 }
 
 + (instancetype)ls_pathOfDbFile:(NSString *)dbFile
@@ -22,12 +22,12 @@
 
 + (instancetype)ls_pathOfItemPictureWithID:(NSString *)itemID
 {
-    return [self ls_filePathInFolder:[NSString stringWithFormat:@"/pics/items/%@",itemID] andFile:@"card" andType:@"webp"];
+    return [self ls_filePathInFolder:[NSString stringWithFormat:@"pics/items/%@",itemID] andFile:@"card" andType:@"webp"];
 }
 
 + (instancetype)ls_pathOfShipPictureWithID:(NSString *)shipID andStatue:(NSString *)status
 {
-    return [self ls_filePathInFolder:[NSString stringWithFormat:@"/pics/ships/%@",shipID] andFile:status andType:@"webp"];
+    return [self ls_filePathInFolder:[NSString stringWithFormat:@"pics/ships/%@",shipID] andFile:status andType:@"webp"];
 }
 
 @end

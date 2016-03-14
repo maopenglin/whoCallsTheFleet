@@ -2,21 +2,20 @@
 //  LSvEntitiesCollectionViewCell.h
 //  whoCallsTheFleet
 //
-//  Created by 苏俊良 on 16/3/12.
+//  Created by 苏俊良 on 16/3/14.
 //  Copyright © 2016年 LarrySue. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@class LSmEntities;
+typedef NS_ENUM (NSUInteger, LSkEntitiesType){
+    LSkEntitiesTypeCV          = 0,//声优
+    LSkEntitiesTypeIllustrator = 1 //画师
+};
 
 @interface LSvEntitiesCollectionViewCell : UICollectionViewCell
 
-@property (nonatomic, strong) LSmEntities *CV;
-@property (nonatomic, strong) UIColor *color;
-/**
- *  快速创建cell
- */
-+ (instancetype)entitiesCollectionViewCell:(UICollectionView *)collectionView forIndexPath:(NSIndexPath *)indexPath;
+//快速创建
++ (instancetype)entitiesCollectionViewCell:(UICollectionView *)collectionView forItemAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

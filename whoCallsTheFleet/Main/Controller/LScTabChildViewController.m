@@ -6,8 +6,8 @@
 //  Copyright © 2016年 LarrySue. All rights reserved.
 //
 
-#import "LScBaseNavigationController.h"
 #import "LScTabChildViewController.h"
+#import "LScBaseNavigationController.h"
 #import "LScMenuViewController.h"
 
 @interface LScTabChildViewController ()<LSpOtherMenuViewDelegate>
@@ -122,7 +122,7 @@
             CGFloat maskBtnH = self.otherMenuView.frame.size.height;
             self.maskBtn.frame = CGRectMake(maskBtnX, maskBtnY, maskBtnW, maskBtnH);
             //为遮罩按钮绑定回调
-            [self.maskBtn addTarget:self action:@selector(maskBtnDidClick) forControlEvents:UIControlEventTouchUpInside];
+            [self.maskBtn addTarget:self action:@selector(maskBtnDidClick) forControlEvents:UIControlEventTouchDown];
         }];
     }
 }

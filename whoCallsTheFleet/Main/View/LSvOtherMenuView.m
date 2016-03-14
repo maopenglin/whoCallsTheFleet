@@ -32,12 +32,6 @@
     swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
     [otherMenuView addGestureRecognizer:swipeGestureRecognizer];
     
-    //添加背景模糊
-//    UIBlurEffect *maskBlurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-//    UIVisualEffectView *maskBlurEffectView = [[UIVisualEffectView alloc] initWithFrame:otherMenuView.bounds];
-//    maskBlurEffectView.effect = maskBlurEffect;
-//    [otherMenuView.backgroundView addSubview:maskBlurEffectView];
-    
     return  otherMenuView;
 }
 

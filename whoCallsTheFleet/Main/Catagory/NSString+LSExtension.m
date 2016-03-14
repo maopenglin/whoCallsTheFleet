@@ -18,7 +18,7 @@
     stdJsonStr = [NSString stringWithFormat:@"%@%@%@",@"[",stdJsonStr,@"]"];
     
     //对字符串中需要替换的字符进行处理（暂不需要
-//    stdJsonStr = stdJsonStr.ls_clearKeyword;
+    stdJsonStr = stdJsonStr.ls_clearKeyword;
     
     return stdJsonStr;
 }
@@ -26,7 +26,7 @@
 - (NSString *)ls_clearKeyword
 {
     //字符串替换词典
-    NSDictionary *keywordDict = @{};
+    NSDictionary *keywordDict = @{@"再也没有什么字符串":@"需要替换了"};
     //用以保存结果的字符串
     NSString *newStr = [NSString string];
     

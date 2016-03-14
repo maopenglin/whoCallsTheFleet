@@ -9,23 +9,13 @@
 #import "AppDelegate.h"
 
 #import "LScTabBarController.h"
-
 #import "LScBaseNavigationController.h"
-#import "LScTabChildViewController.h"
-
 #import "LScBaseViewController.h"
-
-#import "LScFleetViewController.h"
-#import "LScShipsViewController.h"
-#import "LScItemsViewController.h"
-#import "LScArsenalViewController.h"
-#import "LScEntitiesViewController.h"
 
 #import "LSmControllerAttributes.h"
 
 @interface AppDelegate ()<UITabBarControllerDelegate>
 
-//
 @property (nonatomic, strong) LScTabBarController *tabBarVc;
 @property (nonatomic, strong) UIImage *backgroundImage;
 

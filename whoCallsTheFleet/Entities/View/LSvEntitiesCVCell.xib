@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="entitiesCVCell" id="gTV-IL-0wX" customClass="LSvEntitiesCollectionViewCell">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="entitiesCVCell" id="gTV-IL-0wX" customClass="LSvEntitiesCVCell">
             <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -47,8 +47,8 @@
             </constraints>
             <size key="customSize" width="188" height="211"/>
             <connections>
-                <outlet property="nameView" destination="SfE-6Y-caJ" id="OML-t9-DP3"/>
-                <outlet property="pictureView" destination="doe-pV-scm" id="5fY-6q-TL7"/>
+                <outlet property="nameView" destination="SfE-6Y-caJ" id="Oj0-LQ-q1I"/>
+                <outlet property="pictureView" destination="doe-pV-scm" id="bUn-K5-GM9"/>
             </connections>
             <point key="canvasLocation" x="206" y="155"/>
         </collectionViewCell>
