@@ -17,6 +17,7 @@
 
 @interface LScOptionViewController ()<UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, weak) UITableView *tableView;
 //optionTableView数据模型
 @property (nonatomic, strong) NSMutableArray<LSmOption *> *options;
 
@@ -28,14 +29,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     //创建TableView
     LSvOptionTableView *tableView = [LSvOptionTableView optionTableView];
-    self.mainTableView = tableView;
-    [self.view addSubview:self.mainTableView];
+    self.tableView = tableView;
+    [self.navigationController.view addSubview:self.tableView];
     //设置代理
-    self.mainTableView.dataSource = self;
-    self.mainTableView.delegate   = self;
+    self.tableView.dataSource = self;
+    self.tableView.delegate   = self;
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    self.tableView.frame = self.view.frame;
 }
 
 #pragma mark - Table View Data Source
@@ -57,7 +65,7 @@
     cell.color                    = self.controllerAttribute.color;
     cell.LSbAccessoryValueChanged = ^(NSString *value){
         //收回键盘
-        [self.mainTableView endEditing:YES];
+        [self.tableView endEditing:YES];
         //更新数据
         self.options[indexPath.section].items[indexPath.row].value = value;
         //保存数据
@@ -86,7 +94,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    [self.mainTableView endEditing:YES];
+    [self.tableView endEditing:YES];
 }
 
 #pragma mark - Lazy Load

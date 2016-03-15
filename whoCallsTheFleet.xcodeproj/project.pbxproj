@@ -73,6 +73,7 @@
 		1D7547A21C983DF0009AB38C /* ship_types.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D0FB59D1C81D4F6005A1D30 /* ship_types.json */; };
 		1D7547A31C983DF0009AB38C /* ships.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D0FB59E1C81D4F6005A1D30 /* ships.json */; };
 		1D7547A41C983DF0009AB38C /* updates.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D0FB59F1C81D4F6005A1D30 /* updates.json */; };
+		1D7547A91C98493A009AB38C /* LSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7547A81C98493A009AB38C /* LSConstants.m */; };
 		1D9AEAAF1C96431B0030FCEE /* LSvEntitiesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9AEAAE1C96431B0030FCEE /* LSvEntitiesCollectionViewCell.m */; };
 		1D9AEAB21C9655D70030FCEE /* LSvEntitiesCVCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9AEAB11C9655D70030FCEE /* LSvEntitiesCVCollectionView.m */; };
 		1D9AEAB51C96561C0030FCEE /* LSvEntitiesIllustratorTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9AEAB41C96561C0030FCEE /* LSvEntitiesIllustratorTableView.m */; };
@@ -220,6 +221,8 @@
 		1D681D491C830D34004B5FAE /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		1D6FB2191C821A2B007F9A9F /* LScBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LScBaseViewController.h; sourceTree = "<group>"; };
 		1D6FB21A1C821A2B007F9A9F /* LScBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScBaseViewController.m; sourceTree = "<group>"; };
+		1D7547A71C984918009AB38C /* LSConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSConstants.h; sourceTree = "<group>"; };
+		1D7547A81C98493A009AB38C /* LSConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSConstants.m; sourceTree = "<group>"; };
 		1D9AEAAD1C96431B0030FCEE /* LSvEntitiesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvEntitiesCollectionViewCell.h; sourceTree = "<group>"; };
 		1D9AEAAE1C96431B0030FCEE /* LSvEntitiesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvEntitiesCollectionViewCell.m; sourceTree = "<group>"; };
 		1D9AEAB01C9655D70030FCEE /* LSvEntitiesCVCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvEntitiesCVCollectionView.h; sourceTree = "<group>"; };
@@ -2615,6 +2618,8 @@
 			isa = PBXGroup;
 			children = (
 				1D0FB5131C8167F6005A1D30 /* whoCallsTheFleet.pch */,
+				1D7547A71C984918009AB38C /* LSConstants.h */,
+				1D7547A81C98493A009AB38C /* LSConstants.m */,
 				1D0FB5221C81D149005A1D30 /* Info.plist */,
 				1D5024341C3FCA120053FA71 /* Assets.xcassets */,
 			);
@@ -11055,6 +11060,7 @@
 				1D0FBF791C81D501005A1D30 /* NSArray+LSJson.m in Sources */,
 				1D3E41311C8593B400FBDB77 /* LScOptionViewController.m in Sources */,
 				1DED6C251C9152A600C90CC2 /* LSvTPCalculatorView.m in Sources */,
+				1D7547A91C98493A009AB38C /* LSConstants.m in Sources */,
 				1DE61CA71C92E8BD00C81882 /* LSmTPCalculatorCount.m in Sources */,
 				1D9AEAB21C9655D70030FCEE /* LSvEntitiesCVCollectionView.m in Sources */,
 				1D0FBF931C81D501005A1D30 /* LSmShipTypes.m in Sources */,

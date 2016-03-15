@@ -38,10 +38,8 @@
 
 #define LSPathUserTPCalculatorCountPlist [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"userTPCalculatorCount.plist"]
 
-//Identifier
-#define LSIdentifierEntitiesMainCell @"entitiesMainCell"
-#define LSIdentifierEntitiesCVCell @"entitiesCVCell"
-#define LSIdentifierEntitiesIllustratorCell @"entitiesIllustratorCell"
+//Constants Value
+#import "LSConstants.h"
 
 #endif /* Objective-C define */
 

@@ -28,7 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     //设置item图标
     self.tabBarItem.image = [[UIImage imageNamed:self.controllerAttribute.itemIconName] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     
