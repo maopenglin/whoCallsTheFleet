@@ -40,9 +40,9 @@
     [self.segmentedControl addTarget:self action:@selector(segmentedControlValueChanged:) forControlEvents:UIControlEventValueChanged];
     
     //创建分页collectionView
-    LSvEntitiesCollectionView *mainCollectionView = [LSvEntitiesCollectionView entitiesCollectionViewWithCellSize:self.view.bounds.size];
+    LSvEntitiesCollectionView *mainCollectionView = [LSvEntitiesCollectionView entitiesCollectionViewWithCellSize:self.navigationController.view.bounds.size];
     self.mainCollectionView = mainCollectionView;
-    [self.view addSubview:self.mainCollectionView];
+    [self.navigationController.view addSubview:self.mainCollectionView];
     //代理
     self.mainCollectionView.dataSource = self;
     self.mainCollectionView.delegate   = self;
@@ -71,6 +71,8 @@
     CGFloat mainCollectionViewH = CGRectGetHeight(self.view.frame) - mainCollectionViewX;
     
     self.mainCollectionView.frame = CGRectMake(mainCollectionViewX, mainCollectionViewY, mainCollectionViewW, mainCollectionViewH);
+    
+    [self.view bringSubviewToFront:self.otherMenuView];
 }
 
 #pragma mark - 回调方法
@@ -99,16 +101,24 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     LSvEntitiesCollectionViewCell *cell = [LSvEntitiesCollectionViewCell entitiesCollectionViewCell:collectionView forItemAtIndexPath:indexPath];
-//    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:LSIdentifierEntitiesMainCell forIndexPath:indexPath];
     
     cell.backgroundColor = [UIColor clearColor];
+    cell.backgroundColor = LSColorRandom;
     
     return cell;
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+#pragma mark - Collection View Delegate
+
+- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.mainCollectionView reloadItemsAtIndexPaths:@[indexPath]];
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
 {
     self.segmentedControl.selectedSegmentIndex = (scrollView.contentOffset.x / [UIScreen mainScreen].bounds.size.width) / 0.5;
 }
+
 
 @end

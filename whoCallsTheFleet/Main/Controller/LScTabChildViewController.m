@@ -45,19 +45,12 @@
     //设置代理
     self.otherMenuView.delegate = self;
     //添加至View
-    [self.view addSubview:self.otherMenuView];
+    [self.navigationController.view addSubview:self.otherMenuView];
     
     //添加屏幕边缘右滑响应
     UIScreenEdgePanGestureRecognizer *screenEdgePanGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(otherMenuViewRightSwipe)];
     screenEdgePanGestureRecognizer.edges = UIRectEdgeLeft;
     [self.view addGestureRecognizer:screenEdgePanGestureRecognizer];
-}
-
-- (void)viewDidLayoutSubviews
-{
-    [super viewDidLayoutSubviews];
-    
-    [self.view bringSubviewToFront:self.otherMenuView];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -79,7 +72,6 @@
  */
 - (void)otherMenuBtnItemDidClick
 {
-    [self.view bringSubviewToFront:self.otherMenuView];
     //若菜单栏开启
     if (self.otherMenuView.isOpen) {
         //菜单按钮不可用
@@ -98,6 +90,7 @@
     }
     //若菜单栏关闭
     else{
+        [self.navigationController.view bringSubviewToFront:self.otherMenuView];
         //菜单按钮不可用
         self.otherBtnItem.enabled = NO;
         //动画
@@ -114,7 +107,6 @@
             self.maskBtn = maskButton;
             [self.navigationController.view addSubview:self.maskBtn];
             [self.navigationController.view bringSubviewToFront:self.maskBtn];
-            
             //设置遮罩按钮frame
             CGFloat maskBtnX = self.otherMenuView.frame.size.width;
             CGFloat maskBtnY = self.otherMenuView.frame.origin.y;
