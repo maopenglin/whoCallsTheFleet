@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
@@ -24,24 +25,16 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S13-n0-ZOJ">
-                        <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
                 <constraint firstItem="SfE-6Y-caJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0fy-jv-cmQ"/>
-                <constraint firstItem="S13-n0-ZOJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7uh-eB-fya"/>
                 <constraint firstAttribute="trailing" secondItem="SfE-6Y-caJ" secondAttribute="trailing" id="MrM-rE-5Dd"/>
                 <constraint firstItem="SfE-6Y-caJ" firstAttribute="top" secondItem="doe-pV-scm" secondAttribute="bottom" id="S3Q-J3-pVI"/>
-                <constraint firstItem="S13-n0-ZOJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UJQ-Yc-syL"/>
                 <constraint firstAttribute="bottom" secondItem="SfE-6Y-caJ" secondAttribute="bottom" id="VFO-5w-B2i"/>
-                <constraint firstAttribute="trailing" secondItem="S13-n0-ZOJ" secondAttribute="trailing" id="bFy-ZX-4bd"/>
                 <constraint firstItem="doe-pV-scm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="clJ-82-sUH"/>
                 <constraint firstAttribute="trailing" secondItem="doe-pV-scm" secondAttribute="trailing" id="crA-bv-8A2"/>
-                <constraint firstAttribute="bottom" secondItem="S13-n0-ZOJ" secondAttribute="bottom" id="dQb-Pc-1MY"/>
                 <constraint firstItem="doe-pV-scm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="q9x-4n-AAa"/>
             </constraints>
             <size key="customSize" width="188" height="211"/>

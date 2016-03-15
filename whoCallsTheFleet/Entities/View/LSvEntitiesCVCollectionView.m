@@ -26,7 +26,7 @@
     collectionViewLayout.itemSize                = CGSizeMake(80, 100);
     collectionViewLayout.minimumInteritemSpacing = 15;
     collectionViewLayout.minimumLineSpacing      = 20;
-    collectionViewLayout.sectionInset            = UIEdgeInsetsMake(10, 20, 100, 20);
+    collectionViewLayout.sectionInset            = UIEdgeInsetsMake(10, 20, 10, 20);
     //创建collectionView
     LSvEntitiesCVCollectionView *collectionView = [[LSvEntitiesCVCollectionView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) collectionViewLayout:collectionViewLayout];
     //设置代理、属性
@@ -60,6 +60,13 @@
     cell.color = LSColorRandom;
     
     return cell;
+}
+
+#pragma mark - Collection View Delegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%s", __FUNCTION__);
 }
 
 - (void)dealloc

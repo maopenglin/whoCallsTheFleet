@@ -29,8 +29,8 @@
     tableView.backgroundColor = [UIColor clearColor];
     tableView.allowsSelection = NO;
     tableView.separatorStyle  = UITableViewCellSeparatorStyleNone;
-    tableView.contentInset    = UIEdgeInsetsMake(10, 0, 60, 0);
-    tableView.contentOffset   = CGPointMake(0, - 10);
+    tableView.contentInset    = UIEdgeInsetsMake(5, 0, 10, 0);
+//    tableView.contentOffset   = CGPointMake(0, - 10);
     //注册Cell
     UINib *tableViewNib = [UINib nibWithNibName:@"LSvEntitiesIllustratorCell" bundle:nil];
     [tableView registerNib:tableViewNib forCellReuseIdentifier:LSIdentifierEntitiesIllustratorCell];
@@ -57,6 +57,14 @@
     
     return cell;
 }
+
+#pragma mark - Table View Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%s", __FUNCTION__);
+}
+
 - (void)dealloc
 {
     NSLog(@"%s", __FUNCTION__);

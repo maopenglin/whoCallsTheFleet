@@ -40,7 +40,7 @@
     [self.segmentedControl addTarget:self action:@selector(segmentedControlValueChanged:) forControlEvents:UIControlEventValueChanged];
     
     //创建分页collectionView
-    LSvEntitiesCollectionView *mainCollectionView = [LSvEntitiesCollectionView entitiesCollectionViewWithCellSize:self.navigationController.view.bounds.size];
+    LSvEntitiesCollectionView *mainCollectionView = [LSvEntitiesCollectionView entitiesCollectionViewWithCellSize:self.view.frame.size];
     self.mainCollectionView = mainCollectionView;
     [self.navigationController.view addSubview:self.mainCollectionView];
     //代理
@@ -65,14 +65,7 @@
         [self layoutOtherMenuView];
     });
     
-    CGFloat mainCollectionViewX = 0;
-    CGFloat mainCollectionViewY = CGRectGetMaxY(self.navigationController.navigationBar.frame);
-    CGFloat mainCollectionViewW = CGRectGetWidth(self.view.frame);
-    CGFloat mainCollectionViewH = CGRectGetHeight(self.view.frame) - mainCollectionViewX;
-    
-    self.mainCollectionView.frame = CGRectMake(mainCollectionViewX, mainCollectionViewY, mainCollectionViewW, mainCollectionViewH);
-    
-    [self.view bringSubviewToFront:self.otherMenuView];
+    self.mainCollectionView.frame = self.view.frame;
 }
 
 #pragma mark - 回调方法
@@ -109,16 +102,5 @@
 }
 
 #pragma mark - Collection View Delegate
-
-- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    [self.mainCollectionView reloadItemsAtIndexPaths:@[indexPath]];
-}
-
-- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
-{
-    self.segmentedControl.selectedSegmentIndex = (scrollView.contentOffset.x / [UIScreen mainScreen].bounds.size.width) / 0.5;
-}
-
 
 @end

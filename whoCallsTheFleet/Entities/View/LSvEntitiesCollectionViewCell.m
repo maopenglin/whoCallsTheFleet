@@ -20,6 +20,8 @@
 @property (nonatomic, strong) NSArray<LSmEntities *> *entitiesCV;
 @property (nonatomic, strong) NSArray<LSmEntities *> *entitiesIllustrator;
 
+@property (nonatomic, weak) UIView *entitiesView;
+
 @end
 
 @implementation LSvEntitiesCollectionViewCell
@@ -27,17 +29,16 @@
 + (instancetype)entitiesCollectionViewCell:(UICollectionView *)collectionView forItemAtIndexPath:(NSIndexPath *)indexPath
 {
     LSvEntitiesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:LSIdentifierEntitiesMainCell forIndexPath:indexPath];
+
+    [cell.entitiesView removeFromSuperview];
     
-//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(150, 150, 150, 150)];
-//    [cell addSubview:view];
     switch (indexPath.item) {
         case LSkEntitiesTypeCV:{
             LSvEntitiesCVCollectionView *CVView = [LSvEntitiesCVCollectionView entitiesCVCollectionView];
             
             CVView.entitiesCV = nil;
             CVView.entitiesCV = cell.entitiesCV;
-            
-            [cell addSubview:CVView];
+            cell.entitiesView = CVView;
             break;
         }
         case LSkEntitiesTypeIllustrator:{
@@ -45,14 +46,15 @@
             
             illustratorView.entitiesIllustrator = nil;
             illustratorView.entitiesIllustrator = cell.entitiesIllustrator;
-            
-            [cell addSubview:illustratorView];
+            cell.entitiesView = illustratorView;
             break;
         }
             
         default:
             break;
     }
+    
+    [cell addSubview:cell.entitiesView];
     
     return cell;
 }
