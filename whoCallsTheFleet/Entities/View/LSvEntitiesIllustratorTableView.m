@@ -29,8 +29,8 @@
     tableView.backgroundColor = [UIColor clearColor];
     tableView.allowsSelection = NO;
     tableView.separatorStyle  = UITableViewCellSeparatorStyleNone;
-    tableView.contentInset    = UIEdgeInsetsMake(LSConstTopPadding, 0, LSConstBottomPadding, 0);
-    tableView.contentOffset   = CGPointMake(0, - LSConstTopPadding);
+    tableView.contentInset    = UIEdgeInsetsMake(LSValueTopPadding, 0, LSValueBottomPadding, 0);
+    tableView.contentOffset   = CGPointMake(0, - LSValueTopPadding);
     //注册Cell
     UINib *tableViewNib = [UINib nibWithNibName:@"LSvEntitiesIllustratorCell" bundle:nil];
     [tableView registerNib:tableViewNib forCellReuseIdentifier:LSIdentifierEntitiesIllustratorCell];

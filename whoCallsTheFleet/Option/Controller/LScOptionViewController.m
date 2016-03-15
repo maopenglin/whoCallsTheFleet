@@ -43,7 +43,12 @@
 {
     [super viewDidLayoutSubviews];
     
-    self.tableView.frame = self.view.frame;
+    CGFloat tableViewX = 0;
+    CGFloat tableViewY = CGRectGetMaxY(self.navigationController.navigationBar.frame);
+    CGFloat tableViewW = CGRectGetWidth(self.view.frame);
+    CGFloat tableViewH = CGRectGetHeight(self.view.frame) - tableViewX;
+    
+    self.tableView.frame = CGRectMake(tableViewX, tableViewY, tableViewW, tableViewH);
 }
 
 #pragma mark - Table View Data Source

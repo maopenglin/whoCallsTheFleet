@@ -26,7 +26,7 @@
     collectionViewLayout.itemSize                = CGSizeMake(80, 100);
     collectionViewLayout.minimumInteritemSpacing = 15;
     collectionViewLayout.minimumLineSpacing      = 20;
-    collectionViewLayout.sectionInset            = UIEdgeInsetsMake(LSConstTopPadding, 20, 60, LSConstBottomPadding);
+    collectionViewLayout.sectionInset            = UIEdgeInsetsMake(LSValueTopPadding, 20, 60, LSValueBottomPadding);
     //创建collectionView
     LSvEntitiesCVCollectionView *collectionView = [[LSvEntitiesCVCollectionView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) collectionViewLayout:collectionViewLayout];
     //设置代理、属性

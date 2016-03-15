@@ -14,19 +14,6 @@
 
 @implementation LScBaseViewController
 
-#pragma mark - 重写布局方法
-
--(void)viewDidLayoutSubviews
-{
-    self.mainView.frame           = self.view.frame;
-    self.mainTableView.frame      = self.view.frame;
-    self.mainCollectionView.frame = self.view.frame;
-    
-    [self.view bringSubviewToFront:self.mainView];
-    [self.view bringSubviewToFront:self.mainTableView];
-    [self.view bringSubviewToFront:self.mainCollectionView];
-}
-
 #pragma mark - 重写set方法
 
 -(void)setBackgroundImgView:(UIImageView *)backgroundImgView

@@ -16,12 +16,4 @@
 //背景图片
 @property (nonatomic, weak) UIImageView *backgroundImgView;
 
-//主体View
-@property (nonatomic, weak) UIView *mainView;
-//主体tableView
-@property (nonatomic, weak) UITableView *mainTableView;
-//主体collectionView
-@property (nonatomic, weak) UICollectionView *mainCollectionView;
-
-
 @end

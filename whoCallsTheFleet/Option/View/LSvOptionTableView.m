@@ -36,7 +36,7 @@
 + (instancetype)optionTableView
 {
     LSvOptionTableView *optionTableView = [[LSvOptionTableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStyleGrouped];
-    optionTableView.contentInset  = UIEdgeInsetsMake(44, 0, 0, 0);
+    //禁止弹簧（也即禁止滚动）
     optionTableView.bounces = NO;
     
     return optionTableView;

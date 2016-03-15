@@ -18,7 +18,7 @@ NSString *const LSIdentifierEntitiesIllustratorCell = @"entitiesIllustratorCell"
 /*** Const Number ***/
 
 //Layout Value
-CGFloat const LSConstTopPadding    = 70;
-CGFloat const LSConstBottomPadding = 60;
-CGFloat const LSConstLeftPadding   = 0;
-CGFloat const LSConstRightPadding  = 0;
+CGFloat const LSValueTopPadding    = 70;
+CGFloat const LSValueBottomPadding = 60;
+CGFloat const LSValueLeftPadding   = 0;
+CGFloat const LSValueRightPadding  = 0;

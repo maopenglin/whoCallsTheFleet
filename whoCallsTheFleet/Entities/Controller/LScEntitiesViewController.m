@@ -17,6 +17,7 @@
 @interface LScEntitiesViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, weak) UISegmentedControl *segmentedControl;
+@property (nonatomic, weak) UICollectionView *mainCollectionView;
 
 @end
 
@@ -63,6 +64,13 @@
     dispatch_once(&onceToken, ^{
         [self layoutOtherMenuView];
     });
+    
+    CGFloat mainCollectionViewX = 0;
+    CGFloat mainCollectionViewY = CGRectGetMaxY(self.navigationController.navigationBar.frame);
+    CGFloat mainCollectionViewW = CGRectGetWidth(self.view.frame);
+    CGFloat mainCollectionViewH = CGRectGetHeight(self.view.frame) - mainCollectionViewX;
+    
+    self.mainCollectionView.frame = CGRectMake(mainCollectionViewX, mainCollectionViewY, mainCollectionViewW, mainCollectionViewH);
 }
 
 #pragma mark - 回调方法

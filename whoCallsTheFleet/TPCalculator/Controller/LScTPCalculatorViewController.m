@@ -17,6 +17,7 @@
 
 @interface LScTPCalculatorViewController ()<TTTAttributedLabelDelegate>
 
+@property (nonatomic, weak) LSvTPCalculatorView *TPCalculatorView;
 //数据模型
 @property (nonatomic, strong) NSMutableArray<LSmTPCalculatorCount *> *TPCalculatorCounts;
 
@@ -31,10 +32,10 @@
     
     //创建主体view
     LSvTPCalculatorView *TPCalculatorView = [LSvTPCalculatorView TPCalculatorView];
-    self.mainView = TPCalculatorView;
-    [self.view addSubview:self.mainView];
+    self.TPCalculatorView = TPCalculatorView;
+    [self.navigationController.view addSubview:self.TPCalculatorView];
     //赋值
-    TPCalculatorView.color = self.controllerAttribute.color;
+    self.TPCalculatorView.color = self.controllerAttribute.color;
     
     //显示计算结果
     [self reloadCalculatorResult];
@@ -44,8 +45,8 @@
         //计算frame
         CGFloat countViewW = CGRectGetWidth([UIScreen mainScreen].bounds) - 26;
         CGFloat countViewH = 25;
-        CGFloat countViewX = CGRectGetMinX(TPCalculatorView.middleView.frame);
-        CGFloat countViewY = CGRectGetMinY(TPCalculatorView.middleView.frame) + 10 + countViewH * i;
+        CGFloat countViewX = CGRectGetMinX(self.TPCalculatorView.middleView.frame);
+        CGFloat countViewY = CGRectGetMinY(self.TPCalculatorView.middleView.frame) + 10 + countViewH * i;
         //创建
         LSvTPCalculatorCountView *TPCalculatorCountView = [LSvTPCalculatorCountView TPCalculatorCountView];
         TPCalculatorCountView.frame = CGRectMake(countViewX, countViewY, countViewW, countViewH);
@@ -61,20 +62,20 @@
             [[LSmTPCalculatorCount toDicts:self.TPCalculatorCounts] writeToFile:LSPathUserTPCalculatorCountPlist atomically:YES];
         };
         //添加至父控件（并非加到中间的小View上
-        [TPCalculatorView addSubview:TPCalculatorCountView];
+        [self.TPCalculatorView addSubview:TPCalculatorCountView];
     }
 
     /*** 底部label ***/
     
     //设置底部label代理
-    TPCalculatorView.bottomLabel.delegate = self;
+    self.TPCalculatorView.bottomLabel.delegate = self;
     //下划线
-    TPCalculatorView.bottomLabel.linkAttributes = @{(NSString *)kCTUnderlineStyleAttributeName: @YES};
+    self.TPCalculatorView.bottomLabel.linkAttributes = @{(NSString *)kCTUnderlineStyleAttributeName: @YES};
     //文本颜色
-    TPCalculatorView.bottomLabel.textColor = self.controllerAttribute.color;
+    self.TPCalculatorView.bottomLabel.textColor = self.controllerAttribute.color;
     //链接文字选中效果
     NSDictionary *activeLinkAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
-    TPCalculatorView.bottomLabel.activeLinkAttributes = activeLinkAttributes;
+    self.TPCalculatorView.bottomLabel.activeLinkAttributes = activeLinkAttributes;
     //文本内容
     NSString *text = @"关于运输作战的游戏机制可访问此处查询\n感谢NGA论坛的欧米嘉·风焰提供的算法：\n   - TP算法讨论、验证、样本收集帖\n目前算法仍在验证阶段，如果你有计算不准确的案例，请访问上面提供的链接进行汇报";
     //设置绑定超链的范围
@@ -82,7 +83,7 @@
     NSRange linkRange2 = [text rangeOfString:@"欧米嘉·风焰" options:NSCaseInsensitiveSearch];
     NSRange linkRange3 = [text rangeOfString:@"- TP算法讨论、验证、样本收集帖" options:NSCaseInsensitiveSearch];
     //设置文本及格式
-    [TPCalculatorView.bottomLabel setText:text afterInheritingLabelAttributesAndConfiguringWithBlock:^NSMutableAttributedString *(NSMutableAttributedString *mutableAttributedString) {
+    [self.TPCalculatorView.bottomLabel setText:text afterInheritingLabelAttributesAndConfiguringWithBlock:^NSMutableAttributedString *(NSMutableAttributedString *mutableAttributedString) {
         //设置范围内文本的颜色
         [mutableAttributedString addAttribute:(NSString*)kCTForegroundColorAttributeName value:(id)[UIColor whiteColor].CGColor range:linkRange1];
         [mutableAttributedString addAttribute:(NSString*)kCTForegroundColorAttributeName value:(id)[UIColor whiteColor].CGColor range:linkRange2];
@@ -96,9 +97,23 @@
     NSURL *url2 = [NSURL URLWithString:@"http://bbs.ngacn.cc/nuke.php?func=ucp&uid=13838394"];
     NSURL *url3 = [NSURL URLWithString:@"http://bbs.ngacn.cc/read.php?tid=8741165"];
     //将链接添加到label对应范围上
-    [TPCalculatorView.bottomLabel addLinkToURL:url1 withRange:linkRange1];
-    [TPCalculatorView.bottomLabel addLinkToURL:url2 withRange:linkRange2];
-    [TPCalculatorView.bottomLabel addLinkToURL:url3 withRange:linkRange3];
+    [self.TPCalculatorView.bottomLabel addLinkToURL:url1 withRange:linkRange1];
+    [self.TPCalculatorView.bottomLabel addLinkToURL:url2 withRange:linkRange2];
+    [self.TPCalculatorView.bottomLabel addLinkToURL:url3 withRange:linkRange3];
+}
+
+#pragma mark - 重写布局
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    CGFloat TPCalculatorViewX = 0;
+    CGFloat TPCalculatorViewY = CGRectGetMaxY(self.navigationController.navigationBar.frame);
+    CGFloat TPCalculatorViewW = CGRectGetWidth(self.view.frame);
+    CGFloat TPCalculatorViewH = CGRectGetHeight(self.view.frame) - TPCalculatorViewX;
+    
+    self.TPCalculatorView.frame = CGRectMake(TPCalculatorViewX, TPCalculatorViewY, TPCalculatorViewW, TPCalculatorViewH);
 }
 
 #pragma mark - TTT Attributed Label Delegate
@@ -131,7 +146,7 @@
     countS = countDD * 5 + countCL * 2 + countCAV * 4 + countAV * 9.5 + countLHA * 12.25 + countAO * 14.75 + countBBV * 7 + countSSV * 7 + countCT * 6 + countE75 * 5 + countE68 * 8;
     countA = countS * 0.7;
     
-    ((LSvTPCalculatorView *)self.mainView).resultLabel.text = [NSString stringWithFormat:@"A胜：%ld | S胜：%ld",countA, countS];
+    self.TPCalculatorView.resultLabel.text = [NSString stringWithFormat:@"A胜：%ld | S胜：%ld",countA, countS];
 }
 
 #pragma mark - Lazy Load

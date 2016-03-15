@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -13,21 +14,21 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKt-Qx-6Hz">
-                    <rect key="frame" x="13" y="401" width="372" height="40"/>
+                    <rect key="frame" x="13" y="356" width="372" height="40"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="D0S-ZL-HCO"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TP - 运输点数（Transportation Points）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aP-Lt-CRN">
-                    <rect key="frame" x="13" y="60" width="372" height="16"/>
+                    <rect key="frame" x="13" y="15" width="372" height="16"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3i-f4-4Jc" customClass="TTTAttributedLabel">
-                    <rect key="frame" x="13" y="456" width="372" height="0.0"/>
+                    <rect key="frame" x="13" y="411" width="372" height="0.0"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -39,13 +40,13 @@
                     </userDefinedRuntimeAttributes>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xby-Vb-Xka">
-                    <rect key="frame" x="31.5" y="401" width="335" height="40"/>
+                    <rect key="frame" x="31.5" y="356" width="335" height="40"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pg9-K1-VG9">
-                    <rect key="frame" x="13" y="91" width="372" height="295"/>
+                    <rect key="frame" x="13" y="46" width="372" height="295"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="295" id="DOq-WJ-6L6"/>
@@ -63,7 +64,7 @@
                 <constraint firstItem="gKt-Qx-6Hz" firstAttribute="width" secondItem="pg9-K1-VG9" secondAttribute="width" id="Ldw-7w-fe6"/>
                 <constraint firstItem="pg9-K1-VG9" firstAttribute="centerX" secondItem="JjX-O5-heA" secondAttribute="centerX" id="NLA-bA-aHz"/>
                 <constraint firstItem="i3i-f4-4Jc" firstAttribute="centerX" secondItem="JjX-O5-heA" secondAttribute="centerX" id="QCe-aO-yJ3"/>
-                <constraint firstItem="2aP-Lt-CRN" firstAttribute="top" secondItem="JjX-O5-heA" secondAttribute="top" constant="60" id="RvP-6Z-5Uf"/>
+                <constraint firstItem="2aP-Lt-CRN" firstAttribute="top" secondItem="JjX-O5-heA" secondAttribute="top" constant="15" id="RvP-6Z-5Uf"/>
                 <constraint firstItem="Xby-Vb-Xka" firstAttribute="centerX" secondItem="gKt-Qx-6Hz" secondAttribute="centerX" id="VkO-TR-Jnn"/>
                 <constraint firstAttribute="trailingMargin" secondItem="2aP-Lt-CRN" secondAttribute="trailing" constant="5" id="X8a-73-GBK"/>
                 <constraint firstItem="pg9-K1-VG9" firstAttribute="width" secondItem="2aP-Lt-CRN" secondAttribute="width" id="ZTJ-k9-qk7"/>

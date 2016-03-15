@@ -22,9 +22,9 @@ UIKIT_EXTERN NSString *const LSIdentifierEntitiesIllustratorCell;
 /*** Const Number ***/
 
 //Layout Value
-UIKIT_EXTERN CGFloat const LSConstTopPadding;
-UIKIT_EXTERN CGFloat const LSConstBottomPadding;
-UIKIT_EXTERN CGFloat const LSConstLeftPadding;
-UIKIT_EXTERN CGFloat const LSConstRightPadding;
+UIKIT_EXTERN CGFloat const LSValueTopPadding;
+UIKIT_EXTERN CGFloat const LSValueBottomPadding;
+UIKIT_EXTERN CGFloat const LSValueLeftPadding;
+UIKIT_EXTERN CGFloat const LSValueRightPadding;
 
 #endif /* LSConstants_h */
