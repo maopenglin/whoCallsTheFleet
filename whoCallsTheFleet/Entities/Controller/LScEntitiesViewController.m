@@ -30,8 +30,8 @@
     //设置标题为segmentedControl
     UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"声优", @"画师"]];
     self.segmentedControl = segmentedControl;
-    self.navigationItem.titleView = self.segmentedControl;
     self.segmentedControl.frame = CGRectMake(0, 0, 180, 25);
+    self.navigationItem.titleView = self.segmentedControl;
     //设置字号
     NSDictionary *attDict = @{NSFontAttributeName: LSFontWithSize(16)};
     [self.segmentedControl setTitleTextAttributes:attDict forState:UIControlStateNormal];

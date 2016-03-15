@@ -1,3 +1,4 @@
-platform :ios, '6.1'
+platform :ios, '8.0'
+use_frameworks!
 pod 'SDWebImage', '~>3.7'
 pod 'TTTAttributedLabel'
