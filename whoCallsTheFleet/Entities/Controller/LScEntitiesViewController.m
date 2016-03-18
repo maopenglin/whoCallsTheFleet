@@ -12,12 +12,13 @@
 #import "LSmEntitiesRelation.h"
 
 #import "LSvEntitiesCollectionView.h"
-#import "LSvEntitiesCollectionViewCell.h"
 
 @interface LScEntitiesViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, weak) UISegmentedControl *segmentedControl;
 @property (nonatomic, weak) UICollectionView *mainCollectionView;
+//模型数据
+@property (nonatomic, strong) NSArray<NSArray<LSmEntities *> *> *entities;
 
 @end
 
@@ -47,10 +48,10 @@
     self.mainCollectionView.dataSource = self;
     self.mainCollectionView.delegate   = self;
     //注册Cell
-    [self.mainCollectionView registerClass:[LSvEntitiesCollectionViewCell class] forCellWithReuseIdentifier:LSIdentifierEntitiesMainCell];
+//    [self.mainCollectionView registerClass:[LSvEntitiesCollectionViewCell class] forCellWithReuseIdentifier:LSIdentifierEntitiesMainCell];
 
     //默认选中“声优”页
-    self.segmentedControl.selectedSegmentIndex = LSkEntitiesTypeCV;
+    self.segmentedControl.selectedSegmentIndex = 0;
     [self segmentedControlValueChanged:self.segmentedControl];
 }
 
@@ -83,17 +84,13 @@
 
 #pragma mark - Collection View Data Source
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
-    return 1;
-}
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return 2;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    LSvEntitiesCollectionViewCell *cell = [LSvEntitiesCollectionViewCell entitiesCollectionViewCell:collectionView forItemAtIndexPath:indexPath];
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:LSIdentifierEntitiesMainCell forIndexPath:indexPath];
     
     cell.backgroundColor = [UIColor clearColor];
     cell.backgroundColor = LSColorRandom;
@@ -102,5 +99,29 @@
 }
 
 #pragma mark - Collection View Delegate
+
+#pragma mark - Lazy Load
+
+- (NSArray<NSArray<LSmEntities *> *> *)entities
+{
+    if (!_entities) {
+        //获取数据
+        NSArray<LSmEntities *> *tempArr = [LSmEntities entities];
+        //新建空的数组
+        NSMutableArray<LSmEntities *> *CVArr = [NSMutableArray array];
+        NSMutableArray<LSmEntities *> *illustratorArr = [NSMutableArray array];
+        for (LSmEntities *entities in tempArr) {
+            if (entities.relation.cv) {
+                [CVArr addObject:entities];
+            } else if (entities.relation.illustrator) {
+                [illustratorArr addObject:entities];
+            }
+        }
+        
+        NSArray<NSArray <LSmEntities *> *> *arr = @[CVArr, illustratorArr];
+        _entities = arr;
+    }
+    return _entities;
+}
 
 @end

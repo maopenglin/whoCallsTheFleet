@@ -53,8 +53,6 @@
 		1D50244E1C3FCA120053FA71 /* whoCallsTheFleetUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D50244D1C3FCA120053FA71 /* whoCallsTheFleetUITests.m */; };
 		1D681D481C830639004B5FAE /* LSvOtherMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D681D471C830639004B5FAE /* LSvOtherMenuView.m */; };
 		1D6FB21B1C821A2B007F9A9F /* LScBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FB21A1C821A2B007F9A9F /* LScBaseViewController.m */; };
-		1D7547911C983D49009AB38C /* LSvEntitiesCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DEB9D051C93B98800EAA467 /* LSvEntitiesCVCell.xib */; };
-		1D7547921C983D49009AB38C /* LSvEntitiesIllustratorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DEB9D0A1C94039100EAA467 /* LSvEntitiesIllustratorCell.xib */; };
 		1D7547931C983D49009AB38C /* LSvTPCalculatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DED6C241C9152A600C90CC2 /* LSvTPCalculatorView.xib */; };
 		1D7547941C983D49009AB38C /* LSvTPCalculatorCountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DE61CA11C92A9C300C81882 /* LSvTPCalculatorCountView.xib */; };
 		1D7547951C983D49009AB38C /* LSvOtherMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D133DC91C84173E007D4F13 /* LSvOtherMenuView.xib */; };
@@ -73,17 +71,11 @@
 		1D7547A21C983DF0009AB38C /* ship_types.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D0FB59D1C81D4F6005A1D30 /* ship_types.json */; };
 		1D7547A31C983DF0009AB38C /* ships.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D0FB59E1C81D4F6005A1D30 /* ships.json */; };
 		1D7547A41C983DF0009AB38C /* updates.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D0FB59F1C81D4F6005A1D30 /* updates.json */; };
-		1D7547A91C98493A009AB38C /* LSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7547A81C98493A009AB38C /* LSConstants.m */; };
 		1D7547AB1C9857D4009AB38C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 1D7547AA1C9857D4009AB38C /* README.md */; };
-		1D9AEAAF1C96431B0030FCEE /* LSvEntitiesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9AEAAE1C96431B0030FCEE /* LSvEntitiesCollectionViewCell.m */; };
-		1D9AEAB21C9655D70030FCEE /* LSvEntitiesCVCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9AEAB11C9655D70030FCEE /* LSvEntitiesCVCollectionView.m */; };
-		1D9AEAB51C96561C0030FCEE /* LSvEntitiesIllustratorTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9AEAB41C96561C0030FCEE /* LSvEntitiesIllustratorTableView.m */; };
 		1D9AEABD1C96A7680030FCEE /* LSvEntitiesCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9AEABC1C96A7680030FCEE /* LSvEntitiesCollectionViewFlowLayout.m */; };
 		1D9AEAC01C96A8310030FCEE /* LSvEntitiesCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9AEABF1C96A8310030FCEE /* LSvEntitiesCollectionView.m */; };
 		1DE61CA01C92A9B700C81882 /* LSvTPCalculatorCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE61C9F1C92A9B700C81882 /* LSvTPCalculatorCountView.m */; };
 		1DE61CA71C92E8BD00C81882 /* LSmTPCalculatorCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE61CA61C92E8BD00C81882 /* LSmTPCalculatorCount.m */; };
-		1DEB9D061C93B98800EAA467 /* LSvEntitiesCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB9D041C93B98800EAA467 /* LSvEntitiesCVCell.m */; };
-		1DEB9D0B1C94039100EAA467 /* LSvEntitiesIllustratorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB9D091C94039100EAA467 /* LSvEntitiesIllustratorCell.m */; };
 		1DED6C251C9152A600C90CC2 /* LSvTPCalculatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DED6C231C9152A600C90CC2 /* LSvTPCalculatorView.m */; };
 		C822165C0333FF931447841D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D884B8E0C637C0A726FFAE /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -222,15 +214,7 @@
 		1D681D491C830D34004B5FAE /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		1D6FB2191C821A2B007F9A9F /* LScBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LScBaseViewController.h; sourceTree = "<group>"; };
 		1D6FB21A1C821A2B007F9A9F /* LScBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScBaseViewController.m; sourceTree = "<group>"; };
-		1D7547A71C984918009AB38C /* LSConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSConstants.h; sourceTree = "<group>"; };
-		1D7547A81C98493A009AB38C /* LSConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSConstants.m; sourceTree = "<group>"; };
 		1D7547AA1C9857D4009AB38C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		1D9AEAAD1C96431B0030FCEE /* LSvEntitiesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvEntitiesCollectionViewCell.h; sourceTree = "<group>"; };
-		1D9AEAAE1C96431B0030FCEE /* LSvEntitiesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvEntitiesCollectionViewCell.m; sourceTree = "<group>"; };
-		1D9AEAB01C9655D70030FCEE /* LSvEntitiesCVCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvEntitiesCVCollectionView.h; sourceTree = "<group>"; };
-		1D9AEAB11C9655D70030FCEE /* LSvEntitiesCVCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvEntitiesCVCollectionView.m; sourceTree = "<group>"; };
-		1D9AEAB31C96561C0030FCEE /* LSvEntitiesIllustratorTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvEntitiesIllustratorTableView.h; sourceTree = "<group>"; };
-		1D9AEAB41C96561C0030FCEE /* LSvEntitiesIllustratorTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvEntitiesIllustratorTableView.m; sourceTree = "<group>"; };
 		1D9AEABB1C96A7680030FCEE /* LSvEntitiesCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvEntitiesCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		1D9AEABC1C96A7680030FCEE /* LSvEntitiesCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvEntitiesCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		1D9AEABE1C96A8310030FCEE /* LSvEntitiesCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvEntitiesCollectionView.h; sourceTree = "<group>"; };
@@ -1950,12 +1934,6 @@
 		1DE61CA31C92E7B800C81882 /* LSmTPCalculatorCount.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LSmTPCalculatorCount.plist; sourceTree = "<group>"; };
 		1DE61CA51C92E8BD00C81882 /* LSmTPCalculatorCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSmTPCalculatorCount.h; sourceTree = "<group>"; };
 		1DE61CA61C92E8BD00C81882 /* LSmTPCalculatorCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSmTPCalculatorCount.m; sourceTree = "<group>"; };
-		1DEB9D031C93B98800EAA467 /* LSvEntitiesCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvEntitiesCVCell.h; sourceTree = "<group>"; };
-		1DEB9D041C93B98800EAA467 /* LSvEntitiesCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvEntitiesCVCell.m; sourceTree = "<group>"; };
-		1DEB9D051C93B98800EAA467 /* LSvEntitiesCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSvEntitiesCVCell.xib; sourceTree = "<group>"; };
-		1DEB9D081C94039100EAA467 /* LSvEntitiesIllustratorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvEntitiesIllustratorCell.h; sourceTree = "<group>"; };
-		1DEB9D091C94039100EAA467 /* LSvEntitiesIllustratorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvEntitiesIllustratorCell.m; sourceTree = "<group>"; };
-		1DEB9D0A1C94039100EAA467 /* LSvEntitiesIllustratorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSvEntitiesIllustratorCell.xib; sourceTree = "<group>"; };
 		1DED6C221C9152A600C90CC2 /* LSvTPCalculatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvTPCalculatorView.h; sourceTree = "<group>"; };
 		1DED6C231C9152A600C90CC2 /* LSvTPCalculatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvTPCalculatorView.m; sourceTree = "<group>"; };
 		1DED6C241C9152A600C90CC2 /* LSvTPCalculatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSvTPCalculatorView.xib; sourceTree = "<group>"; };
@@ -2072,20 +2050,8 @@
 			children = (
 				1D9AEABE1C96A8310030FCEE /* LSvEntitiesCollectionView.h */,
 				1D9AEABF1C96A8310030FCEE /* LSvEntitiesCollectionView.m */,
-				1D9AEAAD1C96431B0030FCEE /* LSvEntitiesCollectionViewCell.h */,
-				1D9AEAAE1C96431B0030FCEE /* LSvEntitiesCollectionViewCell.m */,
 				1D9AEABB1C96A7680030FCEE /* LSvEntitiesCollectionViewFlowLayout.h */,
 				1D9AEABC1C96A7680030FCEE /* LSvEntitiesCollectionViewFlowLayout.m */,
-				1DEB9D031C93B98800EAA467 /* LSvEntitiesCVCell.h */,
-				1DEB9D041C93B98800EAA467 /* LSvEntitiesCVCell.m */,
-				1DEB9D051C93B98800EAA467 /* LSvEntitiesCVCell.xib */,
-				1D9AEAB01C9655D70030FCEE /* LSvEntitiesCVCollectionView.h */,
-				1D9AEAB11C9655D70030FCEE /* LSvEntitiesCVCollectionView.m */,
-				1DEB9D081C94039100EAA467 /* LSvEntitiesIllustratorCell.h */,
-				1DEB9D091C94039100EAA467 /* LSvEntitiesIllustratorCell.m */,
-				1DEB9D0A1C94039100EAA467 /* LSvEntitiesIllustratorCell.xib */,
-				1D9AEAB31C96561C0030FCEE /* LSvEntitiesIllustratorTableView.h */,
-				1D9AEAB41C96561C0030FCEE /* LSvEntitiesIllustratorTableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2621,8 +2587,6 @@
 			isa = PBXGroup;
 			children = (
 				1D0FB5131C8167F6005A1D30 /* whoCallsTheFleet.pch */,
-				1D7547A71C984918009AB38C /* LSConstants.h */,
-				1D7547A81C98493A009AB38C /* LSConstants.m */,
 				1D0FB5221C81D149005A1D30 /* Info.plist */,
 				1D5024341C3FCA120053FA71 /* Assets.xcassets */,
 			);
@@ -10883,6 +10847,7 @@
 				TargetAttributes = {
 					1D5024241C3FCA120053FA71 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = FAHA792R32;
 					};
 					1D50243D1C3FCA120053FA71 = {
 						CreatedOnToolsVersion = 7.2;
@@ -10934,8 +10899,6 @@
 				1D7547A31C983DF0009AB38C /* ships.json in Resources */,
 				1D7547A41C983DF0009AB38C /* updates.json in Resources */,
 				1D7547961C983D86009AB38C /* Assets.xcassets in Resources */,
-				1D7547911C983D49009AB38C /* LSvEntitiesCVCell.xib in Resources */,
-				1D7547921C983D49009AB38C /* LSvEntitiesIllustratorCell.xib in Resources */,
 				1D7547931C983D49009AB38C /* LSvTPCalculatorView.xib in Resources */,
 				1D7547941C983D49009AB38C /* LSvTPCalculatorCountView.xib in Resources */,
 				1D7547951C983D49009AB38C /* LSvOtherMenuView.xib in Resources */,
@@ -11023,7 +10986,6 @@
 				1D0FBF871C81D501005A1D30 /* LSmItemsImprovement.m in Sources */,
 				1D0FBF911C81D501005A1D30 /* LSmShipTypeCollections.m in Sources */,
 				1D0FC65D1C81D8D3005A1D30 /* LScShipsViewController.m in Sources */,
-				1DEB9D0B1C94039100EAA467 /* LSvEntitiesIllustratorCell.m in Sources */,
 				1DE61CA01C92A9B700C81882 /* LSvTPCalculatorCountView.m in Sources */,
 				1D0FBF841C81D501005A1D30 /* LSmEntitiesPicture.m in Sources */,
 				1D0FBF921C81D501005A1D30 /* LSmShipTypeOrder.m in Sources */,
@@ -11031,9 +10993,7 @@
 				1D2E912C1C8ACC650072FB29 /* LSvOptionTableViewCell.m in Sources */,
 				1D0FBF881C81D501005A1D30 /* LSmItemsStat.m in Sources */,
 				1D0FBF811C81D501005A1D30 /* LSmArsenalAll.m in Sources */,
-				1D9AEAB51C96561C0030FCEE /* LSvEntitiesIllustratorTableView.m in Sources */,
 				1D2E91361C8C2AEB0072FB29 /* LScPatchNoteViewController.m in Sources */,
-				1D9AEAAF1C96431B0030FCEE /* LSvEntitiesCollectionViewCell.m in Sources */,
 				1D681D481C830639004B5FAE /* LSvOtherMenuView.m in Sources */,
 				1D3E412E1C85939200FBDB77 /* LScAboutViewController.m in Sources */,
 				1D2E91291C89B6AA0072FB29 /* LSmOptionItem.m in Sources */,
@@ -11041,7 +11001,6 @@
 				1D3E41341C8593CF00FBDB77 /* LScTPCalculatorViewController.m in Sources */,
 				1D0FBF8E1C81D501005A1D30 /* LSmShipNamesuffix.m in Sources */,
 				1D0FB5281C81D156005A1D30 /* AppDelegate.m in Sources */,
-				1DEB9D061C93B98800EAA467 /* LSvEntitiesCVCell.m in Sources */,
 				1D0FBF7C1C81D501005A1D30 /* LScBaseNavigationController.m in Sources */,
 				1D0FC6571C81D8A6005A1D30 /* LScArsenalViewController.m in Sources */,
 				1D0FC6541C81D88E005A1D30 /* LScEntitiesViewController.m in Sources */,
@@ -11064,9 +11023,7 @@
 				1D3E41311C8593B400FBDB77 /* LScOptionViewController.m in Sources */,
 				1D7547AB1C9857D4009AB38C /* README.md in Sources */,
 				1DED6C251C9152A600C90CC2 /* LSvTPCalculatorView.m in Sources */,
-				1D7547A91C98493A009AB38C /* LSConstants.m in Sources */,
 				1DE61CA71C92E8BD00C81882 /* LSmTPCalculatorCount.m in Sources */,
-				1D9AEAB21C9655D70030FCEE /* LSvEntitiesCVCollectionView.m in Sources */,
 				1D0FBF931C81D501005A1D30 /* LSmShipTypes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -11190,6 +11147,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/whoCallsTheFleet/whoCallsTheFleet.pch";
 				INFOPLIST_FILE = whoCallsTheFleet/Info.plist;
@@ -11197,6 +11155,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.larrySue.whoCallsTheFleet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -11209,6 +11168,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/whoCallsTheFleet/whoCallsTheFleet.pch";
 				INFOPLIST_FILE = whoCallsTheFleet/Info.plist;
@@ -11216,6 +11176,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.larrySue.whoCallsTheFleet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

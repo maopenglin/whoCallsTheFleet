@@ -27,9 +27,5 @@
     
     return entitiesCollectionView;
 }
-- (void)dealloc
-{
-    NSLog(@"%s", __FUNCTION__);
-}
 
 @end
