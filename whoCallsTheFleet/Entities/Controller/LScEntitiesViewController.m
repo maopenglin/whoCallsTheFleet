@@ -8,17 +8,22 @@
 
 #import "LScEntitiesViewController.h"
 
+#import "LScCVViewController.h"
+#import "LScIllustratorViewController.h"
+
 #import "LSmEntities.h"
 #import "LSmEntitiesRelation.h"
 
 #import "LSvEntitiesCollectionView.h"
+#import "LSvEntitiesCollectionViewCell.h"
 
 @interface LScEntitiesViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, weak) UISegmentedControl *segmentedControl;
 @property (nonatomic, weak) UICollectionView *mainCollectionView;
 //模型数据
-@property (nonatomic, strong) NSArray<NSArray<LSmEntities *> *> *entities;
+//@property (nonatomic, strong) NSArray<NSArray<LSmEntities *> *> *entities;
+@property (nonatomic, strong) NSArray<UIViewController *> *viewControllers;
 
 @end
 
@@ -48,7 +53,7 @@
     self.mainCollectionView.dataSource = self;
     self.mainCollectionView.delegate   = self;
     //注册Cell
-//    [self.mainCollectionView registerClass:[LSvEntitiesCollectionViewCell class] forCellWithReuseIdentifier:LSIdentifierEntitiesMainCell];
+    [self.mainCollectionView registerClass:[LSvEntitiesCollectionViewCell class] forCellWithReuseIdentifier:LSIdentifierEntitiesMainCell];
 
     //默认选中“声优”页
     self.segmentedControl.selectedSegmentIndex = 0;
@@ -66,7 +71,11 @@
         [self layoutOtherMenuView];
     });
     
-    self.mainCollectionView.frame = self.view.frame;
+    CGFloat Y = self.navigationController.navigationBar.frame.size.height;
+    CGFloat H = self.view.frame.size.height - 88;
+    self.mainCollectionView.frame = CGRectMake(0, Y, self.view.frame.size.width, H);
+    
+    [self.navigationController.view bringSubviewToFront:self.otherMenuView];
 }
 
 #pragma mark - 回调方法
@@ -90,9 +99,11 @@
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:LSIdentifierEntitiesMainCell forIndexPath:indexPath];
+    LSvEntitiesCollectionViewCell *cell = [LSvEntitiesCollectionViewCell entitiesCollectionViewCell:collectionView indexPath:indexPath];
     
-    cell.backgroundColor = [UIColor clearColor];
+    cell.entitiesVc = self.viewControllers[indexPath.item];
+    
+//    cell.backgroundColor = [UIColor clearColor];
     cell.backgroundColor = LSColorRandom;
     
     return cell;
@@ -102,26 +113,15 @@
 
 #pragma mark - Lazy Load
 
-- (NSArray<NSArray<LSmEntities *> *> *)entities
+- (NSArray<UIViewController *> *)viewControllers
 {
-    if (!_entities) {
-        //获取数据
-        NSArray<LSmEntities *> *tempArr = [LSmEntities entities];
-        //新建空的数组
-        NSMutableArray<LSmEntities *> *CVArr = [NSMutableArray array];
-        NSMutableArray<LSmEntities *> *illustratorArr = [NSMutableArray array];
-        for (LSmEntities *entities in tempArr) {
-            if (entities.relation.cv) {
-                [CVArr addObject:entities];
-            } else if (entities.relation.illustrator) {
-                [illustratorArr addObject:entities];
-            }
-        }
+    if (!_viewControllers) {
         
-        NSArray<NSArray <LSmEntities *> *> *arr = @[CVArr, illustratorArr];
-        _entities = arr;
+        UIViewController *CVViewController = [LScCVViewController CVViewController];
+        UIViewController *illustratorViewController = [LScIllustratorViewController illustratorViewController];
+        _viewControllers = @[CVViewController, illustratorViewController];
     }
-    return _entities;
+    return _viewControllers;
 }
 
 @end
