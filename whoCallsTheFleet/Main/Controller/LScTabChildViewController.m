@@ -24,7 +24,7 @@
 
 @implementation LScTabChildViewController
 
-#pragma mark - 重写view生命周期方法
+#pragma mark - 重写Controller生命周期方法
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,13 +32,22 @@
     //设置item图标
     self.tabBarItem.image = [[UIImage imageNamed:self.controllerAttribute.itemIconName] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     
+    //添加屏幕边缘右滑响应
+    UIScreenEdgePanGestureRecognizer *screenEdgePanGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(otherMenuViewRightSwipe)];
+    screenEdgePanGestureRecognizer.edges = UIRectEdgeLeft;
+    self.screenEdgePanGestureRecognizer = screenEdgePanGestureRecognizer;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
     //左上角添加按钮
     UIBarButtonItem *otherBtnItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"otherItem"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStyleDone target:self action:@selector(otherMenuBtnItemDidClick)];
     self.otherBtnItem = otherBtnItem;
     
     //设置该按钮属性
     self.navigationItem.leftBarButtonItem = self.otherBtnItem;
-    
     //创建侧边菜单栏
     LSvOtherMenuView *otherMenuView = [LSvOtherMenuView otherMenuView];
     self.otherMenuView = otherMenuView;
@@ -46,22 +55,19 @@
     self.otherMenuView.delegate = self;
     //添加至View
     [self.navigationController.view addSubview:self.otherMenuView];
-    
-    //添加屏幕边缘右滑响应
-    UIScreenEdgePanGestureRecognizer *screenEdgePanGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(otherMenuViewRightSwipe)];
-    screenEdgePanGestureRecognizer.edges = UIRectEdgeLeft;
-    [self.view addGestureRecognizer:screenEdgePanGestureRecognizer];
+    //修正frame
+    [self layoutOtherMenuView];
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewWillDisappear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
+    [super viewWillDisappear:animated];
     
-    //切换页面时收回侧边栏
-    self.otherMenuView.transform = CGAffineTransformMakeTranslation(0, 0);
-    self.otherMenuView.open = NO;
-    //释放遮罩按钮
     [self freeMaskBtn];
+    self.otherBtnItem                       = nil;
+    [self.otherMenuView removeFromSuperview];
+    self.otherMenuView.controllerAttributes = nil;
+    self.otherMenuView                      = nil;
 }
 
 #pragma mark - 回调方法
@@ -105,6 +111,7 @@
             //创建遮罩按钮
             UIButton *maskButton = [UIButton buttonWithType:UIButtonTypeCustom];
             self.maskBtn = maskButton;
+            self.maskBtn.backgroundColor = [UIColor redColor];
             [self.navigationController.view addSubview:self.maskBtn];
             [self.navigationController.view bringSubviewToFront:self.maskBtn];
             //设置遮罩按钮frame

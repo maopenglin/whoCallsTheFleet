@@ -19,17 +19,4 @@
     // Do any additional setup after loading the view.
 }
 
-/**
- *  重写子控件布局方法
- */
-- (void)viewDidLayoutSubviews
-{
-    [super viewDidLayoutSubviews];
-    //单次执行以下代码
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [self layoutOtherMenuView];
-    });
-}
-
 @end

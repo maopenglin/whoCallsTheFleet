@@ -65,11 +65,6 @@
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
-    //单次执行以下代码
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [self layoutOtherMenuView];
-    });
     
     CGFloat Y = self.navigationController.navigationBar.frame.size.height;
     CGFloat H = self.view.frame.size.height - 88;

@@ -71,7 +71,6 @@
 		1D7547A21C983DF0009AB38C /* ship_types.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D0FB59D1C81D4F6005A1D30 /* ship_types.json */; };
 		1D7547A31C983DF0009AB38C /* ships.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D0FB59E1C81D4F6005A1D30 /* ships.json */; };
 		1D7547A41C983DF0009AB38C /* updates.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D0FB59F1C81D4F6005A1D30 /* updates.json */; };
-		1D7547AB1C9857D4009AB38C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 1D7547AA1C9857D4009AB38C /* README.md */; };
 		1D9AEABD1C96A7680030FCEE /* LSvEntitiesCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9AEABC1C96A7680030FCEE /* LSvEntitiesCollectionViewFlowLayout.m */; };
 		1D9AEAC01C96A8310030FCEE /* LSvEntitiesCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9AEABF1C96A8310030FCEE /* LSvEntitiesCollectionView.m */; };
 		1DE61CA01C92A9B700C81882 /* LSvTPCalculatorCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE61C9F1C92A9B700C81882 /* LSvTPCalculatorCountView.m */; };
@@ -11047,7 +11046,6 @@
 				1D0FBF781C81D501005A1D30 /* LScFleetViewController.m in Sources */,
 				1D0FBF791C81D501005A1D30 /* NSArray+LSJson.m in Sources */,
 				1D3E41311C8593B400FBDB77 /* LScOptionViewController.m in Sources */,
-				1D7547AB1C9857D4009AB38C /* README.md in Sources */,
 				1DED6C251C9152A600C90CC2 /* LSvTPCalculatorView.m in Sources */,
 				1DE61CA71C92E8BD00C81882 /* LSmTPCalculatorCount.m in Sources */,
 				1D0FBF931C81D501005A1D30 /* LSmShipTypes.m in Sources */,
