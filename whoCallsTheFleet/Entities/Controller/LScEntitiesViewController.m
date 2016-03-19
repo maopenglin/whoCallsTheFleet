@@ -11,9 +11,6 @@
 #import "LScCVViewController.h"
 #import "LScIllustratorViewController.h"
 
-#import "LSmEntities.h"
-#import "LSmEntitiesRelation.h"
-
 #import "LSvEntitiesCollectionView.h"
 #import "LSvEntitiesCollectionViewCell.h"
 
@@ -22,7 +19,6 @@
 @property (nonatomic, weak) UISegmentedControl *segmentedControl;
 @property (nonatomic, weak) UICollectionView *mainCollectionView;
 //模型数据
-//@property (nonatomic, strong) NSArray<NSArray<LSmEntities *> *> *entities;
 @property (nonatomic, strong) NSArray<UIViewController *> *viewControllers;
 
 @end
@@ -54,8 +50,10 @@
     self.mainCollectionView.delegate   = self;
     //注册Cell
     [self.mainCollectionView registerClass:[LSvEntitiesCollectionViewCell class] forCellWithReuseIdentifier:LSIdentifierEntitiesMainCell];
+    //绑定手势
+    [self.mainCollectionView addGestureRecognizer:self.screenEdgePanGestureRecognizer];
 
-    //默认选中“声优”页
+//    默认选中“声优”页
     self.segmentedControl.selectedSegmentIndex = 0;
     [self segmentedControlValueChanged:self.segmentedControl];
 }
@@ -98,13 +96,18 @@
     
     cell.entitiesVc = self.viewControllers[indexPath.item];
     
-//    cell.backgroundColor = [UIColor clearColor];
-    cell.backgroundColor = LSColorRandom;
+    cell.backgroundColor = [UIColor clearColor];
+//    cell.backgroundColor = LSColorRandom;
     
     return cell;
 }
 
 #pragma mark - Collection View Delegate
+
+- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.segmentedControl.selectedSegmentIndex = !(indexPath.item);
+}
 
 #pragma mark - Lazy Load
 

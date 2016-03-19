@@ -51,6 +51,7 @@
     //创建侧边菜单栏
     LSvOtherMenuView *otherMenuView = [LSvOtherMenuView otherMenuView];
     self.otherMenuView = otherMenuView;
+    self.otherMenuView.open = NO;
     //设置代理
     self.otherMenuView.delegate = self;
     //添加至View
@@ -63,11 +64,18 @@
 {
     [super viewWillDisappear:animated];
     
+    //释放侧栏菜单遮罩按钮
     [self freeMaskBtn];
-    self.otherBtnItem                       = nil;
-    [self.otherMenuView removeFromSuperview];
-    self.otherMenuView.controllerAttributes = nil;
-    self.otherMenuView                      = nil;
+    //释放顶部侧栏菜单按钮
+    if (self.otherBtnItem) {
+        self.navigationItem.leftBarButtonItem   = nil;
+    }
+    //释放侧栏菜单
+    if (self.otherMenuView) {
+        [self.otherMenuView removeFromSuperview];
+        self.otherMenuView.controllerAttributes = nil;
+        self.otherMenuView                      = nil;
+    }
 }
 
 #pragma mark - 回调方法
@@ -99,12 +107,12 @@
         [self.navigationController.view bringSubviewToFront:self.otherMenuView];
         //菜单按钮不可用
         self.otherBtnItem.enabled = NO;
+        self.otherMenuView.open = YES;
         //动画
         [UIView animateWithDuration:0.5 animations:^{
             //菜单平移展开
             self.otherMenuView.transform = CGAffineTransformMakeTranslation([UIScreen mainScreen].bounds.size.width * 0.3, 0);
         } completion:^(BOOL finished) {
-            self.otherMenuView.open = YES;
             //菜单按钮可用
             self.otherBtnItem.enabled = YES;
             
@@ -130,7 +138,11 @@
   */
 - (void)maskBtnDidClick
 {
-    [self otherMenuBtnItemDidClick];
+    if (self.otherMenuView.isOpen) {
+        [self otherMenuBtnItemDidClick];
+    } else {
+        [self freeMaskBtn];
+    }
 }
 /**
  *  释放遮罩按钮的回调方法

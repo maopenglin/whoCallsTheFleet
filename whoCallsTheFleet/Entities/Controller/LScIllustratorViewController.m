@@ -10,7 +10,8 @@
 
 #import "LSmEntities.h"
 #import "LSmEntitiesRelation.h"
-#import "LSmName.h"
+
+#import "LSvIllustratorCell.h"
 
 @interface LScIllustratorViewController ()
 
@@ -23,11 +24,8 @@
 + (instancetype)illustratorViewController
 {
     UIStoryboard *illustratorSb = [UIStoryboard storyboardWithName:@"LScIllustratorViewController" bundle:nil];
+    
     return illustratorSb.instantiateInitialViewController;
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
 }
 
 #pragma mark - Table view data source
@@ -36,11 +34,18 @@
     return self.illustrators.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:LSIdentifierEntitiesIllustratorCell forIndexPath:indexPath];
+    LSvIllustratorCell *cell = [tableView dequeueReusableCellWithIdentifier:LSIdentifierEntitiesIllustratorCell forIndexPath:indexPath];
     
-    cell.textLabel.text = self.illustrators[indexPath.row].name.zhCn;
+    cell.illustrator = self.illustrators[indexPath.row];
     
     return cell;
+}
+
+#pragma mark - Table View Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%s", __FUNCTION__);
 }
 
 /*
@@ -57,7 +62,7 @@
 
 - (NSArray<LSmEntities *> *)illustrators
 {
-    if (_illustrators) {
+    if (!_illustrators) {
         //获取数据
         NSArray<LSmEntities *> *tempArr = [LSmEntities entities];
         //新建空的数组
