@@ -11,6 +11,7 @@
 #import "LSmEntities.h"
 #import "LSmEntitiesPicture.h"
 #import "LSmName.h"
+#import "LSmControllerAttributes.h"
 
 @interface LSvCVCell ()
 
@@ -21,19 +22,18 @@
 
 @implementation LSvCVCell
 
+- (void)awakeFromNib
+{
+
+    self.nameLbl.textColor = LSSingleton(LSkControllerTypeEntities).color;
+}
+
 - (void)setCV:(LSmEntities *)CV
 {
     _CV = CV;
     
     self.iconView.image = [UIImage imageWithData:CV.picture.avatar];
     self.nameLbl.text = CV.name.zhCn;
-}
-
-- (void)setColor:(UIColor *)color
-{
-    _color = color;
-    
-    self.nameLbl.textColor = color;
 }
 
 @end

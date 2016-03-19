@@ -16,8 +16,6 @@
 @property (nonatomic, weak) IBOutlet UILabel *titleLbl;
 @property (nonatomic, weak) IBOutlet UILabel *countLbl;
 
-//色彩
-@property (nonatomic, strong) UIColor *color;
 //模型
 @property (nonatomic, strong) LSmTPCalculatorCount *TPCalculatorCount;
 

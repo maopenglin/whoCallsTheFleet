@@ -10,7 +10,6 @@
 
 @interface LScIllustratorViewController : UITableViewController
 
-@property (nonatomic, strong) UIColor *color;
 /**
  *  快速创建
  */

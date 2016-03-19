@@ -12,7 +12,6 @@
 
 @interface LSvTPCalculatorView : UIView
 
-@property (nonatomic, strong) UIColor *color;
 //控件连线
 @property (nonatomic, weak) IBOutlet TTTAttributedLabel *bottomLabel;
 @property (nonatomic, weak) IBOutlet UIView *middleView;

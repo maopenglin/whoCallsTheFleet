@@ -43,6 +43,9 @@
 #define LSIdentifierEntitiesCVCell @"entitiesCVCell"
 #define LSIdentifierEntitiesIllustratorCell @"entitiesIllustratorCell"
 
+//Singleton
+#define LSSingleton(controllerType) [LSmControllerAttributes sharedControllerAttributes][controllerType]
+
 
 #endif /* Objective-C define */
 

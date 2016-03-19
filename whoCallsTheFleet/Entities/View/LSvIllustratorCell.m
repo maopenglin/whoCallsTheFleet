@@ -10,6 +10,7 @@
 
 #import "LSmEntities.h"
 #import "LSmName.h"
+#import "LSmControllerAttributes.h"
 
 @interface LSvIllustratorCell ()
 
@@ -20,20 +21,17 @@
 
 @implementation LSvIllustratorCell
 
+- (void)awakeFromNib
+{
+    self.nameLbl.textColor        = LSSingleton(LSkControllerTypeEntities).color;
+    self.lineView.backgroundColor = LSSingleton(LSkControllerTypeEntities).color;
+}
+
 - (void)setIllustrator:(LSmEntities *)illustrator
 {
     _illustrator = illustrator;
     
     self.nameLbl.text = illustrator.name.zhCn;
-}
-
-- (void)setColor:(UIColor *)color
-{
-    _color = color;
-    
-    self.nameLbl.textColor        = color;
-    self.lineView.backgroundColor = color;
-//    self.tintColor  = color;
 }
 
 @end

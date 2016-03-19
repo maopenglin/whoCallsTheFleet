@@ -117,9 +117,7 @@
         //创建控制器
         LScCVViewController *CVViewController = [LScCVViewController CVViewController];
         LScIllustratorViewController *illustratorViewController = [LScIllustratorViewController illustratorViewController];
-        //赋值
-        CVViewController.color          = self.controllerAttribute.color;
-        illustratorViewController.color = self.controllerAttribute.color;
+
         //存放于数组
         _viewControllers = @[CVViewController, illustratorViewController];
     }

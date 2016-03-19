@@ -67,7 +67,6 @@
 
     //赋值
     cell.optionItem               = self.options[indexPath.section].items[indexPath.row];
-    cell.color                    = self.controllerAttribute.color;
     cell.LSbAccessoryValueChanged = ^(NSString *value){
         //收回键盘
         [self.tableView endEditing:YES];

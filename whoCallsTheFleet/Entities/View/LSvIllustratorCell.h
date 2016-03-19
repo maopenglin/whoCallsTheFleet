@@ -12,7 +12,6 @@
 
 @interface LSvIllustratorCell : UITableViewCell
 
-@property (nonatomic, strong) UIColor *color;
 @property (nonatomic, strong) LSmEntities *illustrator;
 
 @end

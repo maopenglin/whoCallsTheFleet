@@ -8,11 +8,12 @@
 
 #import "LSvTPCalculatorView.h"
 
+#import "LSmControllerAttributes.h"
+
 @interface LSvTPCalculatorView ()
 
 //控件连线
 @property (nonatomic, weak) IBOutlet UILabel *topLabel;
-
 
 @end
 
@@ -28,14 +29,10 @@
     return TPCalculatorView;
 }
 
-#pragma mark - 重写set方法
-
-- (void)setColor:(UIColor *)color
+- (void)awakeFromNib
 {
-    _color = color;
-    
-    self.topLabel.textColor    = color;
-    self.resultLabel.textColor = color;
+    self.topLabel.textColor    = LSSingleton(LSkControllerTypeTPCalculator).color;
+    self.resultLabel.textColor = LSSingleton(LSkControllerTypeTPCalculator).color;
 }
 
 @end

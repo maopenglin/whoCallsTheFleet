@@ -41,7 +41,6 @@
     LSvCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:LSIdentifierEntitiesCVCell forIndexPath:indexPath];
     
     cell.CV    = self.CVs[indexPath.item];
-    cell.color = self.color;
     
     return cell;
 }

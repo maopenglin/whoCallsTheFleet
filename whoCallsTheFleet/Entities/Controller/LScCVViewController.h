@@ -10,7 +10,6 @@
 
 @interface LScCVViewController : UICollectionViewController
 
-@property (nonatomic, strong) UIColor *color;
 //快速创建
 + (instancetype)CVViewController;
 

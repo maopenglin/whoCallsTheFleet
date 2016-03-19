@@ -8,6 +8,7 @@
 
 #import "LSvTPCalculatorCountView.h"
 #import "LSmTPCalculatorCount.h"
+#import "LSmControllerAttributes.h"
 
 @interface LSvTPCalculatorCountView ()
 
@@ -55,16 +56,12 @@
     
     self.titleLbl.text = TPCalculatorCount.title;
     self.countLbl.text = TPCalculatorCount.count;
-}
-- (void)setColor:(UIColor *)color
-{
-    _color = color;
     
-    self.titleLbl.textColor = color;
-    self.countLbl.textColor = color;
+    self.titleLbl.textColor = LSSingleton(LSkControllerTypeTPCalculator).color;
+    self.countLbl.textColor = LSSingleton(LSkControllerTypeTPCalculator).color;
     
-    [self.addBtn setTitleColor:color forState:UIControlStateNormal];
-    [self.subBtn setTitleColor:color forState:UIControlStateNormal];
+    [self.addBtn setTitleColor:LSSingleton(LSkControllerTypeTPCalculator).color forState:UIControlStateNormal];
+    [self.subBtn setTitleColor:LSSingleton(LSkControllerTypeTPCalculator).color forState:UIControlStateNormal];
 }
 
 @end

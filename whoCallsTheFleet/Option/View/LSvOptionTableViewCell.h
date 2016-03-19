@@ -14,8 +14,6 @@
 
 //数据模型
 @property (nonatomic, strong) LSmOptionItem *optionItem;
-//主题色
-@property (nonatomic, strong) UIColor *color;
 
 //子控件
 @property (nonatomic, weak) UITextField *accessoryTxt;

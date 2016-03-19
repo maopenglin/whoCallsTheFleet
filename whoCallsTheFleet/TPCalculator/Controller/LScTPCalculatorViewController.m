@@ -34,8 +34,6 @@
     LSvTPCalculatorView *TPCalculatorView = [LSvTPCalculatorView TPCalculatorView];
     self.TPCalculatorView = TPCalculatorView;
     [self.navigationController.view addSubview:self.TPCalculatorView];
-    //赋值
-    self.TPCalculatorView.color = self.controllerAttribute.color;
     
     //显示计算结果
     [self reloadCalculatorResult];
@@ -52,7 +50,6 @@
         TPCalculatorCountView.frame = CGRectMake(countViewX, countViewY, countViewW, countViewH);
         //赋值
         TPCalculatorCountView.TPCalculatorCount = self.TPCalculatorCounts[i];
-        TPCalculatorCountView.color             = self.controllerAttribute.color;
         TPCalculatorCountView.LSbCountChanged   = ^(NSString *count){
             //更新数据
             self.TPCalculatorCounts[i].count = count;
