@@ -27,4 +27,13 @@
     self.nameLbl.text = illustrator.name.zhCn;
 }
 
+- (void)setColor:(UIColor *)color
+{
+    _color = color;
+    
+    self.nameLbl.textColor        = color;
+    self.lineView.backgroundColor = color;
+//    self.tintColor  = color;
+}
+
 @end

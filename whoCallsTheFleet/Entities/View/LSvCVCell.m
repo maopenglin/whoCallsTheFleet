@@ -29,4 +29,11 @@
     self.nameLbl.text = CV.name.zhCn;
 }
 
+- (void)setColor:(UIColor *)color
+{
+    _color = color;
+    
+    self.nameLbl.textColor = color;
+}
+
 @end

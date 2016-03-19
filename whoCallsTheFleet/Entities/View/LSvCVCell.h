@@ -12,6 +12,7 @@
 
 @interface LSvCVCell : UICollectionViewCell
 
+@property (nonatomic, strong) UIColor *color;
 @property (nonatomic, strong) LSmEntities *CV;
 
 @end

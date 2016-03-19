@@ -14,6 +14,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.92890625000000004" green="0.28359858469999999" blue="0.3796482222" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -24,22 +25,36 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGC-Bn-yDO">
-                                            <rect key="frame" x="8" y="16" width="271" height="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxx" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGC-Bn-yDO">
+                                            <rect key="frame" x="38" y="16" width="241" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="1" green="0.70920765190000001" blue="0.19981646089999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbT-Ot-v5L">
+                                            <rect key="frame" x="15" y="48" width="257" height="2"/>
+                                            <color key="backgroundColor" red="1" green="0.70920765190000001" blue="0.19981646089999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="2" id="9q8-3g-9UR"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="ZGC-Bn-yDO" firstAttribute="centerY" secondItem="vwY-sv-ThT" secondAttribute="centerY" id="DEV-Uk-L1Z"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ZGC-Bn-yDO" secondAttribute="trailing" id="bSX-07-dkJ"/>
-                                        <constraint firstItem="ZGC-Bn-yDO" firstAttribute="leading" secondItem="vwY-sv-ThT" secondAttribute="leadingMargin" id="jIY-Lp-t0F"/>
+                                        <constraint firstItem="ZGC-Bn-yDO" firstAttribute="leading" secondItem="vwY-sv-ThT" secondAttribute="leadingMargin" constant="30" id="jIY-Lp-t0F"/>
+                                        <constraint firstAttribute="trailing" secondItem="hbT-Ot-v5L" secondAttribute="trailing" constant="15" id="nnn-l2-Z5V"/>
+                                        <constraint firstAttribute="bottom" secondItem="hbT-Ot-v5L" secondAttribute="bottom" id="u0j-Cb-p3o"/>
+                                        <constraint firstItem="hbT-Ot-v5L" firstAttribute="leading" secondItem="vwY-sv-ThT" secondAttribute="leading" constant="15" id="xZ4-9j-2dY"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="0.70920765190000001" blue="0.19981646089999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <outlet property="lineView" destination="hbT-Ot-v5L" id="7sE-Do-zzM"/>
                                     <outlet property="nameLbl" destination="ZGC-Bn-yDO" id="TSi-Uq-92Q"/>
                                 </connections>
                             </tableViewCell>
@@ -52,7 +67,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g2v-wZ-1kY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="272.5333333333333" y="-14.199999999999999"/>
+            <point key="canvasLocation" x="272" y="-15"/>
         </scene>
     </scenes>
 </document>

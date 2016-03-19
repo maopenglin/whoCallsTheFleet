@@ -37,6 +37,8 @@
     LSvIllustratorCell *cell = [tableView dequeueReusableCellWithIdentifier:LSIdentifierEntitiesIllustratorCell forIndexPath:indexPath];
     
     cell.illustrator = self.illustrators[indexPath.row];
+    cell.color       = self.color;
+    cell.tintColor   = self.color;
     
     return cell;
 }

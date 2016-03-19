@@ -97,7 +97,6 @@
     cell.entitiesVc = self.viewControllers[indexPath.item];
     
     cell.backgroundColor = [UIColor clearColor];
-//    cell.backgroundColor = LSColorRandom;
     
     return cell;
 }
@@ -115,8 +114,13 @@
 {
     if (!_viewControllers) {
         
-        UIViewController *CVViewController = [LScCVViewController CVViewController];
-        UIViewController *illustratorViewController = [LScIllustratorViewController illustratorViewController];
+        //创建控制器
+        LScCVViewController *CVViewController = [LScCVViewController CVViewController];
+        LScIllustratorViewController *illustratorViewController = [LScIllustratorViewController illustratorViewController];
+        //赋值
+        CVViewController.color          = self.controllerAttribute.color;
+        illustratorViewController.color = self.controllerAttribute.color;
+        //存放于数组
         _viewControllers = @[CVViewController, illustratorViewController];
     }
     return _viewControllers;
