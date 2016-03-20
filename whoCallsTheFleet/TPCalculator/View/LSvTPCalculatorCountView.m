@@ -57,11 +57,11 @@
     self.titleLbl.text = TPCalculatorCount.title;
     self.countLbl.text = TPCalculatorCount.count;
     
-    self.titleLbl.textColor = LSSingleton(LSkControllerTypeTPCalculator).color;
-    self.countLbl.textColor = LSSingleton(LSkControllerTypeTPCalculator).color;
+    self.titleLbl.textColor = LSSingletonControllerAttributes(LSkControllerTypeTPCalculator).color;
+    self.countLbl.textColor = LSSingletonControllerAttributes(LSkControllerTypeTPCalculator).color;
     
-    [self.addBtn setTitleColor:LSSingleton(LSkControllerTypeTPCalculator).color forState:UIControlStateNormal];
-    [self.subBtn setTitleColor:LSSingleton(LSkControllerTypeTPCalculator).color forState:UIControlStateNormal];
+    [self.addBtn setTitleColor:LSSingletonControllerAttributes(LSkControllerTypeTPCalculator).color forState:UIControlStateNormal];
+    [self.subBtn setTitleColor:LSSingletonControllerAttributes(LSkControllerTypeTPCalculator).color forState:UIControlStateNormal];
 }
 
 @end

@@ -9,15 +9,14 @@
 #import "AppDelegate.h"
 
 #import "LScTabBarController.h"
-#import "LScBaseNavigationController.h"
 #import "LScBaseViewController.h"
+#import "LScBaseNavigationController.h"
 
 #import "LSmControllerAttributes.h"
 
 @interface AppDelegate ()<UITabBarControllerDelegate>
 
 @property (nonatomic, strong) LScTabBarController *tabBarVc;
-@property (nonatomic, strong) UIImage *backgroundImage;
 
 @end
 
@@ -63,7 +62,7 @@
     //设置前景图片
     //设置前景变暗淡出效果
     __block UIImageView *backgroundImgView = [[UIImageView alloc] initWithFrame:self.window.bounds];
-    backgroundImgView.image = self.backgroundImage;
+    backgroundImgView.image = LSSingletonControllerAttributes(kNilOptions).backgroundImage;
     backgroundImgView.contentMode = UIViewContentModeScaleAspectFill;
     [self.window addSubview:backgroundImgView];
     //暗色效果
@@ -98,7 +97,7 @@
 - (void)addchildVCWithType:(LSkControllerType)controllerType{
     
     //创建包装好的控制器
-    LScBaseNavigationController *navVc = [[LScBaseNavigationController alloc] initWithType:controllerType AndBackgroundImage:self.backgroundImage];
+    LScBaseNavigationController *navVc = [[LScBaseNavigationController alloc] initWithType:controllerType];
     
     //添加至tabBar控制器
     [self.tabBarVc addChildViewController:navVc];
@@ -118,19 +117,6 @@
 {
     //对参数做两次类型转换获取属性值并做设置
     viewController.tabBarController.tabBar.tintColor = ((LScBaseViewController *)((LScBaseNavigationController *)viewController).viewControllers.lastObject).controllerAttribute.color;
-}
-
-#pragma mark - Lazy Load
-
-- (UIImage *)backgroundImage
-{
-    if (!_backgroundImage) {
-        //随机选取背景图片
-        int rndNum = arc4random()%15;
-        NSString *imageName = [NSString stringWithFormat:@"tbg%d",rndNum];
-        _backgroundImage = [UIImage imageNamed:imageName];
-    }
-    return _backgroundImage;
 }
 
 @end

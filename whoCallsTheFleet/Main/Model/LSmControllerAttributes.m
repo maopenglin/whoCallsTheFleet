@@ -19,6 +19,23 @@
 #import "LScPatchNoteViewController.h"
 #import "LScAboutViewController.h"
 
+@interface LSmControllerAttributes ()
+
+//控制器类型
+@property (nonatomic, assign) LSkControllerType controllerType;
+//控制器的类
+@property (nonatomic, assign) Class controllerClass;
+//控制器的标题
+@property (nonatomic, copy) NSString *title;
+//控制器的主题色
+@property (nonatomic, strong) UIColor *color;
+//控制器的图标
+@property (nonatomic, copy) NSString *itemIconName;
+//控制器背景图片
+@property (nonatomic, strong) UIImage *backgroundImage;
+
+@end
+
 @implementation LSmControllerAttributes
 
 +(NSArray<LSmControllerAttributes *> *)sharedControllerAttributes
@@ -27,6 +44,8 @@
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        
+        /*** 赋值特有属性 ***/
         //TabVc子控制器
         LSmControllerAttributes *fleetControllerAtt    = [[LSmControllerAttributes alloc] init];
         LSmControllerAttributes *shipsControllerAtt    = [[LSmControllerAttributes alloc] init];
@@ -108,6 +127,15 @@
                                 optionControllerAtt,
                                 patchNoteControllerAtt,
                                 aboutControllerAtt];
+        
+        /*** 赋值共有属性 ***/
+        //随机选取背景图片
+        int rndNum = arc4random()%15;
+        NSString *imageName = [NSString stringWithFormat:@"tbg%d",rndNum];
+        //设置背景图
+        [controllerAttributes enumerateObjectsUsingBlock:^(LSmControllerAttributes * _Nonnull controllerAtt, NSUInteger idx, BOOL * _Nonnull stop) {
+            controllerAtt.backgroundImage = [UIImage imageNamed:imageName];
+        }];
     });
     
     return controllerAttributes;

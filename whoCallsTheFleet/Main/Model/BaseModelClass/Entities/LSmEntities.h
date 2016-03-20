@@ -12,15 +12,14 @@
 
 @interface LSmEntities : NSObject
 
-@property (strong, nonatomic) LSmName *name;
-@property (strong, nonatomic) NSNumber *id;
-@property (strong, nonatomic) LSmEntitiesPicture *picture;
-@property (strong, nonatomic) NSArray<LSmLink *> *links;
-@property (strong, nonatomic) LSmEntitiesRelation *relation;
-//@property (copy, nonatomic) NSString *_id;
+@property (strong, nonatomic, readonly) LSmName *name;
+@property (strong, nonatomic, readonly) NSNumber *id;
+@property (strong, nonatomic, readonly) LSmEntitiesPicture *picture;
+@property (strong, nonatomic, readonly) NSArray<LSmLink *> *links;
+@property (strong, nonatomic, readonly) LSmEntitiesRelation *relation;
 
-//生成模型
-+ (NSArray<LSmEntities *> *)entities;
+//生成模型（单例
++ (NSArray<LSmEntities *> *)sharedEntities;
 
 //构造方法
 + (instancetype) entitiesWithDict:(NSDictionary *)dict;

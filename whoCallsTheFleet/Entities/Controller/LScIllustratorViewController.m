@@ -7,6 +7,8 @@
 //
 
 #import "LScIllustratorViewController.h"
+#import "LScBaseNavigationController.h"
+#import "LScShowEntitiesViewController.h"
 
 #import "LSmEntities.h"
 #import "LSmEntitiesRelation.h"
@@ -45,7 +47,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"LScShowEntitiesViewController" bundle:nil];
+//    LScShowEntitiesViewController *showEntitiesVc = sb.instantiateInitialViewController;
+//    LScBaseNavigationController *navVc = [LScBaseNavigationController alloc] initWithType:LSkControllerTypeEntities AndBackgroundImage:<#(UIImage *)#>;
+//    showEntitiesVc.controllerAttribute = LSSingletonControllerAttributes(LSkControllerTypeEntities);
     NSLog(@"%s", __FUNCTION__);
+    LSLog(@"%ld",indexPath.row);
 }
 
 /*
@@ -63,11 +70,9 @@
 - (NSArray<LSmEntities *> *)illustrators
 {
     if (!_illustrators) {
-        //获取数据
-        NSArray<LSmEntities *> *tempArr = [LSmEntities entities];
         //新建空的数组
         NSMutableArray<LSmEntities *> *illustratorArr = [NSMutableArray array];
-        for (LSmEntities *entities in tempArr) {
+        for (LSmEntities *entities in LSSingletonEntities) {
             if (entities.relation.illustrator) {
                 [illustratorArr addObject:entities];
             }

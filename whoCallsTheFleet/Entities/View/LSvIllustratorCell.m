@@ -23,8 +23,8 @@
 
 - (void)awakeFromNib
 {
-    self.nameLbl.textColor        = LSSingleton(LSkControllerTypeEntities).color;
-    self.lineView.backgroundColor = LSSingleton(LSkControllerTypeEntities).color;
+    self.nameLbl.textColor        = LSSingletonControllerAttributes(LSkControllerTypeEntities).color;
+    self.lineView.backgroundColor = LSSingletonControllerAttributes(LSkControllerTypeEntities).color;
 }
 
 - (void)setIllustrator:(LSmEntities *)illustrator

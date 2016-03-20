@@ -28,15 +28,17 @@ typedef NS_ENUM (NSUInteger, LSkControllerType){
 @interface LSmControllerAttributes : NSObject
 
 //控制器类型
-@property (nonatomic, assign) LSkControllerType controllerType;
+@property (nonatomic, assign, readonly) LSkControllerType controllerType;
 //控制器的类
-@property (nonatomic, assign) Class controllerClass;
+@property (nonatomic, assign, readonly) Class controllerClass;
 //控制器的标题
-@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy, readonly) NSString *title;
 //控制器的主题色
-@property (nonatomic, strong) UIColor *color;
+@property (nonatomic, strong, readonly) UIColor *color;
 //控制器的图标
-@property (nonatomic, copy) NSString *itemIconName;
+@property (nonatomic, copy, readonly) NSString *itemIconName;
+//控制器背景图片
+@property (nonatomic, strong, readonly) UIImage *backgroundImage;
 
 /**
  *  返回一个控制器属性组成的数组（单例

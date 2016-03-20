@@ -25,7 +25,7 @@
 - (void)awakeFromNib
 {
 
-    self.nameLbl.textColor = LSSingleton(LSkControllerTypeEntities).color;
+    self.nameLbl.textColor = LSSingletonControllerAttributes(LSkControllerTypeEntities).color;
 }
 
 - (void)setCV:(LSmEntities *)CV

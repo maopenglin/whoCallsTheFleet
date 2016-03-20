@@ -13,17 +13,33 @@
 #import "LSmEntitiesRelation.h"
 #import "NSArray+LSJson.h"
 
+@interface LSmEntities ()
+
+@property (strong, nonatomic) LSmName *name;
+@property (strong, nonatomic) NSNumber *id;
+@property (strong, nonatomic) LSmEntitiesPicture *picture;
+@property (strong, nonatomic) NSArray<LSmLink *> *links;
+@property (strong, nonatomic) LSmEntitiesRelation *relation;
+
+@end
+
 @implementation LSmEntities
 
-+(NSArray<LSmEntities *> *)entities
++(NSArray<LSmEntities *> *)sharedEntities
 {
-    NSArray *dictArr = [NSArray ls_arrayWithContentsOfJson:@"entities"];
-    NSMutableArray<LSmEntities *> *descArr = [NSMutableArray array];
+    static NSArray<LSmEntities *> *descArr = nil;
     
-    for (NSDictionary *dict in dictArr) {
-        LSmEntities *entities = [LSmEntities entitiesWithDict:dict];
-        [descArr addObject:entities];
-    }
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSArray *dictArr = [NSArray ls_arrayWithContentsOfJson:@"entities"];
+        NSMutableArray *tempArr = [NSMutableArray array];
+        for (NSDictionary *dict in dictArr) {
+            LSmEntities *entities = [LSmEntities entitiesWithDict:dict];
+            [tempArr addObject:entities];
+        }
+        descArr = tempArr;
+    });
+    
     return descArr;
 }
 
@@ -39,7 +55,6 @@
         self.picture  = [LSmEntitiesPicture entitiesPictureWithDict:dict[@"picture"]];
         self.links    = [LSmLink link:dict[@"links"]];
         self.relation = [LSmEntitiesRelation entitiesRelationWithDict:dict[@"relation"]];
-//        self._id      = dict[@"_id"];
     }
     return self;
 }

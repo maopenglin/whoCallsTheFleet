@@ -7,12 +7,12 @@
 //
 
 #import "LScBaseViewController.h"
-#import "LSvOtherMenuView.h"
+#import "LSvMenuView.h"
 
 @interface LScTabChildViewController : LScBaseViewController
 
 //侧边栏菜单
-@property (nonatomic, weak) LSvOtherMenuView *otherMenuView;
+@property (nonatomic, weak) LSvMenuView *menuView;
 //侧滑手势
 @property (nonatomic, strong) UIScreenEdgePanGestureRecognizer *screenEdgePanGestureRecognizer;
 
@@ -20,6 +20,6 @@
  *  导航栏左上角按钮绑定回调方法
  *  判断侧边菜单栏状态并执行动画（左滑右滑）动画过程中屏蔽呼出菜单按钮
  */
-- (void)otherMenuBtnItemDidClick;
+- (void)menuBtnItemDidClick;
 
 @end

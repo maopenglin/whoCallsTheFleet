@@ -8,6 +8,8 @@
 
 #import "LScBaseViewController.h"
 
+#import "LSmControllerAttributes.h"
+
 @interface LScBaseViewController ()
 
 @end

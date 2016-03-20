@@ -31,8 +31,8 @@
 
 - (void)awakeFromNib
 {
-    self.topLabel.textColor    = LSSingleton(LSkControllerTypeTPCalculator).color;
-    self.resultLabel.textColor = LSSingleton(LSkControllerTypeTPCalculator).color;
+    self.topLabel.textColor    = LSSingletonControllerAttributes(LSkControllerTypeTPCalculator).color;
+    self.resultLabel.textColor = LSSingletonControllerAttributes(LSkControllerTypeTPCalculator).color;
 }
 
 @end

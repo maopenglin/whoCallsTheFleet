@@ -40,7 +40,7 @@
 {
     LSvCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:LSIdentifierEntitiesCVCell forIndexPath:indexPath];
     
-    cell.CV    = self.CVs[indexPath.item];
+    cell.CV = self.CVs[indexPath.item];
     
     return cell;
 }
@@ -50,6 +50,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%s", __FUNCTION__);
+    LSLog(@"%ld",indexPath.item);
 }
 
 #pragma mark - Lazy Load
@@ -57,11 +58,9 @@
 - (NSArray<LSmEntities *> *)CVs
 {
     if (!_CVs) {
-        //获取数据
-        NSArray<LSmEntities *> *tempArr = [LSmEntities entities];
         //新建空的数组
         NSMutableArray<LSmEntities *> *CVArr = [NSMutableArray array];
-        for (LSmEntities *entities in tempArr) {
+        for (LSmEntities *entities in LSSingletonEntities) {
             if (entities.relation.cv) {
                 [CVArr addObject:entities];
             }

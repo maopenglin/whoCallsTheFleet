@@ -9,12 +9,6 @@
 #import "LScBaseNavigationController.h"
 #import "LScBaseViewController.h"
 
-@interface LScBaseNavigationController ()
-
-@property (nonatomic, strong) NSArray<LSmControllerAttributes *> *controllerAttributes;
-
-@end
-
 @implementation LScBaseNavigationController
 
 /**
@@ -32,10 +26,10 @@
 /**
  *  自定义构造方法
  */
-- (instancetype)initWithType:(LSkControllerType)controllerType AndBackgroundImage:(UIImage *)backgroundImage
+- (instancetype)initWithType:(LSkControllerType)controllerType
 {
     //获取数据模型
-    LSmControllerAttributes *controllerAttribute = self.controllerAttributes[controllerType];
+    LSmControllerAttributes *controllerAttribute = LSSingletonControllerAttributes(controllerType);
     //创建子控制器
     LScBaseViewController *vc = [[controllerAttribute.controllerClass alloc] init];
     //包装于导航控制器内
@@ -45,7 +39,7 @@
     
     //添加背景图片
     UIImageView *backgroundImgView = [[UIImageView alloc] initWithFrame:vc.view.bounds];
-    backgroundImgView.image = backgroundImage;
+    backgroundImgView.image = controllerAttribute.backgroundImage;
     vc.backgroundImgView = backgroundImgView;
     [vc.view addSubview:vc.backgroundImgView];
     
@@ -71,16 +65,6 @@
 //    }
 
     return navVc;
-}
-
-#pragma mark - Lazy Load
-
-- (NSArray<LSmControllerAttributes *> *)controllerAttributes
-{
-    if (!_controllerAttributes) {
-        _controllerAttributes = [LSmControllerAttributes sharedControllerAttributes];
-    }
-    return _controllerAttributes;
 }
 
 @end

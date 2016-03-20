@@ -6,8 +6,8 @@
 //  Copyright © 2016年 LarrySue. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "LScBaseViewController.h"
 
-@interface LScShowEntitiesViewController : UIViewController
+@interface LScShowEntitiesViewController : LScBaseViewController
 
 @end

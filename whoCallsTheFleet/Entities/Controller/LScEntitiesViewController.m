@@ -58,6 +58,45 @@
     [self segmentedControlValueChanged:self.segmentedControl];
 }
 
+//- (void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//    
+//    //创建分页collectionView
+//    LSvEntitiesCollectionView *mainCollectionView = [LSvEntitiesCollectionView entitiesCollectionViewWithCellSize:self.view.frame.size];
+//    self.mainCollectionView = mainCollectionView;
+//    [self.navigationController.view addSubview:self.mainCollectionView];
+//    //刷新显示
+//    [self.mainCollectionView reloadData];
+//    //代理
+//    self.mainCollectionView.dataSource = self;
+//    self.mainCollectionView.delegate   = self;
+//    //注册Cell
+//    [self.mainCollectionView registerClass:[LSvEntitiesCollectionViewCell class] forCellWithReuseIdentifier:LSIdentifierEntitiesMainCell];
+//    //绑定手势
+//    [self.mainCollectionView addGestureRecognizer:self.screenEdgePanGestureRecognizer];
+//    
+//    //    默认选中“声优”页
+//    self.segmentedControl.selectedSegmentIndex = 0;
+//    [self segmentedControlValueChanged:self.segmentedControl];
+//}
+//- (void)viewWillDisappear:(BOOL)animated
+//{
+//    [super viewWillDisappear:animated];
+//    
+//    //移除手势
+//    [self.mainCollectionView removeGestureRecognizer:self.screenEdgePanGestureRecognizer];
+//    //清除属性
+//    [self.viewControllers enumerateObjectsUsingBlock:^(UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        obj = nil;
+//    }];
+//    self.viewControllers = nil;
+//    //从父容器移除
+//    [self.mainCollectionView removeFromSuperview];
+//    //释放
+//    self.mainCollectionView = nil;
+//}
+
 #pragma mark - 重写布局方法
 
 - (void)viewDidLayoutSubviews
@@ -68,7 +107,7 @@
     CGFloat H = self.view.frame.size.height - 88;
     self.mainCollectionView.frame = CGRectMake(0, Y, self.view.frame.size.width, H);
     
-    [self.navigationController.view bringSubviewToFront:self.otherMenuView];
+    [self.navigationController.view bringSubviewToFront:self.menuView];
 }
 
 #pragma mark - 回调方法
@@ -76,8 +115,8 @@
 - (void)segmentedControlValueChanged:(UISegmentedControl *)segmentedControl
 {
     //若菜单栏展开 收回菜单栏
-    if (self.otherMenuView.isOpen) {
-        [self otherMenuBtnItemDidClick];
+    if (self.menuView.isOpen) {
+        [self menuBtnItemDidClick];
     }
     //滚动页面
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:segmentedControl.selectedSegmentIndex inSection:0];

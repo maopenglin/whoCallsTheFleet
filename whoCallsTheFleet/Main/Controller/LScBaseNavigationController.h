@@ -19,6 +19,6 @@
  *
  *  @return 包装后的导航控制器
  */
-- (instancetype)initWithType:(LSkControllerType)controllerType AndBackgroundImage:(UIImage *)backgroundImage;
+- (instancetype)initWithType:(LSkControllerType)controllerType;
 
 @end

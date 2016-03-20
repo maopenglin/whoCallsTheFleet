@@ -50,11 +50,12 @@
 		1D3E41311C8593B400FBDB77 /* LScOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E41301C8593B400FBDB77 /* LScOptionViewController.m */; };
 		1D3E41341C8593CF00FBDB77 /* LScTPCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E41331C8593CF00FBDB77 /* LScTPCalculatorViewController.m */; };
 		1D4019E91C871842003D71D3 /* LSvOptionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4019E71C871842003D71D3 /* LSvOptionTableView.m */; };
-		1D681D481C830639004B5FAE /* LSvOtherMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D681D471C830639004B5FAE /* LSvOtherMenuView.m */; };
+		1D406D211C9E4ED300A1D225 /* LScShowEntitiesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D406D201C9E4ED300A1D225 /* LScShowEntitiesViewController.storyboard */; };
+		1D681D481C830639004B5FAE /* LSvMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D681D471C830639004B5FAE /* LSvMenuView.m */; };
 		1D6FB21B1C821A2B007F9A9F /* LScBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FB21A1C821A2B007F9A9F /* LScBaseViewController.m */; };
 		1D7547931C983D49009AB38C /* LSvTPCalculatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DED6C241C9152A600C90CC2 /* LSvTPCalculatorView.xib */; };
 		1D7547941C983D49009AB38C /* LSvTPCalculatorCountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DE61CA11C92A9C300C81882 /* LSvTPCalculatorCountView.xib */; };
-		1D7547951C983D49009AB38C /* LSvOtherMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D133DC91C84173E007D4F13 /* LSvOtherMenuView.xib */; };
+		1D7547951C983D49009AB38C /* LSvMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D133DC91C84173E007D4F13 /* LSvMenuView.xib */; };
 		1D7547961C983D86009AB38C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D5024341C3FCA120053FA71 /* Assets.xcassets */; };
 		1D7547971C983DEF009AB38C /* arsenal_all.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D0FB5921C81D4F6005A1D30 /* arsenal_all.json */; };
 		1D7547981C983DF0009AB38C /* arsenal_weekday.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D0FB5931C81D4F6005A1D30 /* arsenal_weekday.json */; };
@@ -177,7 +178,7 @@
 		1D0FC6591C81D8BF005A1D30 /* LScItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScItemsViewController.m; sourceTree = "<group>"; };
 		1D0FC65B1C81D8D3005A1D30 /* LScShipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LScShipsViewController.h; sourceTree = "<group>"; };
 		1D0FC65C1C81D8D3005A1D30 /* LScShipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScShipsViewController.m; sourceTree = "<group>"; };
-		1D133DC91C84173E007D4F13 /* LSvOtherMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSvOtherMenuView.xib; sourceTree = "<group>"; };
+		1D133DC91C84173E007D4F13 /* LSvMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSvMenuView.xib; sourceTree = "<group>"; };
 		1D133DCE1C8428E9007D4F13 /* LSmControllerAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSmControllerAttributes.h; sourceTree = "<group>"; };
 		1D133DCF1C8428E9007D4F13 /* LSmControllerAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSmControllerAttributes.m; sourceTree = "<group>"; };
 		1D2E91221C89B1A10072FB29 /* LSmOption.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LSmOption.plist; sourceTree = "<group>"; };
@@ -203,11 +204,12 @@
 		1D3E41331C8593CF00FBDB77 /* LScTPCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScTPCalculatorViewController.m; sourceTree = "<group>"; };
 		1D4019E61C871842003D71D3 /* LSvOptionTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvOptionTableView.h; sourceTree = "<group>"; };
 		1D4019E71C871842003D71D3 /* LSvOptionTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvOptionTableView.m; sourceTree = "<group>"; };
+		1D406D201C9E4ED300A1D225 /* LScShowEntitiesViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LScShowEntitiesViewController.storyboard; sourceTree = "<group>"; };
 		1D5024251C3FCA120053FA71 /* whoCallsTheFleet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whoCallsTheFleet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D5024341C3FCA120053FA71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D5024491C3FCA120053FA71 /* whoCallsTheFleetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whoCallsTheFleetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D681D461C830639004B5FAE /* LSvOtherMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvOtherMenuView.h; sourceTree = "<group>"; };
-		1D681D471C830639004B5FAE /* LSvOtherMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvOtherMenuView.m; sourceTree = "<group>"; };
+		1D681D461C830639004B5FAE /* LSvMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvMenuView.h; sourceTree = "<group>"; };
+		1D681D471C830639004B5FAE /* LSvMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvMenuView.m; sourceTree = "<group>"; };
 		1D681D491C830D34004B5FAE /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		1D6FB2191C821A2B007F9A9F /* LScBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LScBaseViewController.h; sourceTree = "<group>"; };
 		1D6FB21A1C821A2B007F9A9F /* LScBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScBaseViewController.m; sourceTree = "<group>"; };
@@ -2047,6 +2049,7 @@
 				1DF953531C9C8D0300A693B4 /* LScIllustratorViewController.storyboard */,
 				1DD972071C9D801C00DC328B /* LScShowEntitiesViewController.h */,
 				1DD972081C9D801C00DC328B /* LScShowEntitiesViewController.m */,
+				1D406D201C9E4ED300A1D225 /* LScShowEntitiesViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2613,9 +2616,9 @@
 		1D681D451C8305F3004B5FAE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1D681D461C830639004B5FAE /* LSvOtherMenuView.h */,
-				1D681D471C830639004B5FAE /* LSvOtherMenuView.m */,
-				1D133DC91C84173E007D4F13 /* LSvOtherMenuView.xib */,
+				1D681D461C830639004B5FAE /* LSvMenuView.h */,
+				1D681D471C830639004B5FAE /* LSvMenuView.m */,
+				1D133DC91C84173E007D4F13 /* LSvMenuView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -10879,6 +10882,7 @@
 				1D75479A1C983DF0009AB38C /* item_type_collections.json in Resources */,
 				1D75479B1C983DF0009AB38C /* item_types.json in Resources */,
 				1D75479C1C983DF0009AB38C /* items.json in Resources */,
+				1D406D211C9E4ED300A1D225 /* LScShowEntitiesViewController.storyboard in Resources */,
 				1D75479D1C983DF0009AB38C /* ship_classes.json in Resources */,
 				1D75479E1C983DF0009AB38C /* ship_namesuffix.json in Resources */,
 				1D75479F1C983DF0009AB38C /* ship_series.json in Resources */,
@@ -10890,7 +10894,7 @@
 				1D7547961C983D86009AB38C /* Assets.xcassets in Resources */,
 				1D7547931C983D49009AB38C /* LSvTPCalculatorView.xib in Resources */,
 				1D7547941C983D49009AB38C /* LSvTPCalculatorCountView.xib in Resources */,
-				1D7547951C983D49009AB38C /* LSvOtherMenuView.xib in Resources */,
+				1D7547951C983D49009AB38C /* LSvMenuView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -10977,7 +10981,7 @@
 				1D0FBF881C81D501005A1D30 /* LSmItemsStat.m in Sources */,
 				1D0FBF811C81D501005A1D30 /* LSmArsenalAll.m in Sources */,
 				1D2E91361C8C2AEB0072FB29 /* LScPatchNoteViewController.m in Sources */,
-				1D681D481C830639004B5FAE /* LSvOtherMenuView.m in Sources */,
+				1D681D481C830639004B5FAE /* LSvMenuView.m in Sources */,
 				1D3E412E1C85939200FBDB77 /* LScAboutViewController.m in Sources */,
 				1D2E91291C89B6AA0072FB29 /* LSmOptionItem.m in Sources */,
 				1D0FBF7D1C81D501005A1D30 /* LScTabBarController.m in Sources */,

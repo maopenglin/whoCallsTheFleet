@@ -114,7 +114,7 @@
     //设置cell文本格式
     self.textLabel.text      = self.optionItem.describe;
     self.textLabel.font      = LSFontWithSize(18);
-    self.textLabel.textColor = LSSingleton(LSkControllerTypeOption).color;
+    self.textLabel.textColor = LSSingletonControllerAttributes(LSkControllerTypeOption).color;
 
     //设置右侧控件
     if ([self isTextFieldType]) {
@@ -135,7 +135,7 @@
         self.accessoryView                                   = Switch;
         self.accessorySwc                                    = Switch;
     }
-    self.accessoryTxt.textColor                          = LSSingleton(LSkControllerTypeOption).color;
+    self.accessoryTxt.textColor                          = LSSingletonControllerAttributes(LSkControllerTypeOption).color;
     self.accessoryTxt.textAlignment                      = NSTextAlignmentCenter;
     self.accessoryTxt.borderStyle                        = UITextBorderStyleRoundedRect;
     self.accessoryTxt.placeholder                        = @"等级";
@@ -143,10 +143,10 @@
     self.accessoryTxt.clearsOnBeginEditing               = YES;
     self.accessoryTxt.text                               = self.optionItem.value;
     
-    self.accessoryTxt.inputAccessoryView.backgroundColor = LSSingleton(LSkControllerTypeOption).color;
-    self.accessoryTxt.inputAccessoryView.tintColor       = LSSingleton(LSkControllerTypeOption).color;
+    self.accessoryTxt.inputAccessoryView.backgroundColor = LSSingletonControllerAttributes(LSkControllerTypeOption).color;
+    self.accessoryTxt.inputAccessoryView.tintColor       = LSSingletonControllerAttributes(LSkControllerTypeOption).color;
     
-    self.accessorySwc.onTintColor                        = LSSingleton(LSkControllerTypeOption).color;
+    self.accessorySwc.onTintColor                        = LSSingletonControllerAttributes(LSkControllerTypeOption).color;
     self.accessorySwc.on                                 = self.optionItem.value.boolValue;
 
     //控件绑定方法
