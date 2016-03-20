@@ -103,10 +103,9 @@
 {
     [super viewDidLayoutSubviews];
     
-    CGFloat Y = self.navigationController.navigationBar.frame.size.height;
-    CGFloat H = self.view.frame.size.height - 88;
-    self.mainCollectionView.frame = CGRectMake(0, Y, self.view.frame.size.width, H);
-    
+    self.mainCollectionView.frame = self.view.frame;
+
+    [self.navigationController.view bringSubviewToFront:self.navigationController.navigationBar];
     [self.navigationController.view bringSubviewToFront:self.menuView];
 }
 
@@ -133,10 +132,15 @@
 {
     LSvEntitiesCollectionViewCell *cell = [LSvEntitiesCollectionViewCell entitiesCollectionViewCell:collectionView indexPath:indexPath];
     
-    cell.entitiesVc = self.viewControllers[indexPath.item];
-    
+    cell.entitiesVc      = self.viewControllers[indexPath.item];
     cell.backgroundColor = [UIColor clearColor];
+//    cell.backgroundColor = LSColorRandom;
     
+    //建立控制器之间的联系
+    if (![self.navigationController.childViewControllers containsObject:cell.entitiesVc]) {
+        [self.navigationController addChildViewController:cell.entitiesVc];
+    }
+
     return cell;
 }
 

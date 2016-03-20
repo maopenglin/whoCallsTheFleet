@@ -8,8 +8,12 @@
 
 #import "LScCVViewController.h"
 
+#import "LScBaseNavigationController.h"
+#import "LScEntitiesDetailViewController.h"
+
 #import "LSmEntities.h"
 #import "LSmEntitiesRelation.h"
+#import "LSmName.h"
 
 #import "LSvCVCell.h"
 
@@ -49,8 +53,12 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%s", __FUNCTION__);
-    LSLog(@"%ld",indexPath.item);
+    LScEntitiesDetailViewController *vc = [[LScEntitiesDetailViewController alloc] init];
+    vc.view.backgroundColor = LSColorRandom;
+    vc.title = self.CVs[indexPath.item].name.zhCn;
+    
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - Lazy Load

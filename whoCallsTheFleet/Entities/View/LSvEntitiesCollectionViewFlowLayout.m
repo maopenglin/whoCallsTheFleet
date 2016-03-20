@@ -15,7 +15,7 @@
     //创建
     LSvEntitiesCollectionViewFlowLayout *collectionViewLayout = [[LSvEntitiesCollectionViewFlowLayout alloc] init];
     //设置属性
-    collectionViewLayout.itemSize                = CGSizeMake(cellSize.width, cellSize.height - 88);
+    collectionViewLayout.itemSize                = cellSize;
     collectionViewLayout.minimumInteritemSpacing = 0;
     collectionViewLayout.minimumLineSpacing      = 0;
     collectionViewLayout.scrollDirection         = UICollectionViewScrollDirectionHorizontal;

@@ -8,12 +8,13 @@
 
 #import "LScIllustratorViewController.h"
 #import "LScBaseNavigationController.h"
-#import "LScShowEntitiesViewController.h"
 
 #import "LSmEntities.h"
 #import "LSmEntitiesRelation.h"
+#import "LSmName.h"
 
 #import "LSvIllustratorCell.h"
+#import "LScEntitiesDetailViewController.h"
 
 @interface LScIllustratorViewController ()
 
@@ -26,8 +27,11 @@
 + (instancetype)illustratorViewController
 {
     UIStoryboard *illustratorSb = [UIStoryboard storyboardWithName:@"LScIllustratorViewController" bundle:nil];
+    LScIllustratorViewController *tableVc = illustratorSb.instantiateInitialViewController;
     
-    return illustratorSb.instantiateInitialViewController;
+    tableVc.tableView.contentInset = UIEdgeInsetsMake(50, 0, 50, 0);
+    
+    return tableVc;
 }
 
 #pragma mark - Table view data source
@@ -47,12 +51,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"LScShowEntitiesViewController" bundle:nil];
-//    LScShowEntitiesViewController *showEntitiesVc = sb.instantiateInitialViewController;
-//    LScBaseNavigationController *navVc = [LScBaseNavigationController alloc] initWithType:LSkControllerTypeEntities AndBackgroundImage:<#(UIImage *)#>;
-//    showEntitiesVc.controllerAttribute = LSSingletonControllerAttributes(LSkControllerTypeEntities);
-    NSLog(@"%s", __FUNCTION__);
-    LSLog(@"%ld",indexPath.row);
+    LScEntitiesDetailViewController *vc = [[LScEntitiesDetailViewController alloc] init];
+    
+    vc.view.backgroundColor = LSColorRandom;
+    vc.title = self.illustrators[indexPath.row].name.zhCn;
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 /*

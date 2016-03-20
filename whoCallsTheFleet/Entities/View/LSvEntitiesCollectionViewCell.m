@@ -12,6 +12,7 @@
 
 + (instancetype)entitiesCollectionViewCell:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath
 {
+//    NSString *ID = [LSIdentifierEntitiesMainCell stringByAppendingString:indexPath.row == 0? @"CV" : @"Illustrator"];
     LSvEntitiesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:LSIdentifierEntitiesMainCell forIndexPath:indexPath];
     
     return cell;
