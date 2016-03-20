@@ -46,7 +46,7 @@
     CGFloat tableViewX = 0;
     CGFloat tableViewY = CGRectGetMaxY(self.navigationController.navigationBar.frame);
     CGFloat tableViewW = CGRectGetWidth(self.view.frame);
-    CGFloat tableViewH = CGRectGetHeight(self.view.frame) - tableViewX;
+    CGFloat tableViewH = CGRectGetHeight(self.view.frame) - tableViewY;
     
     self.tableView.frame = CGRectMake(tableViewX, tableViewY, tableViewW, tableViewH);
 }

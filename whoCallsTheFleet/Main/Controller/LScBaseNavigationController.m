@@ -9,6 +9,10 @@
 #import "LScBaseNavigationController.h"
 #import "LScBaseViewController.h"
 
+@interface LScBaseNavigationController ()<UINavigationControllerDelegate>
+
+@end
+
 @implementation LScBaseNavigationController
 
 /**
@@ -23,6 +27,7 @@
     navigationBar.barStyle    = UIBarStyleBlack;
     navigationBar.translucent = YES;
 }
+
 /**
  *  自定义构造方法
  */
@@ -65,6 +70,53 @@
 //    }
 
     return navVc;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.delegate = self;
+}
+
+#pragma mark - Navigation Controller Delegate
+
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    static UIViewController *lastController = nil;
+    
+    //若上个view不为空
+    if (lastController != nil)
+    {
+        //若该实例实现了viewWillDisappear方法，则调用
+        if ([lastController respondsToSelector:@selector(viewWillDisappear:)])
+        {
+            [lastController viewWillDisappear:animated];
+        }
+    }
+    //将当前要显示的view设置为lastController，在下次view切换调用本方法时，会执行viewWillDisappear
+    lastController = viewController;
+    
+    [viewController viewWillAppear:animated];
+}
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    static UIViewController *lastController = nil;
+    
+    //若上个view不为空
+    if (lastController != nil)
+    {
+        //若该实例实现了viewWillDisappear方法，则调用
+        if ([lastController respondsToSelector:@selector(viewDidDisappear:)])
+        {
+            [lastController viewDidDisappear:animated];
+        }
+    }
+    //将当前要显示的view设置为lastController，在下次view切换调用本方法时，会执行viewWillDisappear
+    lastController = viewController;
+    
+    [viewController viewDidAppear:animated];
 }
 
 @end

@@ -11,7 +11,6 @@
 #import "LScCVViewController.h"
 #import "LScIllustratorViewController.h"
 
-#import "LSvEntitiesCollectionView.h"
 #import "LSvEntitiesCollectionViewCell.h"
 
 @interface LScEntitiesViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
@@ -41,10 +40,22 @@
     //绑定事件响应
     [self.segmentedControl addTarget:self action:@selector(segmentedControlValueChanged:) forControlEvents:UIControlEventValueChanged];
     
-    //创建分页collectionView
-    LSvEntitiesCollectionView *mainCollectionView = [LSvEntitiesCollectionView entitiesCollectionViewWithCellSize:self.view.frame.size];
+    //创建布局
+    UICollectionViewFlowLayout *collectionViewLayout = [[UICollectionViewFlowLayout alloc] init];
+    //设置属性
+    collectionViewLayout.itemSize                = self.view.frame.size;
+    collectionViewLayout.minimumInteritemSpacing = 0;
+    collectionViewLayout.minimumLineSpacing      = 0;
+    collectionViewLayout.scrollDirection         = UICollectionViewScrollDirectionHorizontal;
+    //创建用于分页的collectionView
+    UICollectionView *mainCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) collectionViewLayout:collectionViewLayout];
     self.mainCollectionView = mainCollectionView;
     [self.navigationController.view addSubview:self.mainCollectionView];
+    //基本属性
+    self.mainCollectionView.showsHorizontalScrollIndicator = NO;
+    self.mainCollectionView.bounces                        = NO;
+    self.mainCollectionView.pagingEnabled                  = YES;
+    self.mainCollectionView.backgroundColor                = [UIColor clearColor];
     //代理
     self.mainCollectionView.dataSource = self;
     self.mainCollectionView.delegate   = self;
@@ -53,15 +64,16 @@
     //绑定手势
     [self.mainCollectionView addGestureRecognizer:self.screenEdgePanGestureRecognizer];
 
-//    默认选中“声优”页
+    //默认选中“声优”页
     self.segmentedControl.selectedSegmentIndex = 0;
     [self segmentedControlValueChanged:self.segmentedControl];
 }
 
-//- (void)viewWillAppear:(BOOL)animated
-//{
-//    [super viewWillAppear:animated];
-//    
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    LSLog(@"%s", __FUNCTION__);
+
 //    //创建分页collectionView
 //    LSvEntitiesCollectionView *mainCollectionView = [LSvEntitiesCollectionView entitiesCollectionViewWithCellSize:self.view.frame.size];
 //    self.mainCollectionView = mainCollectionView;
@@ -95,7 +107,12 @@
 //    [self.mainCollectionView removeFromSuperview];
 //    //释放
 //    self.mainCollectionView = nil;
-//}
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    LSLog(@"%s", __FUNCTION__);
+}
 
 #pragma mark - 重写布局方法
 

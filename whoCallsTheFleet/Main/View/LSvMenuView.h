@@ -21,7 +21,7 @@
 @interface LSvMenuView : UIView
 
 //设置开关标记
-@property (assign, nonatomic, getter=isOpen) BOOL open;
+@property (assign, nonatomic, getter = isOpen) BOOL open;
 //设置代理
 @property (weak, nonatomic) id<LSpMenuViewDelegate> delegate;
 

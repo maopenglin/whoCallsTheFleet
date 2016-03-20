@@ -91,7 +91,6 @@
 /**
  *  创建用NavVc包装的子控制器并添加至TabBarVc中
  *
- *  @param vc             子控制器
  *  @param controllerType 子控制器类型
  */
 - (void)addchildVCWithType:(LSkControllerType)controllerType{

@@ -38,7 +38,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+//    LSLog(@"%s", __FUNCTION__);
     //创建左上角按钮
     UIButton *menuBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     menuBtn.frame = CGRectMake(0, 0, 20, 15);
@@ -69,7 +69,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    
+//    LSLog(@"%s", __FUNCTION__);
     //释放侧栏菜单遮罩按钮
     [self freeMaskBtn];
     //释放顶部侧栏菜单按钮
@@ -157,7 +157,7 @@
 {
     if (self.menuMaskBtn) {
         [self.menuMaskBtn removeFromSuperview];
-    self.menuMaskBtn = nil;
+        self.menuMaskBtn = nil;
     }
 }
 /**
@@ -216,10 +216,10 @@
 
 #pragma mark - 重写set方法
 
-- (void)setMenuMaskBtn:(UIButton *)maskBtn
+- (void)setMenuMaskBtn:(UIButton *)menuMaskBtn
 {
     if (!_menuMaskBtn) {
-        _menuMaskBtn = maskBtn;
+        _menuMaskBtn = menuMaskBtn;
     }
 }
 
