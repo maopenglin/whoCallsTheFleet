@@ -74,15 +74,9 @@
 		1D7547A41C983DF0009AB38C /* updates.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D0FB59F1C81D4F6005A1D30 /* updates.json */; };
 		1DDA3E821C9CF3920078D310 /* LSmOption.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D2E91221C89B1A10072FB29 /* LSmOption.plist */; };
 		1DDA3E831C9CF3920078D310 /* LSmTPCalculatorCount.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DE61CA31C92E7B800C81882 /* LSmTPCalculatorCount.plist */; };
-		1DDA3E861C9CFCB10078D310 /* LSvCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDA3E851C9CFCB10078D310 /* LSvCVCell.m */; };
-		1DDA3E891C9D4B660078D310 /* LSvIllustratorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDA3E881C9D4B660078D310 /* LSvIllustratorCell.m */; };
 		1DE61CA01C92A9B700C81882 /* LSvTPCalculatorCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE61C9F1C92A9B700C81882 /* LSvTPCalculatorCountView.m */; };
 		1DE61CA71C92E8BD00C81882 /* LSmTPCalculatorCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE61CA61C92E8BD00C81882 /* LSmTPCalculatorCount.m */; };
 		1DED6C251C9152A600C90CC2 /* LSvTPCalculatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DED6C231C9152A600C90CC2 /* LSvTPCalculatorView.m */; };
-		1DF953501C9C8CA500A693B4 /* LScCVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF9534F1C9C8CA500A693B4 /* LScCVViewController.m */; };
-		1DF953521C9C8CB400A693B4 /* LScCVViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DF953511C9C8CB400A693B4 /* LScCVViewController.storyboard */; };
-		1DF953541C9C8D0300A693B4 /* LScIllustratorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DF953531C9C8D0300A693B4 /* LScIllustratorViewController.storyboard */; };
-		1DF953571C9C8D1800A693B4 /* LScIllustratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF953561C9C8D1800A693B4 /* LScIllustratorViewController.m */; };
 		C822165C0333FF931447841D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D884B8E0C637C0A726FFAE /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -1923,10 +1917,6 @@
 		1DD9EDE81C95F53900E72634 /* 9.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = 9.webp; sourceTree = "<group>"; };
 		1DD9EDEA1C95F53900E72634 /* 8.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8.webp; sourceTree = "<group>"; };
 		1DD9EDEB1C95F53900E72634 /* 9.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = 9.webp; sourceTree = "<group>"; };
-		1DDA3E841C9CFCB10078D310 /* LSvCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvCVCell.h; sourceTree = "<group>"; };
-		1DDA3E851C9CFCB10078D310 /* LSvCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvCVCell.m; sourceTree = "<group>"; };
-		1DDA3E871C9D4B660078D310 /* LSvIllustratorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvIllustratorCell.h; sourceTree = "<group>"; };
-		1DDA3E881C9D4B660078D310 /* LSvIllustratorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvIllustratorCell.m; sourceTree = "<group>"; };
 		1DE61C9E1C92A9B700C81882 /* LSvTPCalculatorCountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvTPCalculatorCountView.h; sourceTree = "<group>"; };
 		1DE61C9F1C92A9B700C81882 /* LSvTPCalculatorCountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvTPCalculatorCountView.m; sourceTree = "<group>"; };
 		1DE61CA11C92A9C300C81882 /* LSvTPCalculatorCountView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSvTPCalculatorCountView.xib; sourceTree = "<group>"; };
@@ -1936,12 +1926,6 @@
 		1DED6C221C9152A600C90CC2 /* LSvTPCalculatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvTPCalculatorView.h; sourceTree = "<group>"; };
 		1DED6C231C9152A600C90CC2 /* LSvTPCalculatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvTPCalculatorView.m; sourceTree = "<group>"; };
 		1DED6C241C9152A600C90CC2 /* LSvTPCalculatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSvTPCalculatorView.xib; sourceTree = "<group>"; };
-		1DF9534E1C9C8CA500A693B4 /* LScCVViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LScCVViewController.h; sourceTree = "<group>"; };
-		1DF9534F1C9C8CA500A693B4 /* LScCVViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScCVViewController.m; sourceTree = "<group>"; };
-		1DF953511C9C8CB400A693B4 /* LScCVViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LScCVViewController.storyboard; sourceTree = "<group>"; };
-		1DF953531C9C8D0300A693B4 /* LScIllustratorViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LScIllustratorViewController.storyboard; sourceTree = "<group>"; };
-		1DF953551C9C8D1800A693B4 /* LScIllustratorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LScIllustratorViewController.h; sourceTree = "<group>"; };
-		1DF953561C9C8D1800A693B4 /* LScIllustratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScIllustratorViewController.m; sourceTree = "<group>"; };
 		4AF6838095A039A60F694CA2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4E2A1AE2EA95BA179099EF77 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C6D884B8E0C637C0A726FFAE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2030,14 +2014,8 @@
 		1D0FB5391C81D4F6005A1D30 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1DF9534E1C9C8CA500A693B4 /* LScCVViewController.h */,
-				1DF9534F1C9C8CA500A693B4 /* LScCVViewController.m */,
-				1DF953511C9C8CB400A693B4 /* LScCVViewController.storyboard */,
 				1D0FC6521C81D88E005A1D30 /* LScEntitiesViewController.h */,
 				1D0FC6531C81D88E005A1D30 /* LScEntitiesViewController.m */,
-				1DF953551C9C8D1800A693B4 /* LScIllustratorViewController.h */,
-				1DF953561C9C8D1800A693B4 /* LScIllustratorViewController.m */,
-				1DF953531C9C8D0300A693B4 /* LScIllustratorViewController.storyboard */,
 				1D406D271C9EA60D00A1D225 /* LScEntitiesDetailViewController.h */,
 				1D406D281C9EA60D00A1D225 /* LScEntitiesDetailViewController.m */,
 				1D406D2A1C9EA61A00A1D225 /* LScEntitiesDetailViewController.storyboard */,
@@ -2055,10 +2033,6 @@
 		1D0FB53B1C81D4F6005A1D30 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1DDA3E841C9CFCB10078D310 /* LSvCVCell.h */,
-				1DDA3E851C9CFCB10078D310 /* LSvCVCell.m */,
-				1DDA3E871C9D4B660078D310 /* LSvIllustratorCell.h */,
-				1DDA3E881C9D4B660078D310 /* LSvIllustratorCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -10860,10 +10834,8 @@
 				1DDA3E821C9CF3920078D310 /* LSmOption.plist in Resources */,
 				1D406D2B1C9EA61A00A1D225 /* LScEntitiesDetailViewController.storyboard in Resources */,
 				1DDA3E831C9CF3920078D310 /* LSmTPCalculatorCount.plist in Resources */,
-				1DF953541C9C8D0300A693B4 /* LScIllustratorViewController.storyboard in Resources */,
 				1D7547971C983DEF009AB38C /* arsenal_all.json in Resources */,
 				1D7547981C983DF0009AB38C /* arsenal_weekday.json in Resources */,
-				1DF953521C9C8CB400A693B4 /* LScCVViewController.storyboard in Resources */,
 				1D7547991C983DF0009AB38C /* entities.json in Resources */,
 				1D75479A1C983DF0009AB38C /* item_type_collections.json in Resources */,
 				1D75479B1C983DF0009AB38C /* item_types.json in Resources */,
@@ -10978,19 +10950,15 @@
 				1D0FC6541C81D88E005A1D30 /* LScEntitiesViewController.m in Sources */,
 				1D133DD01C8428E9007D4F13 /* LSmControllerAttributes.m in Sources */,
 				1D0FBF7A1C81D501005A1D30 /* NSString+LSExtension.m in Sources */,
-				1DF953571C9C8D1800A693B4 /* LScIllustratorViewController.m in Sources */,
 				1D0FBF901C81D501005A1D30 /* LSmShipSeriesShips.m in Sources */,
 				1D0FC65A1C81D8BF005A1D30 /* LScItemsViewController.m in Sources */,
-				1DDA3E891C9D4B660078D310 /* LSvIllustratorCell.m in Sources */,
 				1D0FBF851C81D501005A1D30 /* LSmEntitiesRelation.m in Sources */,
 				1D0FBF8B1C81D501005A1D30 /* LSmLink.m in Sources */,
 				1D2E91261C89B69D0072FB29 /* LSmOption.m in Sources */,
-				1DDA3E861C9CFCB10078D310 /* LSvCVCell.m in Sources */,
 				1D2E912F1C8AFC9C0072FB29 /* LSvOptionHeaderView.m in Sources */,
 				1D3E411C1C85853C00FBDB77 /* LScTabChildViewController.m in Sources */,
 				1D4019E91C871842003D71D3 /* LSvOptionTableView.m in Sources */,
 				1D0FBF8D1C81D501005A1D30 /* LSmShipClasses.m in Sources */,
-				1DF953501C9C8CA500A693B4 /* LScCVViewController.m in Sources */,
 				1D0FBF891C81D501005A1D30 /* LSmItemTypeCollections.m in Sources */,
 				1D0FBF781C81D501005A1D30 /* LScFleetViewController.m in Sources */,
 				1D0FBF791C81D501005A1D30 /* NSArray+LSJson.m in Sources */,
