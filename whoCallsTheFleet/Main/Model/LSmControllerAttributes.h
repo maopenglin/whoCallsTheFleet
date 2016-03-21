@@ -2,14 +2,18 @@
 //  LSmControllerAttributes.h
 //  whoCallsTheFleet
 //
-//  Created by 苏俊良 on 16/2/29.
+//  Created by Larry Sue on 16/2/29.
 //  Copyright © 2016年 LarrySue. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-//控制器枚举
+/**
+ *  控制器枚举
+ *
+ *  用于表示控制器的类型
+ */
 typedef NS_ENUM (NSUInteger, LSkControllerType){
     //tableViewConroller的子控制器
     LSkControllerTypeFleet    = 0,//舰队配置

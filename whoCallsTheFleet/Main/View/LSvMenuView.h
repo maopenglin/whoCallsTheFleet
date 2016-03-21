@@ -2,7 +2,7 @@
 //  LSvOtherMenuView.h
 //  whoCallsTheFleet
 //
-//  Created by 苏俊良 on 16/2/28.
+//  Created by Larry Sue on 16/2/28.
 //  Copyright © 2016年 LarrySue. All rights reserved.
 //
 
@@ -11,9 +11,13 @@
 
 @protocol LSpMenuViewDelegate <NSObject>
 
-//点击菜单内按钮的代理方法
+/**
+ *  点击了菜单栏某个选项的回调方法
+ */
 - (void)menuViewBtnDidClick:(UIButton *)button WithType:(LSkControllerType)controllerType;
-//向左轻扫菜单的代理方法
+/**
+ *  在菜单栏上向左轻扫手势的代理方法
+ */
 - (void)menuViewLeftSwipe;
 
 @end

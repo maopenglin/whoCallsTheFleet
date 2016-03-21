@@ -2,7 +2,7 @@
 //  LSmItemsImprovement.h
 //  whoCallsTheFleet
 //
-//  Created by 苏俊良 on 16/1/23.
+//  Created by Larry Sue on 16/1/23.
 //  Copyright © 2016年 LarrySue. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  LSmArsenalAll.m
 //  whoCallsTheFleet
 //
-//  Created by 苏俊良 on 16/1/15.
+//  Created by Larry Sue on 16/1/15.
 //  Copyright © 2016年 LarrySue. All rights reserved.
 //
 

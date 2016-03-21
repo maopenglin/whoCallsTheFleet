@@ -2,7 +2,7 @@
 //  LSvOtherMenuView.m
 //  whoCallsTheFleet
 //
-//  Created by 苏俊良 on 16/2/28.
+//  Created by Larry Sue on 16/2/28.
 //  Copyright © 2016年 LarrySue. All rights reserved.
 //
 
@@ -20,6 +20,8 @@
 @end
 
 @implementation LSvMenuView
+
+#pragma mark - 工厂方法
 
 + (instancetype)menuView
 {
@@ -53,7 +55,8 @@
     [self.delegate menuViewBtnDidClick:sender WithType:LSkControllerTypeAbout];
 }
 
-#pragma mark - 
+#pragma mark - 手势回调方法
+
 - (void)menuViewLeftSwipe
 {
     if (self.isOpen) {

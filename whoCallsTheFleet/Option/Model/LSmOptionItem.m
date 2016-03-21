@@ -2,7 +2,7 @@
 //  LSmItem.m
 //  whoCallsTheFleet
 //
-//  Created by 苏俊良 on 16/3/4.
+//  Created by Larry Sue on 16/3/4.
 //  Copyright © 2016年 LarrySue. All rights reserved.
 //
 

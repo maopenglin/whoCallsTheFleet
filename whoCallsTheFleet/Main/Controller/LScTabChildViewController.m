@@ -2,7 +2,7 @@
 //  LScTabChildViewController.m
 //  whoCallsTheFleet
 //
-//  Created by 苏俊良 on 16/3/1.
+//  Created by Larry Sue on 16/3/1.
 //  Copyright © 2016年 LarrySue. All rights reserved.
 //
 
@@ -12,9 +12,13 @@
 
 @interface LScTabChildViewController ()<LSpMenuViewDelegate>
 
-//侧边栏菜单按钮
+/**
+ *  侧边栏菜单按钮
+ */
 @property (nonatomic, weak) UIBarButtonItem *menuBtnItem;
-//遮罩按钮 用于接收单击事件收回侧边栏菜单
+/**
+ *  遮罩按钮 用于接收单击事件收回侧边栏菜单
+ */
 @property (nonatomic, weak) UIButton *menuMaskBtn;
 
 @end
@@ -144,6 +148,7 @@
         self.menuMaskBtn = nil;
     }
 }
+
 /**
  *  在屏幕左边缘向右滑动的回调方法
  */
@@ -153,6 +158,7 @@
         [self menuBtnItemDidClick];
     }
 }
+
 /**
  *  重置侧边栏布局的回调方法
  */
@@ -183,6 +189,9 @@
 
 #pragma mark - Other Menu View Delegate
 
+/**
+ *  点击了菜单栏某个选项的代理方法
+ */
 - (void)menuViewBtnDidClick:(UIButton *)button WithType:(LSkControllerType)controllerType
 {
     //新建控制器
@@ -193,6 +202,9 @@
         [self menuBtnItemDidClick];
     }];
 }
+/**
+ *  在菜单栏上向左轻扫手势的代理方法
+ */
 - (void)menuViewLeftSwipe
 {
     [self menuBtnItemDidClick];
