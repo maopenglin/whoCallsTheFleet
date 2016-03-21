@@ -114,8 +114,9 @@
  */
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
-    //对参数做两次类型转换获取属性值并做设置
-    viewController.tabBarController.tabBar.tintColor = ((LScBaseViewController *)((LScBaseNavigationController *)viewController).viewControllers.lastObject).controllerAttribute.color;
+    UITabBar *tabBar = tabBarController.tabBar;
+    LSkControllerType controllerType = (LSkControllerType)[tabBar.items indexOfObject:tabBar.selectedItem];
+    tabBar.tintColor = LSSingletonControllerAttributes(controllerType).color;
 }
 
 @end
