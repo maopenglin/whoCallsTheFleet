@@ -72,7 +72,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    LSLog(@"%s", __FUNCTION__);
+    LSLog(@"entities------%s", __FUNCTION__);
 
 //    //创建分页collectionView
 //    LSvEntitiesCollectionView *mainCollectionView = [LSvEntitiesCollectionView entitiesCollectionViewWithCellSize:self.view.frame.size];
@@ -111,7 +111,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    LSLog(@"%s", __FUNCTION__);
+    LSLog(@"entities------%s", __FUNCTION__);
 }
 
 #pragma mark - 重写布局方法

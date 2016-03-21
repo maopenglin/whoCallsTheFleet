@@ -33,12 +33,7 @@
     UIScreenEdgePanGestureRecognizer *screenEdgePanGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(menuViewRightSwipe)];
     screenEdgePanGestureRecognizer.edges = UIRectEdgeLeft;
     self.screenEdgePanGestureRecognizer = screenEdgePanGestureRecognizer;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-//    LSLog(@"%s", __FUNCTION__);
+    
     //创建左上角按钮
     UIButton *menuBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     menuBtn.frame = CGRectMake(0, 0, 20, 15);
@@ -53,7 +48,7 @@
     self.menuBtnItem = menuBtnItem;
     //关联该按钮至导航栏
     self.navigationItem.leftBarButtonItem = self.menuBtnItem;
-
+    
     //创建侧边菜单栏
     LSvMenuView *menuView = [LSvMenuView menuView];
     self.menuView = menuView;
@@ -66,23 +61,54 @@
     [self layoutMenuView];
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-//    LSLog(@"%s", __FUNCTION__);
-    //释放侧栏菜单遮罩按钮
-    [self freeMaskBtn];
-    //释放顶部侧栏菜单按钮
-    if (self.menuBtnItem) {
-        self.navigationItem.leftBarButtonItem = nil;
-        self.menuBtnItem                     = nil;
-    }
-    //释放侧栏菜单
-    if (self.menuView) {
-        [self.menuView removeFromSuperview];
-        self.menuView                      = nil;
-    }
-}
+//- (void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//
+//    //创建左上角按钮
+//    UIButton *menuBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//    menuBtn.frame = CGRectMake(0, 0, 20, 15);
+//    //拒绝无效时变暗效果
+//    menuBtn.adjustsImageWhenDisabled = NO;
+//    //设置背景图片及渲染方式
+//    [menuBtn setBackgroundImage:[[UIImage imageNamed:@"menuIcon"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+//    //绑定事件回调
+//    [menuBtn addTarget:self action:@selector(menuBtnItemDidClick) forControlEvents:UIControlEventTouchUpInside];
+//    //包装为UIBarButtonItem
+//    UIBarButtonItem *menuBtnItem = [[UIBarButtonItem alloc] initWithCustomView:menuBtn];
+//    self.menuBtnItem = menuBtnItem;
+//    //关联该按钮至导航栏
+//    self.navigationItem.leftBarButtonItem = self.menuBtnItem;
+//
+//    //创建侧边菜单栏
+//    LSvMenuView *menuView = [LSvMenuView menuView];
+//    self.menuView = menuView;
+//    self.menuView.open = NO;
+//    //设置代理
+//    self.menuView.delegate = self;
+//    //添加至View
+//    [self.navigationController.view addSubview:self.menuView];
+//    //修正frame
+//    [self layoutMenuView];
+//}
+
+//- (void)viewWillDisappear:(BOOL)animated
+//{
+//    [super viewWillDisappear:animated];
+//
+//    //释放侧栏菜单遮罩按钮
+//    [self freeMaskBtn];
+//    //释放顶部侧栏菜单按钮
+//    if (self.menuBtnItem) {
+//        self.navigationItem.leftBarButtonItem = nil;
+//        self.menuBtnItem                     = nil;
+//    }
+//    //释放侧栏菜单
+//    if (self.menuView) {
+//        [self.menuView removeFromSuperview];
+//        self.menuView                      = nil;
+//    }
+//}
 
 #pragma mark - 回调方法
 

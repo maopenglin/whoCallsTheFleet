@@ -101,7 +101,7 @@
     //添加至tabBar控制器
     [self.tabBarVc addChildViewController:navVc];
     
-    //选中第一标签页
+    //启动时显式调用代理方法 选中第一标签页
     if (controllerType == LSkControllerTypeFleet) {
         [self tabBarController:self.tabBarVc didSelectViewController:navVc];
     }
@@ -116,6 +116,7 @@
 {
     UITabBar *tabBar = tabBarController.tabBar;
     LSkControllerType controllerType = (LSkControllerType)[tabBar.items indexOfObject:tabBar.selectedItem];
+    //切换标签时切换tabBarItem染色方案
     tabBar.tintColor = LSSingletonControllerAttributes(controllerType).color;
 }
 
