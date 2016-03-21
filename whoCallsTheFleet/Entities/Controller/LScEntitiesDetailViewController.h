@@ -14,4 +14,4 @@
 
 @property (nonatomic, strong) LSmEntities *entities;
 
-@end
+@end //LScEntitiesDetailViewController

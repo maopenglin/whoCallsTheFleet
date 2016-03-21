@@ -17,7 +17,16 @@
 
 @implementation LSvOptionTableViewCell
 
-#pragma mark - 重写构造方法
+#pragma mark - 工厂方法
+
++ (instancetype)optionTableViewCell:(UITableView *)tableView
+{
+    LSvOptionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"optionCell"];
+    if (!cell) {
+        cell = [[LSvOptionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"optionCell"];
+    }
+    return cell;
+}
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -32,17 +41,6 @@
         [self setup];
     }
     return self;
-}
-
-#pragma mark - 快速创建
-
-+ (instancetype)optionTableViewCell:(UITableView *)tableView
-{
-    LSvOptionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"optionCell"];
-    if (!cell) {
-        cell = [[LSvOptionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"optionCell"];
-    }
-    return cell;
 }
 
 - (void)setup

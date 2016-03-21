@@ -14,14 +14,18 @@
 #import "LSmEntitiesRelation.h"
 #import "LSmName.h"
 
-@interface LScEntitiesViewController ()<UICollectionViewDelegate, UITableViewDelegate>
+#import "LSvCVsView.h"
+#import "LSvIllustratorsView.h"
+
+@interface LScEntitiesViewController ()
 
 @property (nonatomic, weak) UISegmentedControl *segmentedControl;
 @property (nonatomic, weak) UIScrollView *scrollView;
 //模型数据
-@property (nonatomic, strong) NSArray<NSArray<LSmEntities *> *> *entities;
+@property (nonatomic, strong) NSArray<LSmEntities *> *CVs;
+@property (nonatomic, strong) NSArray<LSmEntities *> *illustrators;
 
-@end
+@end //LScEntitiesViewController
 
 @implementation LScEntitiesViewController
 
@@ -57,12 +61,17 @@
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.pagingEnabled                  = YES;
 
+    //创建每页分别显示的View
     UICollectionViewFlowLayout *CVsViewLayout = [[UICollectionViewFlowLayout alloc] init];
-    UICollectionView *CVsView = [[UICollectionView alloc] initWithFrame:CGRectMake(scrollViewX, scrollViewY, scrollViewW * 0.5, scrollViewH) collectionViewLayout:CVsViewLayout];
-    UITableView *illustratorsView = [[UITableView alloc] initWithFrame:CGRectMake(scrollViewW * 0.5, 0, scrollViewW * 0.5, scrollViewH) style:UITableViewStylePlain];
-    
-    CVsView.backgroundColor = LSColorRandom;
+    LSvCVsView *CVsView = [LSvCVsView CVsViewWithFrame:CGRectMake(scrollViewX, scrollViewY, scrollViewW * 0.5, scrollViewH) collectionViewLayout:CVsViewLayout];
+    LSvIllustratorsView *illustratorsView = [LSvIllustratorsView illustratorsViewWithFrame:CGRectMake(scrollViewW * 0.5, 0, scrollViewW * 0.5, scrollViewH) style:UITableViewStylePlain];
+    //设置数据
+    CVsView.CVs                   = self.CVs;
+    illustratorsView.illustrators = self.illustrators;
+    //设置背景色
+    CVsView.backgroundColor          = LSColorRandom;
     illustratorsView.backgroundColor = LSColorRandom;
+    //添加至scrollView
     [self.scrollView addSubview:CVsView];
     [self.scrollView addSubview:illustratorsView];
 
@@ -95,47 +104,36 @@
 //    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:segmentedControl.selectedSegmentIndex inSection:0];
 }
 
-#pragma mark - Collection View Delegate
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    LScEntitiesDetailViewController *vc = [[LScEntitiesDetailViewController alloc] init];
-    vc.view.backgroundColor = LSColorRandom;
-    vc.title = self.entities[0][indexPath.item].name.zhCn;
-
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-#pragma mark - Table View Delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    LScEntitiesDetailViewController *vc = [[LScEntitiesDetailViewController alloc] init];
-    
-    vc.view.backgroundColor = LSColorRandom;
-    vc.title = self.entities[1][indexPath.row].name.zhCn;
-    
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
 #pragma mark - Lazy Load
 
-- (NSArray<NSArray<LSmEntities *> *> *)entities
+- (NSArray<LSmEntities *> *)CVs
 {
-    if (!_entities) {
+    if (!_CVs) {
         //新建空的数组
         NSMutableArray<LSmEntities *> *CVArr = [NSMutableArray array];
-        NSMutableArray<LSmEntities *> *illustratorArr = [NSMutableArray array];
         for (LSmEntities *entities in LSSingletonEntities) {
             if (entities.relation.cv) {
                 [CVArr addObject:entities];
-            } else if (entities.relation.illustrator) {
+            }
+        }
+        _CVs = CVArr;
+    }
+    return _CVs;
+}
+
+- (NSArray<LSmEntities *> *)illustrators
+{
+    if (!_illustrators) {
+        //新建空的数组
+        NSMutableArray<LSmEntities *> *illustratorArr = [NSMutableArray array];
+        for (LSmEntities *entities in LSSingletonEntities) {
+            if (entities.relation.illustrator) {
                 [illustratorArr addObject:entities];
             }
         }
-        _entities = @[CVArr, illustratorArr];
+        _illustrators = illustratorArr;
     }
-    return _entities;
+    return _illustrators;
 }
 
-@end
+@end //LScEntitiesViewController

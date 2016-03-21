@@ -17,4 +17,4 @@
     self.hidesBottomBarWhenPushed = YES;
 }
 
-@end
+@end //LScEntitiesDetailViewController

@@ -14,7 +14,16 @@
 
 @implementation LSvOptionTableView
 
-#pragma mark - 重写构造方法
+#pragma mark - 工厂方法
+
++ (instancetype)optionTableView
+{
+    LSvOptionTableView *optionTableView = [[LSvOptionTableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStyleGrouped];
+    //禁止弹簧（也即禁止滚动）
+    optionTableView.bounces = NO;
+    
+    return optionTableView;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style
 {
@@ -23,6 +32,7 @@
     }
     return self;
 }
+
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     if (self = [super initWithCoder:aDecoder]) {
@@ -33,14 +43,6 @@
 
 #pragma mark - 快速创建
 
-+ (instancetype)optionTableView
-{
-    LSvOptionTableView *optionTableView = [[LSvOptionTableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStyleGrouped];
-    //禁止弹簧（也即禁止滚动）
-    optionTableView.bounces = NO;
-    
-    return optionTableView;
-}
 
 - (void)setup
 {

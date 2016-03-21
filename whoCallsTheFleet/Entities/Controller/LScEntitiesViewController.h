@@ -10,4 +10,4 @@
 
 @interface LScEntitiesViewController : LScTabChildViewController
 
-@end
+@end //LScEntitiesViewController

@@ -74,6 +74,12 @@
 		1D7547A41C983DF0009AB38C /* updates.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D0FB59F1C81D4F6005A1D30 /* updates.json */; };
 		1DDA3E821C9CF3920078D310 /* LSmOption.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D2E91221C89B1A10072FB29 /* LSmOption.plist */; };
 		1DDA3E831C9CF3920078D310 /* LSmTPCalculatorCount.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DE61CA31C92E7B800C81882 /* LSmTPCalculatorCount.plist */; };
+		1DE477081CA0644600D26AE7 /* LSvCVsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE477071CA0644600D26AE7 /* LSvCVsView.m */; };
+		1DE4770B1CA0656E00D26AE7 /* LSvIllustratorsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE4770A1CA0656E00D26AE7 /* LSvIllustratorsView.m */; };
+		1DE477111CA06CF700D26AE7 /* LSvCVsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE4770F1CA06CF700D26AE7 /* LSvCVsViewCell.m */; };
+		1DE477121CA06CF700D26AE7 /* LSvCVsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DE477101CA06CF700D26AE7 /* LSvCVsViewCell.xib */; };
+		1DE477161CA06F1500D26AE7 /* LSvIllustratorsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE477141CA06F1500D26AE7 /* LSvIllustratorsViewCell.m */; };
+		1DE477171CA06F1500D26AE7 /* LSvIllustratorsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DE477151CA06F1500D26AE7 /* LSvIllustratorsViewCell.xib */; };
 		1DE61CA01C92A9B700C81882 /* LSvTPCalculatorCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE61C9F1C92A9B700C81882 /* LSvTPCalculatorCountView.m */; };
 		1DE61CA71C92E8BD00C81882 /* LSmTPCalculatorCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE61CA61C92E8BD00C81882 /* LSmTPCalculatorCount.m */; };
 		1DED6C251C9152A600C90CC2 /* LSvTPCalculatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DED6C231C9152A600C90CC2 /* LSvTPCalculatorView.m */; };
@@ -1917,6 +1923,16 @@
 		1DD9EDE81C95F53900E72634 /* 9.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = 9.webp; sourceTree = "<group>"; };
 		1DD9EDEA1C95F53900E72634 /* 8.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8.webp; sourceTree = "<group>"; };
 		1DD9EDEB1C95F53900E72634 /* 9.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = 9.webp; sourceTree = "<group>"; };
+		1DE477061CA0644600D26AE7 /* LSvCVsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvCVsView.h; sourceTree = "<group>"; };
+		1DE477071CA0644600D26AE7 /* LSvCVsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvCVsView.m; sourceTree = "<group>"; };
+		1DE477091CA0656E00D26AE7 /* LSvIllustratorsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvIllustratorsView.h; sourceTree = "<group>"; };
+		1DE4770A1CA0656E00D26AE7 /* LSvIllustratorsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvIllustratorsView.m; sourceTree = "<group>"; };
+		1DE4770E1CA06CF700D26AE7 /* LSvCVsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvCVsViewCell.h; sourceTree = "<group>"; };
+		1DE4770F1CA06CF700D26AE7 /* LSvCVsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvCVsViewCell.m; sourceTree = "<group>"; };
+		1DE477101CA06CF700D26AE7 /* LSvCVsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSvCVsViewCell.xib; sourceTree = "<group>"; };
+		1DE477131CA06F1500D26AE7 /* LSvIllustratorsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvIllustratorsViewCell.h; sourceTree = "<group>"; };
+		1DE477141CA06F1500D26AE7 /* LSvIllustratorsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvIllustratorsViewCell.m; sourceTree = "<group>"; };
+		1DE477151CA06F1500D26AE7 /* LSvIllustratorsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSvIllustratorsViewCell.xib; sourceTree = "<group>"; };
 		1DE61C9E1C92A9B700C81882 /* LSvTPCalculatorCountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvTPCalculatorCountView.h; sourceTree = "<group>"; };
 		1DE61C9F1C92A9B700C81882 /* LSvTPCalculatorCountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvTPCalculatorCountView.m; sourceTree = "<group>"; };
 		1DE61CA11C92A9C300C81882 /* LSvTPCalculatorCountView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSvTPCalculatorCountView.xib; sourceTree = "<group>"; };
@@ -2033,6 +2049,16 @@
 		1D0FB53B1C81D4F6005A1D30 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1DE477061CA0644600D26AE7 /* LSvCVsView.h */,
+				1DE477071CA0644600D26AE7 /* LSvCVsView.m */,
+				1DE4770E1CA06CF700D26AE7 /* LSvCVsViewCell.h */,
+				1DE4770F1CA06CF700D26AE7 /* LSvCVsViewCell.m */,
+				1DE477101CA06CF700D26AE7 /* LSvCVsViewCell.xib */,
+				1DE477091CA0656E00D26AE7 /* LSvIllustratorsView.h */,
+				1DE4770A1CA0656E00D26AE7 /* LSvIllustratorsView.m */,
+				1DE477131CA06F1500D26AE7 /* LSvIllustratorsViewCell.h */,
+				1DE477141CA06F1500D26AE7 /* LSvIllustratorsViewCell.m */,
+				1DE477151CA06F1500D26AE7 /* LSvIllustratorsViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -10842,6 +10868,7 @@
 				1D75479C1C983DF0009AB38C /* items.json in Resources */,
 				1D75479D1C983DF0009AB38C /* ship_classes.json in Resources */,
 				1D75479E1C983DF0009AB38C /* ship_namesuffix.json in Resources */,
+				1DE477121CA06CF700D26AE7 /* LSvCVsViewCell.xib in Resources */,
 				1D75479F1C983DF0009AB38C /* ship_series.json in Resources */,
 				1D7547A01C983DF0009AB38C /* ship_type_collections.json in Resources */,
 				1D7547A11C983DF0009AB38C /* ship_type_order.json in Resources */,
@@ -10849,6 +10876,7 @@
 				1D7547A31C983DF0009AB38C /* ships.json in Resources */,
 				1D7547A41C983DF0009AB38C /* updates.json in Resources */,
 				1D7547961C983D86009AB38C /* Assets.xcassets in Resources */,
+				1DE477171CA06F1500D26AE7 /* LSvIllustratorsViewCell.xib in Resources */,
 				1D7547931C983D49009AB38C /* LSvTPCalculatorView.xib in Resources */,
 				1D7547941C983D49009AB38C /* LSvTPCalculatorCountView.xib in Resources */,
 				1D7547951C983D49009AB38C /* LSvMenuView.xib in Resources */,
@@ -10944,10 +10972,13 @@
 				1D0FBF7D1C81D501005A1D30 /* LScTabBarController.m in Sources */,
 				1D3E41341C8593CF00FBDB77 /* LScTPCalculatorViewController.m in Sources */,
 				1D0FBF8E1C81D501005A1D30 /* LSmShipNamesuffix.m in Sources */,
+				1DE477111CA06CF700D26AE7 /* LSvCVsViewCell.m in Sources */,
 				1D0FB5281C81D156005A1D30 /* AppDelegate.m in Sources */,
 				1D0FBF7C1C81D501005A1D30 /* LScBaseNavigationController.m in Sources */,
 				1D0FC6571C81D8A6005A1D30 /* LScArsenalViewController.m in Sources */,
 				1D0FC6541C81D88E005A1D30 /* LScEntitiesViewController.m in Sources */,
+				1DE477081CA0644600D26AE7 /* LSvCVsView.m in Sources */,
+				1DE477161CA06F1500D26AE7 /* LSvIllustratorsViewCell.m in Sources */,
 				1D133DD01C8428E9007D4F13 /* LSmControllerAttributes.m in Sources */,
 				1D0FBF7A1C81D501005A1D30 /* NSString+LSExtension.m in Sources */,
 				1D0FBF901C81D501005A1D30 /* LSmShipSeriesShips.m in Sources */,
@@ -10962,6 +10993,7 @@
 				1D0FBF891C81D501005A1D30 /* LSmItemTypeCollections.m in Sources */,
 				1D0FBF781C81D501005A1D30 /* LScFleetViewController.m in Sources */,
 				1D0FBF791C81D501005A1D30 /* NSArray+LSJson.m in Sources */,
+				1DE4770B1CA0656E00D26AE7 /* LSvIllustratorsView.m in Sources */,
 				1D3E41311C8593B400FBDB77 /* LScOptionViewController.m in Sources */,
 				1DED6C251C9152A600C90CC2 /* LSvTPCalculatorView.m in Sources */,
 				1DE61CA71C92E8BD00C81882 /* LSmTPCalculatorCount.m in Sources */,
