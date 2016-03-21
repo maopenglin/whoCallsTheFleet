@@ -83,7 +83,6 @@
 		1DF953521C9C8CB400A693B4 /* LScCVViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DF953511C9C8CB400A693B4 /* LScCVViewController.storyboard */; };
 		1DF953541C9C8D0300A693B4 /* LScIllustratorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DF953531C9C8D0300A693B4 /* LScIllustratorViewController.storyboard */; };
 		1DF953571C9C8D1800A693B4 /* LScIllustratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF953561C9C8D1800A693B4 /* LScIllustratorViewController.m */; };
-		1DF9535A1C9C8FF800A693B4 /* LSvEntitiesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF953591C9C8FF800A693B4 /* LSvEntitiesCollectionViewCell.m */; };
 		C822165C0333FF931447841D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D884B8E0C637C0A726FFAE /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -1943,8 +1942,6 @@
 		1DF953531C9C8D0300A693B4 /* LScIllustratorViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LScIllustratorViewController.storyboard; sourceTree = "<group>"; };
 		1DF953551C9C8D1800A693B4 /* LScIllustratorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LScIllustratorViewController.h; sourceTree = "<group>"; };
 		1DF953561C9C8D1800A693B4 /* LScIllustratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScIllustratorViewController.m; sourceTree = "<group>"; };
-		1DF953581C9C8FF800A693B4 /* LSvEntitiesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvEntitiesCollectionViewCell.h; sourceTree = "<group>"; };
-		1DF953591C9C8FF800A693B4 /* LSvEntitiesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvEntitiesCollectionViewCell.m; sourceTree = "<group>"; };
 		4AF6838095A039A60F694CA2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4E2A1AE2EA95BA179099EF77 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C6D884B8E0C637C0A726FFAE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2058,8 +2055,6 @@
 		1D0FB53B1C81D4F6005A1D30 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1DF953581C9C8FF800A693B4 /* LSvEntitiesCollectionViewCell.h */,
-				1DF953591C9C8FF800A693B4 /* LSvEntitiesCollectionViewCell.m */,
 				1DDA3E841C9CFCB10078D310 /* LSvCVCell.h */,
 				1DDA3E851C9CFCB10078D310 /* LSvCVCell.m */,
 				1DDA3E871C9D4B660078D310 /* LSvIllustratorCell.h */,
@@ -10953,7 +10948,6 @@
 				1D0FB5291C81D156005A1D30 /* main.m in Sources */,
 				1D0FBF8C1C81D501005A1D30 /* LSmName.m in Sources */,
 				1D0FBF8A1C81D501005A1D30 /* LSmItemTypes.m in Sources */,
-				1DF9535A1C9C8FF800A693B4 /* LSvEntitiesCollectionViewCell.m in Sources */,
 				1D0FBF8F1C81D501005A1D30 /* LSmShipSeries.m in Sources */,
 				1D6FB21B1C821A2B007F9A9F /* LScBaseViewController.m in Sources */,
 				1D0FBF7B1C81D501005A1D30 /* NSString+LSFilePath.m in Sources */,

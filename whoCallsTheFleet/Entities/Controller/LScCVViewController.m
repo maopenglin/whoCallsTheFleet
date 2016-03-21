@@ -8,22 +8,7 @@
 
 #import "LScCVViewController.h"
 
-#import "LScBaseNavigationController.h"
-#import "LScEntitiesDetailViewController.h"
-
-#import "LSmEntities.h"
-#import "LSmEntitiesRelation.h"
-#import "LSmName.h"
-
 #import "LSvCVCell.h"
-
-@class LSvEntitiesCollectionViewCell, LSvEntitiesCollectionView;
-
-@interface LScCVViewController ()
-
-@property (nonatomic, strong) NSArray<LSmEntities *> *CVs;
-
-@end
 
 @implementation LScCVViewController
 
@@ -49,33 +34,16 @@
     return cell;
 }
 
-#pragma mark - Collection View Delegate
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    LScEntitiesDetailViewController *vc = [[LScEntitiesDetailViewController alloc] init];
-    vc.view.backgroundColor = LSColorRandom;
-    vc.title = self.CVs[indexPath.item].name.zhCn;
-    
-    
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-#pragma mark - Lazy Load
-
-- (NSArray<LSmEntities *> *)CVs
-{
-    if (!_CVs) {
-        //新建空的数组
-        NSMutableArray<LSmEntities *> *CVArr = [NSMutableArray array];
-        for (LSmEntities *entities in LSSingletonEntities) {
-            if (entities.relation.cv) {
-                [CVArr addObject:entities];
-            }
-        }
-        _CVs = CVArr;
-    }
-    return _CVs;
-}
+//#pragma mark - Collection View Delegate
+//
+//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+//{
+////    LScEntitiesDetailViewController *vc = [[LScEntitiesDetailViewController alloc] init];
+////    vc.view.backgroundColor = LSColorRandom;
+////    vc.title = self.CVs[indexPath.item].name.zhCn;
+////    
+////    
+////    [self.navigationController pushViewController:vc animated:YES];
+//}
 
 @end

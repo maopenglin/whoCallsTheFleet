@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class LSmEntities;
+
 @interface LScCVViewController : UICollectionViewController
 
+@property (nonatomic, strong) NSArray<LSmEntities *> *CVs;
 //快速创建
 + (instancetype)CVViewController;
 

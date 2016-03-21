@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class LSmEntities;
+
 @interface LScIllustratorViewController : UITableViewController
 
+@property (nonatomic, strong) NSArray<LSmEntities *> *illustrators;
 /**
  *  快速创建
  */

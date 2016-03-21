@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class LSmEntities;
+
 @interface LScEntitiesDetailViewController : UIViewController
+
+@property (nonatomic, strong) LSmEntities *entities;
 
 @end

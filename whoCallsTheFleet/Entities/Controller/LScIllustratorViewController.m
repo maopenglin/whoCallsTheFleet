@@ -7,20 +7,8 @@
 //
 
 #import "LScIllustratorViewController.h"
-#import "LScBaseNavigationController.h"
-
-#import "LSmEntities.h"
-#import "LSmEntitiesRelation.h"
-#import "LSmName.h"
 
 #import "LSvIllustratorCell.h"
-#import "LScEntitiesDetailViewController.h"
-
-@interface LScIllustratorViewController ()
-
-@property (nonatomic, strong) NSArray<LSmEntities *> *illustrators;
-
-@end
 
 @implementation LScIllustratorViewController
 
@@ -47,17 +35,17 @@
     return cell;
 }
 
-#pragma mark - Table View Delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    LScEntitiesDetailViewController *vc = [[LScEntitiesDetailViewController alloc] init];
-    
-    vc.view.backgroundColor = LSColorRandom;
-    vc.title = self.illustrators[indexPath.row].name.zhCn;
-    
-    [self.navigationController pushViewController:vc animated:YES];
-}
+//#pragma mark - Table View Delegate
+//
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    LScEntitiesDetailViewController *vc = [[LScEntitiesDetailViewController alloc] init];
+//    
+//    vc.view.backgroundColor = LSColorRandom;
+//    vc.title = self.illustrators[indexPath.row].name.zhCn;
+//    
+//    [self.navigationController pushViewController:vc animated:YES];
+//}
 
 /*
 #pragma mark - Navigation
@@ -68,22 +56,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-#pragma mark - Lazy Load
-
-- (NSArray<LSmEntities *> *)illustrators
-{
-    if (!_illustrators) {
-        //新建空的数组
-        NSMutableArray<LSmEntities *> *illustratorArr = [NSMutableArray array];
-        for (LSmEntities *entities in LSSingletonEntities) {
-            if (entities.relation.illustrator) {
-                [illustratorArr addObject:entities];
-            }
-        }
-        _illustrators = illustratorArr;
-    }
-    return _illustrators;
-}
 
 @end
