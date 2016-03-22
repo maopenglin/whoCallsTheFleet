@@ -88,7 +88,10 @@
 {
     [super viewDidLayoutSubviews];
     
-    [self layoutMenuView];
+    //若菜单栏关闭状态则进行布局充值
+    if (!self.menuView.isOpen) {
+        [self layoutMenuView];
+    }
 }
 
 #pragma mark - 回调方法
@@ -126,22 +129,19 @@
             //菜单平移展开
             self.menuView.transform = CGAffineTransformMakeTranslation([UIScreen mainScreen].bounds.size.width * 0.3, 0);
         } completion:^(BOOL finished) {
-            
             //创建遮罩按钮
             UIButton *menuMaskBtn = [UIButton buttonWithType:UIButtonTypeCustom];
             self.menuMaskBtn = menuMaskBtn;
             self.menuMaskBtn.backgroundColor = [UIColor redColor];
             [self.view addSubview:self.menuMaskBtn];
+
 //            [self.view bringSubviewToFront:self.menuMaskBtn];
-//            //设置遮罩按钮frame
-//            CGFloat menuMaskBtnX = self.menuView.frame.size.width;
-//            CGFloat menuMaskBtnY = self.menuView.frame.origin.y;
-//            CGFloat menuMaskBtnW = [UIScreen mainScreen].bounds.size.width - menuMaskBtnX;
-//            CGFloat menuMaskBtnH = self.menuView.frame.size.height;
-            self.menuMaskBtn.frame = CGRectMake(200, 200, 50, 50);
-            //            self.menuMaskBtn.frame = CGRectMake(menuMaskBtnX, menuMaskBtnY, menuMaskBtnW, menuMaskBtnH);
-            NSLog(@"%@",NSStringFromCGRect(self.menuView.frame));
-            NSLog(@"%@",NSStringFromCGRect(self.menuMaskBtn.frame));
+            //设置遮罩按钮frame
+            CGFloat menuMaskBtnX = self.menuView.frame.size.width;
+            CGFloat menuMaskBtnY = self.menuView.frame.origin.y;
+            CGFloat menuMaskBtnW = [UIScreen mainScreen].bounds.size.width - menuMaskBtnX;
+            CGFloat menuMaskBtnH = self.menuView.frame.size.height;
+            self.menuMaskBtn.frame = CGRectMake(menuMaskBtnX, menuMaskBtnY, menuMaskBtnW, menuMaskBtnH);
             //为遮罩按钮绑定回调
             [self.menuMaskBtn addTarget:self action:@selector(maskBtnDidClick) forControlEvents:UIControlEventTouchDown];
             //标记为开

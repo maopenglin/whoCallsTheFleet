@@ -37,20 +37,82 @@
         //创建主体view
         LSvTPCalculatorView *TPCalculatorView = [LSvTPCalculatorView TPCalculatorView];
         self.TPCalculatorView = TPCalculatorView;
+        //添加至当前view
+        [self.view addSubview:self.TPCalculatorView];
+        //加载计数View
+        [self loadCountView];
+        //加载底部AttLabel
+        [self loadAttLabel];
     }
     return self;
 }
 
 #pragma mark - controller生命周期方法
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     
-    [self.view addSubview:self.TPCalculatorView];
     //显示计算结果
     [self reloadCalculatorResult];
+}
+
+#pragma mark - controller布局方法
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
     
-    /*** 添加countView ***/
+    CGFloat TPCalculatorViewX = 0;
+    CGFloat TPCalculatorViewY = CGRectGetMaxY(self.navigationController.navigationBar.frame);
+    CGFloat TPCalculatorViewW = CGRectGetWidth(self.view.frame);
+    CGFloat TPCalculatorViewH = CGRectGetHeight(self.view.frame) - TPCalculatorViewX;
+    
+    self.TPCalculatorView.frame = CGRectMake(TPCalculatorViewX, TPCalculatorViewY, TPCalculatorViewW, TPCalculatorViewH);
+}
+
+#pragma mark - TTT Attributed Label Delegate
+
+- (void)attributedLabel:(__unused TTTAttributedLabel *)label
+   didSelectLinkWithURL:(NSURL *)url
+{
+    //跳转至URL
+    [[UIApplication sharedApplication] openURL:url];
+}
+
+#pragma mark - 其他方法
+
+/**
+ *  刷新计算结果显示
+ */
+- (void)reloadCalculatorResult
+{
+    NSInteger countDD  = self.TPCalculatorCounts[0].count.integerValue;
+    NSInteger countCL  = self.TPCalculatorCounts[1].count.integerValue;
+    NSInteger countCAV = self.TPCalculatorCounts[2].count.integerValue;
+    NSInteger countBBV = self.TPCalculatorCounts[3].count.integerValue;
+    NSInteger countAV  = self.TPCalculatorCounts[4].count.integerValue;
+    NSInteger countLHA = self.TPCalculatorCounts[5].count.integerValue;
+    NSInteger countAO  = self.TPCalculatorCounts[6].count.integerValue;
+    NSInteger countSSV = self.TPCalculatorCounts[7].count.integerValue;
+    NSInteger countCT  = self.TPCalculatorCounts[8].count.integerValue;
+    NSInteger countE75 = self.TPCalculatorCounts[9].count.integerValue;
+    NSInteger countE68 = self.TPCalculatorCounts[10].count.integerValue;
+    
+    NSInteger countS = 0, countA = 0;
+    
+    countS = countDD * 5 + countCL * 2 + countCAV * 4 + countAV * 9.5 + countLHA * 12.25 + countAO * 14.75 + countBBV * 7 + countSSV * 7 + countCT * 6 + countE75 * 5 + countE68 * 8;
+    countA = countS * 0.7;
+    
+    self.TPCalculatorView.resultLabel.text = [NSString stringWithFormat:@"A胜：%ld | S胜：%ld",countA, countS];
+}
+/**
+ *  加载计数View
+ */
+- (void)loadCountView
+{
+    /*** countView ***/
+    
     for (int i = 0; i < self.TPCalculatorCounts.count; ++i) {
         //计算frame
         CGFloat countViewW = CGRectGetWidth([UIScreen mainScreen].bounds) - 26;
@@ -73,7 +135,12 @@
         //添加至父控件（并非加到中间的小View上
         [self.TPCalculatorView addSubview:TPCalculatorCountView];
     }
-
+}
+/**
+ *  加载底部AttLabel
+ */
+- (void)loadAttLabel
+{
     /*** 底部label ***/
     
     //设置底部label代理
@@ -81,7 +148,7 @@
     //下划线
     self.TPCalculatorView.bottomLabel.linkAttributes = @{(NSString *)kCTUnderlineStyleAttributeName: @YES};
     //文本颜色
-    self.TPCalculatorView.bottomLabel.textColor = self.controllerAttribute.color;
+    self.TPCalculatorView.bottomLabel.textColor = LSSingletonControllerAttributes(LSkControllerTypeTPCalculator).color;
     //链接文字选中效果
     NSDictionary *activeLinkAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     self.TPCalculatorView.bottomLabel.activeLinkAttributes = activeLinkAttributes;
@@ -109,53 +176,6 @@
     [self.TPCalculatorView.bottomLabel addLinkToURL:url1 withRange:linkRange1];
     [self.TPCalculatorView.bottomLabel addLinkToURL:url2 withRange:linkRange2];
     [self.TPCalculatorView.bottomLabel addLinkToURL:url3 withRange:linkRange3];
-}
-
-#pragma mark - 重写布局
-
-- (void)viewDidLayoutSubviews
-{
-    [super viewDidLayoutSubviews];
-    
-    CGFloat TPCalculatorViewX = 0;
-    CGFloat TPCalculatorViewY = CGRectGetMaxY(self.navigationController.navigationBar.frame);
-    CGFloat TPCalculatorViewW = CGRectGetWidth(self.view.frame);
-    CGFloat TPCalculatorViewH = CGRectGetHeight(self.view.frame) - TPCalculatorViewX;
-    
-    self.TPCalculatorView.frame = CGRectMake(TPCalculatorViewX, TPCalculatorViewY, TPCalculatorViewW, TPCalculatorViewH);
-}
-
-#pragma mark - TTT Attributed Label Delegate
-
-- (void)attributedLabel:(__unused TTTAttributedLabel *)label
-   didSelectLinkWithURL:(NSURL *)url
-{
-    //跳转至URL
-    [[UIApplication sharedApplication] openURL:url];
-}
-
-#pragma mark - 其他方法
-
-- (void)reloadCalculatorResult
-{
-    NSInteger countDD  = self.TPCalculatorCounts[0].count.integerValue;
-    NSInteger countCL  = self.TPCalculatorCounts[1].count.integerValue;
-    NSInteger countCAV = self.TPCalculatorCounts[2].count.integerValue;
-    NSInteger countBBV = self.TPCalculatorCounts[3].count.integerValue;
-    NSInteger countAV  = self.TPCalculatorCounts[4].count.integerValue;
-    NSInteger countLHA = self.TPCalculatorCounts[5].count.integerValue;
-    NSInteger countAO  = self.TPCalculatorCounts[6].count.integerValue;
-    NSInteger countSSV = self.TPCalculatorCounts[7].count.integerValue;
-    NSInteger countCT  = self.TPCalculatorCounts[8].count.integerValue;
-    NSInteger countE75 = self.TPCalculatorCounts[9].count.integerValue;
-    NSInteger countE68 = self.TPCalculatorCounts[10].count.integerValue;
-    
-    NSInteger countS = 0, countA = 0;
-    
-    countS = countDD * 5 + countCL * 2 + countCAV * 4 + countAV * 9.5 + countLHA * 12.25 + countAO * 14.75 + countBBV * 7 + countSSV * 7 + countCT * 6 + countE75 * 5 + countE68 * 8;
-    countA = countS * 0.7;
-    
-    self.TPCalculatorView.resultLabel.text = [NSString stringWithFormat:@"A胜：%ld | S胜：%ld",countA, countS];
 }
 
 #pragma mark - Lazy Load

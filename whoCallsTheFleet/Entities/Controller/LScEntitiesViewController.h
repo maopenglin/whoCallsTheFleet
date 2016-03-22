@@ -14,9 +14,5 @@
  *  工厂方法
  */
 + (instancetype)entitiesViewController;
-/**
- *  工厂方法
- */
-- (instancetype)init;
 
 @end //LScEntitiesViewController

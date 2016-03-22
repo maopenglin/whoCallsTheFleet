@@ -40,17 +40,13 @@
         //设置代理
         self.tableView.dataSource = self;
         self.tableView.delegate   = self;
+        //添加至当前view
+        [self.view addSubview:self.tableView];
     }
     return self;
 }
 
-#pragma mark - controller生命周期方法
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-    [self.view addSubview:self.tableView];
-}
+#pragma mark - controller布局方法
 
 - (void)viewDidLayoutSubviews
 {

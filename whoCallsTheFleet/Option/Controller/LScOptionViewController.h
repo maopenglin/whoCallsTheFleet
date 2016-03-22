@@ -14,9 +14,5 @@
  *  工厂方法
  */
 + (instancetype)optionViewController;
-/**
- *  工厂方法
- */
-- (instancetype)init;
 
 @end

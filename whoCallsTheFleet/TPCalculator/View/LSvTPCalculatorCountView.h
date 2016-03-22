@@ -12,10 +12,6 @@
 
 @interface LSvTPCalculatorCountView : UIView
 
-//控件连线
-@property (nonatomic, weak) IBOutlet UILabel *titleLbl;
-@property (nonatomic, weak) IBOutlet UILabel *countLbl;
-
 //模型
 @property (nonatomic, strong) LSmTPCalculatorCount *TPCalculatorCount;
 
@@ -23,7 +19,7 @@
 @property (nonatomic, copy) void (^LSbCountChanged)(NSString *count);
 
 /**
- *  快速创建
+ *  工厂方法
  */
 + (instancetype)TPCalculatorCountView;
 

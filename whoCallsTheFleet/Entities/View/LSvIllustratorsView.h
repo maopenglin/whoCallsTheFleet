@@ -23,9 +23,5 @@
  *  工厂方法
  */
 + (instancetype)illustratorsViewWithFrame:(CGRect)frame style:(UITableViewStyle)style;
-/**
- *  工厂方法
- */
-- (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style;
 
 @end //LSvIllustratorsView

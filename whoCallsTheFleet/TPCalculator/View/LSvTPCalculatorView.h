@@ -18,7 +18,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *resultLabel;
 
 /**
- *  创建TPCalculatorView
+ *  工厂方法
  */
 + (instancetype)TPCalculatorView;
 

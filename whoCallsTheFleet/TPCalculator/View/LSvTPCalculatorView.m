@@ -15,11 +15,12 @@
 //控件连线
 @property (nonatomic, weak) IBOutlet UILabel *topLabel;
 
+
 @end
 
 @implementation LSvTPCalculatorView
 
-#pragma mark - 快速创建
+#pragma mark - 工厂方法
 
 + (instancetype)TPCalculatorView
 {
@@ -28,8 +29,28 @@
     
     return TPCalculatorView;
 }
-
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
+        ;
+    }
+    return self;
+}
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder]) {
+        ;
+    }
+    return self;
+}
 - (void)awakeFromNib
+{
+    [self setup];
+}
+/**
+ *  设置属性
+ */
+- (void)setup
 {
     self.topLabel.textColor    = LSSingletonControllerAttributes(LSkControllerTypeTPCalculator).color;
     self.resultLabel.textColor = LSSingletonControllerAttributes(LSkControllerTypeTPCalculator).color;

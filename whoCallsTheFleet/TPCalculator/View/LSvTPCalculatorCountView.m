@@ -14,11 +14,15 @@
 
 @property (nonatomic, weak) IBOutlet UIButton *addBtn;
 @property (nonatomic, weak) IBOutlet UIButton *subBtn;
+//控件连线
+@property (nonatomic, weak) IBOutlet UILabel *titleLbl;
+@property (nonatomic, weak) IBOutlet UILabel *countLbl;
 
 @end
+
 @implementation LSvTPCalculatorCountView
 
-#pragma mark - 快速创建
+#pragma mark - 工厂方法
 
 + (instancetype)TPCalculatorCountView
 {
@@ -26,6 +30,35 @@
     LSvTPCalculatorCountView *TPCalculatorCountView = (LSvTPCalculatorCountView *)nibArr.lastObject;
     
     return TPCalculatorCountView;
+}
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
+        ;
+    }
+    return self;
+}
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder]) {
+        ;
+    }
+    return self;
+}
+- (void)awakeFromNib
+{
+    [self setup];
+}
+/**
+ *  设置属性
+ */
+- (void)setup
+{
+    self.titleLbl.textColor = LSSingletonControllerAttributes(LSkControllerTypeTPCalculator).color;
+    self.countLbl.textColor = LSSingletonControllerAttributes(LSkControllerTypeTPCalculator).color;
+    
+    [self.addBtn setTitleColor:LSSingletonControllerAttributes(LSkControllerTypeTPCalculator).color forState:UIControlStateNormal];
+    [self.subBtn setTitleColor:LSSingletonControllerAttributes(LSkControllerTypeTPCalculator).color forState:UIControlStateNormal];
 }
 
 #pragma mark - 连线方法
@@ -56,12 +89,6 @@
     
     self.titleLbl.text = TPCalculatorCount.title;
     self.countLbl.text = TPCalculatorCount.count;
-    
-    self.titleLbl.textColor = LSSingletonControllerAttributes(LSkControllerTypeTPCalculator).color;
-    self.countLbl.textColor = LSSingletonControllerAttributes(LSkControllerTypeTPCalculator).color;
-    
-    [self.addBtn setTitleColor:LSSingletonControllerAttributes(LSkControllerTypeTPCalculator).color forState:UIControlStateNormal];
-    [self.subBtn setTitleColor:LSSingletonControllerAttributes(LSkControllerTypeTPCalculator).color forState:UIControlStateNormal];
 }
 
 @end

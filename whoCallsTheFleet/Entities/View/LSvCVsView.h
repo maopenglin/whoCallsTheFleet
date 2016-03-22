@@ -23,9 +23,5 @@
  *  工厂方法
  */
 + (instancetype)CVsViewWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout;
-/**
- *  工厂方法
- */
-- (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout;
 
 @end //LSvCVsView

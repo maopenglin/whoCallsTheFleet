@@ -15,4 +15,9 @@
 
 @property (nonatomic, strong) LSmEntities *entities;
 
+/**
+ *  工厂方法
+ */
++ (instancetype)entitiesDetailViewController;
+
 @end //LScEntitiesDetailViewController

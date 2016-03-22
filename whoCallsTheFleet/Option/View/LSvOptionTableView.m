@@ -41,9 +41,6 @@
     return self;
 }
 
-#pragma mark - 快速创建
-
-
 - (void)setup
 {
     //设置属性

@@ -10,12 +10,28 @@
 
 @implementation LScEntitiesDetailViewController
 
+#pragma mark - 工厂方法
+
++ (instancetype)entitiesDetailViewController
+{
+    return [[self alloc] init];
+}
+- (instancetype)init
+{
+    if (self = [super init]) {
+        self.controllerAttribute = LSSingletonControllerAttributes(LSkControllerTypeEntities);
+        self.hidesBottomBarWhenPushed = YES;
+    }
+    return self;
+}
+
+#pragma mark - controller生命周期方法
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.controllerAttribute = LSSingletonControllerAttributes(LSkControllerTypeEntities);
-    self.hidesBottomBarWhenPushed = YES;
+
 }
 
 @end //LScEntitiesDetailViewController
