@@ -11,6 +11,14 @@
 #import "LSmEntities.h"
 #import "LSmEntitiesPicture.h"
 #import "LSmName.h"
+#import "LSmControllerAttributes.h"
+
+@interface LSvCVsViewCell ()
+
+@property (nonatomic, weak) IBOutlet UIImageView *iconView;
+@property (nonatomic, weak) IBOutlet UILabel *nameLbl;
+
+@end
 
 @implementation LSvCVsViewCell
 
@@ -26,6 +34,14 @@
 - (void)setCV:(LSmEntities *)CV
 {
     _CV = CV;
+    
+    //设置内容
+    self.iconView.image = [UIImage imageWithData:CV.picture.avatar];
+    self.nameLbl.text   = CV.name.zhCn;
+    
+    //设置颜色
+    UIColor *color = LSSingletonControllerAttributes(LSkControllerTypeEntities).color;
+    self.nameLbl.textColor = color;
 }
 
 @end //LSvCVsViewCell

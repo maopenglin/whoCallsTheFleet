@@ -26,9 +26,15 @@
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style
 {
     if (self = [super initWithFrame:frame style:style]) {
+        //设置代理
         self.dataSource = self;
         self.delegate   = self;
-        [self registerClass:[LSvIllustratorsViewCell class] forCellReuseIdentifier:LSIdentifierEntitiesIllustratorCell];
+        //注册cell
+        [self registerNib:[UINib nibWithNibName:@"LSvIllustratorsViewCell" bundle:nil] forCellReuseIdentifier:LSIdentifierEntitiesIllustratorCell];
+        //设置属性
+        self.separatorStyle               = UITableViewCellSeparatorStyleNone;
+        self.contentInset                 = UIEdgeInsetsMake(50, 0, 55, 0);
+        self.showsVerticalScrollIndicator = NO;
     }
     return self;
 }
@@ -44,6 +50,7 @@
 {
     LSvIllustratorsViewCell *cell = [LSvIllustratorsViewCell illustratorViewCell:tableView forRowAtIndexPath:indexPath];
     
+    //设置数据
     cell.illustrator = self.illustrators[indexPath.row];
     
     return cell;

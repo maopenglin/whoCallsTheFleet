@@ -26,9 +26,13 @@
 - (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout
 {
     if (self = [super initWithFrame:frame collectionViewLayout:layout]) {
+        //设置代理
         self.dataSource = self;
         self.delegate   = self;
-        [self registerClass:[LSvCVsViewCell class] forCellWithReuseIdentifier:LSIdentifierEntitiesCVCell];
+        //注册cell
+        [self registerNib:[UINib nibWithNibName:@"LSvCVsViewCell" bundle:nil] forCellWithReuseIdentifier:LSIdentifierEntitiesCVCell];
+        //设置属性
+        self.showsVerticalScrollIndicator = NO;
     }
     return self;
 }
@@ -44,6 +48,7 @@
 {
     LSvCVsViewCell *cell = [LSvCVsViewCell CVsViewCell:collectionView forItemAtIndexPath:indexPath];
     
+    //设置数据
     cell.CV = self.CVs[indexPath.item];
     
     return cell;
