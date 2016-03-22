@@ -126,7 +126,7 @@
 {
     [super viewDidLayoutSubviews];
 
-    [self.view bringSubviewToFront:self.navigationController.navigationBar];
+    [self.view bringSubviewToFront:self.menuView];
 }
 
 #pragma mark - 回调方法

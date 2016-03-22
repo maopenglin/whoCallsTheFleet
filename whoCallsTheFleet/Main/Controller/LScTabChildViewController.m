@@ -71,6 +71,17 @@
     //关联该按钮至导航栏
     self.navigationItem.leftBarButtonItem = self.menuBtnItem;
 }
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    //切换页面时收回侧边栏
+    self.menuView.transform = CGAffineTransformMakeTranslation(0, 0);
+    self.menuView.open = NO;
+    //释放遮罩按钮
+    [self freeMaskBtn];
+}
 #pragma mark - 重写布局方法
 
 - (void)viewDidLayoutSubviews
@@ -99,6 +110,7 @@
             //菜单平移收回
             self.menuView.transform = CGAffineTransformMakeTranslation(0, 0);
         } completion:^(BOOL finished) {
+            //标记为关
             self.menuView.open = NO;
             //菜单按钮可用
             self.menuBtnItem.enabled = YES;
@@ -106,32 +118,37 @@
     }
     //若菜单栏关闭
     else {
-        [self.view bringSubviewToFront:self.menuView];
+//        [self.view bringSubviewToFront:self.menuView];
         //菜单按钮不可用
         self.menuBtnItem.enabled = NO;
-        self.menuView.open = YES;
         //动画
         [UIView animateWithDuration:0.5 animations:^{
             //菜单平移展开
             self.menuView.transform = CGAffineTransformMakeTranslation([UIScreen mainScreen].bounds.size.width * 0.3, 0);
+//            self.menuView.transform = CGAffineTransformMakeTranslation(50, 50);
         } completion:^(BOOL finished) {
-            //菜单按钮可用
-            self.menuBtnItem.enabled = YES;
             
-            //创建遮罩按钮
+//            //创建遮罩按钮
             UIButton *menuMaskBtn = [UIButton buttonWithType:UIButtonTypeCustom];
             self.menuMaskBtn = menuMaskBtn;
             self.menuMaskBtn.backgroundColor = [UIColor redColor];
             [self.view addSubview:self.menuMaskBtn];
-            [self.view bringSubviewToFront:self.menuMaskBtn];
-            //设置遮罩按钮frame
-            CGFloat menuMaskBtnX = self.menuView.frame.size.width;
-            CGFloat menuMaskBtnY = self.menuView.frame.origin.y;
-            CGFloat menuMaskBtnW = [UIScreen mainScreen].bounds.size.width - menuMaskBtnX;
-            CGFloat menuMaskBtnH = self.menuView.frame.size.height;
-            self.menuMaskBtn.frame = CGRectMake(menuMaskBtnX, menuMaskBtnY, menuMaskBtnW, menuMaskBtnH);
-            //为遮罩按钮绑定回调
-            [self.menuMaskBtn addTarget:self action:@selector(maskBtnDidClick) forControlEvents:UIControlEventTouchDown];
+//            [self.view bringSubviewToFront:self.menuMaskBtn];
+//            //设置遮罩按钮frame
+//            CGFloat menuMaskBtnX = self.menuView.frame.size.width;
+//            CGFloat menuMaskBtnY = self.menuView.frame.origin.y;
+//            CGFloat menuMaskBtnW = [UIScreen mainScreen].bounds.size.width - menuMaskBtnX;
+//            CGFloat menuMaskBtnH = self.menuView.frame.size.height;
+            self.menuMaskBtn.frame = CGRectMake(200, 200, 50, 50);
+            //            self.menuMaskBtn.frame = CGRectMake(menuMaskBtnX, menuMaskBtnY, menuMaskBtnW, menuMaskBtnH);
+            NSLog(@"%@",NSStringFromCGRect(self.menuView.frame));
+            NSLog(@"%@",NSStringFromCGRect(self.menuMaskBtn.frame));
+//            //为遮罩按钮绑定回调
+//            [self.menuMaskBtn addTarget:self action:@selector(maskBtnDidClick) forControlEvents:UIControlEventTouchDown];
+            //标记为开
+            self.menuView.open = YES;
+            //菜单按钮可用
+            self.menuBtnItem.enabled = YES;
         }];
     }
 }

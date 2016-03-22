@@ -37,7 +37,6 @@
         //创建主体view
         LSvTPCalculatorView *TPCalculatorView = [LSvTPCalculatorView TPCalculatorView];
         self.TPCalculatorView = TPCalculatorView;
-        [self.view addSubview:self.TPCalculatorView];
     }
     return self;
 }
@@ -47,6 +46,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.view addSubview:self.TPCalculatorView];
     //显示计算结果
     [self reloadCalculatorResult];
     
