@@ -125,10 +125,9 @@
         [UIView animateWithDuration:0.5 animations:^{
             //菜单平移展开
             self.menuView.transform = CGAffineTransformMakeTranslation([UIScreen mainScreen].bounds.size.width * 0.3, 0);
-//            self.menuView.transform = CGAffineTransformMakeTranslation(50, 50);
         } completion:^(BOOL finished) {
             
-//            //创建遮罩按钮
+            //创建遮罩按钮
             UIButton *menuMaskBtn = [UIButton buttonWithType:UIButtonTypeCustom];
             self.menuMaskBtn = menuMaskBtn;
             self.menuMaskBtn.backgroundColor = [UIColor redColor];
@@ -143,8 +142,8 @@
             //            self.menuMaskBtn.frame = CGRectMake(menuMaskBtnX, menuMaskBtnY, menuMaskBtnW, menuMaskBtnH);
             NSLog(@"%@",NSStringFromCGRect(self.menuView.frame));
             NSLog(@"%@",NSStringFromCGRect(self.menuMaskBtn.frame));
-//            //为遮罩按钮绑定回调
-//            [self.menuMaskBtn addTarget:self action:@selector(maskBtnDidClick) forControlEvents:UIControlEventTouchDown];
+            //为遮罩按钮绑定回调
+            [self.menuMaskBtn addTarget:self action:@selector(maskBtnDidClick) forControlEvents:UIControlEventTouchDown];
             //标记为开
             self.menuView.open = YES;
             //菜单按钮可用
