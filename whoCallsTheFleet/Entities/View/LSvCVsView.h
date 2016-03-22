@@ -12,7 +12,12 @@
 
 @interface LSvCVsView : UICollectionView
 
+//模型数组
 @property (nonatomic, strong) NSArray<LSmEntities *> *CVs;
+/**
+ *  选择cell时回调block
+ */
+@property (nonatomic, copy) void (^LSbCellDidSelect)(NSIndexPath *);
 
 /**
  *  工厂方法

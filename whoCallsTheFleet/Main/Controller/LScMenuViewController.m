@@ -8,11 +8,20 @@
 
 #import "LScMenuViewController.h"
 
-@interface LScMenuViewController ()
-
-@end
-
 @implementation LScMenuViewController
+
+#pragma mark - 工厂方法
+
++ (instancetype)menuViewController
+{
+    return [[self alloc] init];
+}
+- (instancetype)init
+{
+    if (self = [super init]) {
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,4 +41,4 @@
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
-@end
+@end //LScMenuViewController

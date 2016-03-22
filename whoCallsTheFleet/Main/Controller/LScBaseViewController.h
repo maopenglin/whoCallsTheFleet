@@ -13,7 +13,14 @@
 
 //控制器属性表
 @property (nonatomic, strong) LSmControllerAttributes *controllerAttribute;
-//背景图片
-@property (nonatomic, weak) UIImageView *backgroundImgView;
 
-@end
+/**
+ *  工厂方法
+ */
++ (instancetype)baseViewController;
+/**
+ *  工厂方法
+ */
+- (instancetype)init;
+
+@end //LScBaseViewController

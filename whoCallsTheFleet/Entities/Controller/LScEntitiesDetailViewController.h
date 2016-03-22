@@ -6,11 +6,12 @@
 //  Copyright © 2016年 LarrySue. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "LScBaseViewController.h"
+//#import <UIKit/UIKit.h>
 
 @class LSmEntities;
 
-@interface LScEntitiesDetailViewController : UIViewController
+@interface LScEntitiesDetailViewController : LScBaseViewController
 
 @property (nonatomic, strong) LSmEntities *entities;
 

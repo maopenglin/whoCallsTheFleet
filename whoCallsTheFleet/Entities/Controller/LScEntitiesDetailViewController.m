@@ -14,6 +14,7 @@
 {
     [super viewDidLoad];
     
+    self.controllerAttribute = LSSingletonControllerAttributes(LSkControllerTypeEntities);
     self.hidesBottomBarWhenPushed = YES;
 }
 

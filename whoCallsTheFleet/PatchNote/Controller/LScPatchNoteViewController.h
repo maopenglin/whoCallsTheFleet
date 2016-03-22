@@ -10,4 +10,13 @@
 
 @interface LScPatchNoteViewController : LScMenuViewController
 
+/**
+ *  工厂方法
+ */
++ (instancetype)patchNoteViewController;
+/**
+ *  工厂方法
+ */
+- (instancetype)init;
+
 @end

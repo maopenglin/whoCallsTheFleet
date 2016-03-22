@@ -25,15 +25,27 @@
 
 @implementation LScTPCalculatorViewController
 
+#pragma mark - 工厂方法
+
++ (instancetype)TPCalculatorViewController
+{
+    return [[self alloc] init];
+}
+- (instancetype)init
+{
+    if (self = [super init]) {
+        //创建主体view
+        LSvTPCalculatorView *TPCalculatorView = [LSvTPCalculatorView TPCalculatorView];
+        self.TPCalculatorView = TPCalculatorView;
+        [self.view addSubview:self.TPCalculatorView];
+    }
+    return self;
+}
+
 #pragma mark - controller生命周期方法
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    //创建主体view
-    LSvTPCalculatorView *TPCalculatorView = [LSvTPCalculatorView TPCalculatorView];
-    self.TPCalculatorView = TPCalculatorView;
-    [self.navigationController.view addSubview:self.TPCalculatorView];
     
     //显示计算结果
     [self reloadCalculatorResult];

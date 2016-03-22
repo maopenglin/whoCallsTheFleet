@@ -12,7 +12,12 @@
 
 @interface LSvIllustratorsView : UITableView
 
+//模型数组
 @property (nonatomic, strong) NSArray<LSmEntities *> *illustrators;
+/**
+ *  选择cell时回调block
+ */
+@property (nonatomic, copy) void (^LSbCellDidSelect)(NSIndexPath *);
 
 /**
  *  工厂方法

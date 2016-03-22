@@ -56,4 +56,12 @@
     return cell;
 }
 
+#pragma mark - Table View Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //调用Block
+    self.LSbCellDidSelect(indexPath);
+}
+
 @end //LSvIllustratorsView

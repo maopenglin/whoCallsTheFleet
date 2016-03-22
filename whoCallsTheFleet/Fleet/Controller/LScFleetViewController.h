@@ -10,4 +10,13 @@
 
 @interface LScFleetViewController : LScTabChildViewController
 
+/**
+ *  工厂方法
+ */
++ (instancetype)fleetViewController;
+/**
+ *  工厂方法
+ */
+- (instancetype)init;
+
 @end

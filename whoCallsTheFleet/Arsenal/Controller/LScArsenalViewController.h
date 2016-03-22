@@ -10,4 +10,13 @@
 
 @interface LScArsenalViewController : LScTabChildViewController
 
+/**
+ *  工厂方法
+ */
++ (instancetype)arsenalViewController;
+/**
+ *  工厂方法
+ */
+- (instancetype)init;
+
 @end

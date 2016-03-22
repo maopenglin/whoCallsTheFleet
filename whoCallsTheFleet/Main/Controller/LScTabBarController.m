@@ -10,7 +10,7 @@
 
 @interface LScTabBarController ()
 
-@end
+@end //LScTabBarController
 
 @implementation LScTabBarController
 
@@ -27,4 +27,4 @@
     [tabBar setTranslucent:YES];
 }
 
-@end
+@end //LScTabBarController

@@ -25,18 +25,31 @@
 
 @implementation LScOptionViewController
 
+#pragma mark - 工厂方法
+
++ (instancetype)optionViewController
+{
+    return [[self alloc] init];
+}
+- (instancetype)init
+{
+    if (self = [super init]) {
+        //创建TableView
+        LSvOptionTableView *tableView = [LSvOptionTableView optionTableView];
+        self.tableView = tableView;
+        //设置代理
+        self.tableView.dataSource = self;
+        self.tableView.delegate   = self;
+    }
+    return self;
+}
+
 #pragma mark - controller生命周期方法
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    //创建TableView
-    LSvOptionTableView *tableView = [LSvOptionTableView optionTableView];
-    self.tableView = tableView;
-    [self.navigationController.view addSubview:self.tableView];
-    //设置代理
-    self.tableView.dataSource = self;
-    self.tableView.delegate   = self;
+    [self.view addSubview:self.tableView];
 }
 
 - (void)viewDidLayoutSubviews

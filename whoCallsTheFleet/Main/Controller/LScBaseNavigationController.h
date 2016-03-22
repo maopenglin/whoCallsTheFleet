@@ -21,4 +21,4 @@
  */
 - (instancetype)initWithType:(LSkControllerType)controllerType;
 
-@end
+@end //LScBaseNavigationController

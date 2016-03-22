@@ -54,5 +54,12 @@
     return cell;
 }
 
+#pragma mark - Collection View Delegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    //调用Block
+    self.LSbCellDidSelect(indexPath);
+}
 
 @end //LSvCVsView

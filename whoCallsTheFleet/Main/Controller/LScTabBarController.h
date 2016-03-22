@@ -10,4 +10,4 @@
 
 @interface LScTabBarController : UITabBarController
 
-@end
+@end //LScTabBarController

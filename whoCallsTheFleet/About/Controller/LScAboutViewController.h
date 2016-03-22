@@ -10,4 +10,13 @@
 
 @interface LScAboutViewController : LScMenuViewController
 
+/**
+ *  工厂方法
+ */
++ (instancetype)aboutViewController;
+/**
+ *  工厂方法
+ */
+- (instancetype)init;
+
 @end

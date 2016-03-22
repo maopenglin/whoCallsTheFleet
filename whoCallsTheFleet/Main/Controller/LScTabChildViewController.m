@@ -21,18 +21,36 @@
  */
 @property (nonatomic, weak) UIButton *menuMaskBtn;
 
-@end
+@end //LScTabChildViewController
 
 @implementation LScTabChildViewController
 
-#pragma mark - 重写Controller生命周期方法
+#pragma mark - 工厂方法
 
-- (void)viewDidLoad {
++ (instancetype)tabChildViewController
+{
+    return [[self alloc] init];
+}
+- (instancetype)init
+{
+    if (self = [super init]) {
+        //创建侧边菜单栏
+        LSvMenuView *menuView = [LSvMenuView menuView];
+        self.menuView = menuView;
+        self.menuView.open = NO;
+        //设置代理
+        self.menuView.delegate = self;
+        //添加至View
+        [self.view addSubview:self.menuView];
+    }
+    return self;
+}
+
+#pragma mark - controller生命周期方法
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-
-    //设置item图标
-    self.tabBarItem.image = [[UIImage imageNamed:self.controllerAttribute.itemIconName] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    
     //添加屏幕边缘右滑响应
     UIScreenEdgePanGestureRecognizer *screenEdgePanGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(menuViewRightSwipe)];
     screenEdgePanGestureRecognizer.edges = UIRectEdgeLeft;
@@ -52,17 +70,7 @@
     self.menuBtnItem = menuBtnItem;
     //关联该按钮至导航栏
     self.navigationItem.leftBarButtonItem = self.menuBtnItem;
-    
-    //创建侧边菜单栏
-    LSvMenuView *menuView = [LSvMenuView menuView];
-    self.menuView = menuView;
-    self.menuView.open = NO;
-    //设置代理
-    self.menuView.delegate = self;
-    //添加至View
-    [self.navigationController.view addSubview:self.menuView];
 }
-
 #pragma mark - 重写布局方法
 
 - (void)viewDidLayoutSubviews
@@ -97,8 +105,8 @@
         }];
     }
     //若菜单栏关闭
-    else{
-        [self.navigationController.view bringSubviewToFront:self.menuView];
+    else {
+        [self.view bringSubviewToFront:self.menuView];
         //菜单按钮不可用
         self.menuBtnItem.enabled = NO;
         self.menuView.open = YES;
@@ -114,8 +122,8 @@
             UIButton *menuMaskBtn = [UIButton buttonWithType:UIButtonTypeCustom];
             self.menuMaskBtn = menuMaskBtn;
             self.menuMaskBtn.backgroundColor = [UIColor redColor];
-            [self.navigationController.view addSubview:self.menuMaskBtn];
-            [self.navigationController.view bringSubviewToFront:self.menuMaskBtn];
+            [self.view addSubview:self.menuMaskBtn];
+            [self.view bringSubviewToFront:self.menuMaskBtn];
             //设置遮罩按钮frame
             CGFloat menuMaskBtnX = self.menuView.frame.size.width;
             CGFloat menuMaskBtnY = self.menuView.frame.origin.y;
@@ -219,4 +227,12 @@
     }
 }
 
-@end
+- (void)setControllerAttribute:(LSmControllerAttributes *)controllerAttribute
+{
+    [super setControllerAttribute:controllerAttribute];
+    
+    //设置item图标
+    self.tabBarItem.image = [[UIImage imageNamed:self.controllerAttribute.itemIconName] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+}
+
+@end //LScTabChildViewController

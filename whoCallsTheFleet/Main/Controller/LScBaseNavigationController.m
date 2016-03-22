@@ -11,7 +11,7 @@
 
 @interface LScBaseNavigationController ()
 
-@end
+@end //LScBaseNavigationController
 
 @implementation LScBaseNavigationController
 
@@ -41,35 +41,8 @@
     LScBaseNavigationController *navVc = [[LScBaseNavigationController alloc] initWithRootViewController:vc];
     //为子控制器赋值
     vc.controllerAttribute = controllerAttribute;
-    
-    //添加背景图片
-    UIImageView *backgroundImgView = [[UIImageView alloc] initWithFrame:vc.view.bounds];
-    backgroundImgView.image = controllerAttribute.backgroundImage;
-    vc.backgroundImgView = backgroundImgView;
-    [vc.view addSubview:vc.backgroundImgView];
-    
-    //添加背景遮罩
-    //暗色效果(待定)
-//    UIView *maskView = [[UIView alloc] initWithFrame:vc.view.bounds];
-//    maskView.backgroundColor = [UIColor blackColor];
-//    maskView.backgroundColor = vc.controllerAttribute.color;
-//    maskView.alpha = 0.1;
-//    [vc.view addSubview:maskView];
-    
-//    if (controllerType == LSkControllerTypeAbout  ||
-//        controllerType == LSkControllerTypeOption ||
-//        controllerType == LSkControllerTypePatchNote ||
-//        controllerType == LSkControllerTypeTPCalculator) {
-    
-    //毛玻璃效果
-    UIBlurEffect *maskBlurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-    UIVisualEffectView *maskBlurEffectView = [[UIVisualEffectView alloc] initWithFrame:vc.view.bounds];
-    maskBlurEffectView.effect = maskBlurEffect;
-//    maskBlurEffectView.alpha  = 0.99;
-    [vc.view addSubview:maskBlurEffectView];
-//    }
 
     return navVc;
 }
 
-@end
+@end //LScBaseNavigationController
