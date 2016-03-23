@@ -9,15 +9,10 @@
 #import "LScBaseNavigationController.h"
 #import "LScBaseViewController.h"
 
-@interface LScBaseNavigationController ()
-
-@end //LScBaseNavigationController
-
 @implementation LScBaseNavigationController
 
-/**
- *  重写构造方法
- */
+#pragma mark - 构造方法
+
 + (void)initialize
 {
     //获取全局navigationBar
@@ -28,9 +23,8 @@
     navigationBar.translucent = YES;
 }
 
-/**
- *  自定义构造方法
- */
+#pragma mark - 工厂方法
+
 - (instancetype)initWithType:(LSkControllerType)controllerType
 {
     //获取数据模型

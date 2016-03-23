@@ -18,7 +18,7 @@
 @property (nonatomic, weak) IBOutlet UIImageView *arrowView;
 @property (nonatomic, weak) IBOutlet UIView *lineView;
 
-@end
+@end //LSvIllustratorsViewCell
 
 @implementation LSvIllustratorsViewCell
 

@@ -18,7 +18,7 @@
 @property (nonatomic, weak) IBOutlet UIImageView *iconView;
 @property (nonatomic, weak) IBOutlet UILabel *nameLbl;
 
-@end
+@end //LSvCVsViewCell
 
 @implementation LSvCVsViewCell
 

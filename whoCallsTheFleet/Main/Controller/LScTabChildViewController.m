@@ -31,19 +31,31 @@
 {
     return [[self alloc] init];
 }
-- (instancetype)init
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    if (self = [super init]) {
-        //创建侧边菜单栏
-        LSvMenuView *menuView = [LSvMenuView menuView];
-        self.menuView = menuView;
-        self.menuView.open = NO;
-        //设置代理
-        self.menuView.delegate = self;
-        //添加至View
-        [self.view addSubview:self.menuView];
+    if (self = [super initWithCoder:aDecoder]) {
+        [self setupController];
     }
     return self;
+}
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        [self setupController];
+    }
+    return self;
+}
+- (void)setupController
+{
+    [super setupController];
+    //创建侧边菜单栏
+    LSvMenuView *menuView = [LSvMenuView menuView];
+    self.menuView = menuView;
+    self.menuView.open = NO;
+    //设置代理
+    self.menuView.delegate = self;
+    //添加至View
+    [self.view addSubview:self.menuView];
 }
 
 #pragma mark - controller生命周期方法

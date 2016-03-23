@@ -35,65 +35,71 @@
 {
     return [[self alloc] init];
 }
-- (instancetype)init
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    if (self = [super init]) {
-        //计算需要使用的尺寸数值
-        CGFloat viewX = 0;
-        CGFloat viewY = 0;
-        CGFloat viewW = self.view.frame.size.width * 2;
-        CGFloat viewH = self.view.frame.size.height;
-        
-        //创建用于分页的scrollView
-        UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
-        self.scrollView = scrollView;
-        [self.view addSubview:self.scrollView];
-        //设置代理
-        self.scrollView.delegate                       = self;
-        //设置属性
-        self.scrollView.backgroundColor                = [UIColor clearColor];
-        self.scrollView.contentSize                    = CGSizeMake(viewW, 0);
-        self.scrollView.bounces                        = NO;
-        self.scrollView.showsHorizontalScrollIndicator = NO;
-        self.scrollView.pagingEnabled                  = YES;
-        
-        //创建每页分别显示的View
-        //创建声优页面布局
-        UICollectionViewFlowLayout *CVsViewLayout = [[UICollectionViewFlowLayout alloc] init];
-        //设置布局属性
-        CVsViewLayout.minimumLineSpacing      = 20;
-        CVsViewLayout.minimumInteritemSpacing = 15;
-        CVsViewLayout.itemSize                = CGSizeMake(80, 100);
-        CVsViewLayout.sectionInset            = UIEdgeInsetsMake(60, 20, 55, 20);
-        //创建声优页面View
-        LSvCVsView *CVsView = [LSvCVsView CVsViewWithFrame:CGRectMake(viewX, viewY, viewW * 0.5, viewH) collectionViewLayout:CVsViewLayout];
-        //创建画师页面View
-        LSvIllustratorsView *illustratorsView = [LSvIllustratorsView illustratorsViewWithFrame:CGRectMake(viewW * 0.5, 0, viewW * 0.5, viewH) style:UITableViewStylePlain];
-        //设置数据
-        CVsView.CVs                   = self.CVs;
-        illustratorsView.illustrators = self.illustrators;
-        //设置回调Block
-        CVsView.LSbCellDidSelect = ^(NSIndexPath *indexPath){
-            //获取数据
-            LSmEntities *CV = self.CVs[indexPath.item];
-            //push控制器
-            [self pushEntitiesDetailViewController:CV];
-        };
-        illustratorsView.LSbCellDidSelect = ^(NSIndexPath *indexPath){
-            //获取数据
-            LSmEntities *illustrator = self.illustrators[indexPath.row];
-            //push控制器
-            [self pushEntitiesDetailViewController:illustrator];
-        };
-        
-        //设置背景色
-        CVsView.backgroundColor          = [UIColor clearColor];
-        illustratorsView.backgroundColor = [UIColor clearColor];
-        //添加至scrollView
-        [self.scrollView addSubview:CVsView];
-        [self.scrollView addSubview:illustratorsView];
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        [self setupController];
     }
     return self;
+}
+- (void)setupController
+{
+    [super setupController];
+    
+    //计算需要使用的尺寸数值
+    CGFloat viewX = 0;
+    CGFloat viewY = 0;
+    CGFloat viewW = self.view.frame.size.width * 2;
+    CGFloat viewH = self.view.frame.size.height;
+    
+    //创建用于分页的scrollView
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
+    self.scrollView = scrollView;
+    [self.view addSubview:self.scrollView];
+    //设置代理
+    self.scrollView.delegate                       = self;
+    //设置属性
+    self.scrollView.backgroundColor                = [UIColor clearColor];
+    self.scrollView.contentSize                    = CGSizeMake(viewW, 0);
+    self.scrollView.bounces                        = NO;
+    self.scrollView.showsHorizontalScrollIndicator = NO;
+    self.scrollView.pagingEnabled                  = YES;
+    
+    //创建每页分别显示的View
+    //创建声优页面布局
+    UICollectionViewFlowLayout *CVsViewLayout = [[UICollectionViewFlowLayout alloc] init];
+    //设置布局属性
+    CVsViewLayout.minimumLineSpacing      = 20;
+    CVsViewLayout.minimumInteritemSpacing = 15;
+    CVsViewLayout.itemSize                = CGSizeMake(80, 100);
+    CVsViewLayout.sectionInset            = UIEdgeInsetsMake(60, 20, 55, 20);
+    //创建声优页面View
+    LSvCVsView *CVsView = [LSvCVsView CVsViewWithFrame:CGRectMake(viewX, viewY, viewW * 0.5, viewH) collectionViewLayout:CVsViewLayout];
+    //创建画师页面View
+    LSvIllustratorsView *illustratorsView = [LSvIllustratorsView illustratorsViewWithFrame:CGRectMake(viewW * 0.5, 0, viewW * 0.5, viewH) style:UITableViewStylePlain];
+    //设置数据
+    CVsView.CVs                   = self.CVs;
+    illustratorsView.illustrators = self.illustrators;
+    //设置回调Block
+    CVsView.LSbCellDidSelect = ^(NSIndexPath *indexPath){
+        //获取数据
+        LSmEntities *CV = self.CVs[indexPath.item];
+        //push控制器
+        [self pushEntitiesDetailViewController:CV];
+    };
+    illustratorsView.LSbCellDidSelect = ^(NSIndexPath *indexPath){
+        //获取数据
+        LSmEntities *illustrator = self.illustrators[indexPath.row];
+        //push控制器
+        [self pushEntitiesDetailViewController:illustrator];
+    };
+    
+    //设置背景色
+    CVsView.backgroundColor          = [UIColor clearColor];
+    illustratorsView.backgroundColor = [UIColor clearColor];
+    //添加至scrollView
+    [self.scrollView addSubview:CVsView];
+    [self.scrollView addSubview:illustratorsView];
 }
 
 #pragma mark - controller生命周期方法
@@ -152,14 +158,12 @@
  */
 - (void)pushEntitiesDetailViewController:(LSmEntities *)entities
 {
-    //scrollView消失
-    [UIView animateWithDuration:0.1 animations:^{
-        self.scrollView.alpha = 0;
-    }];
-    LSLog(@"%@", entities.name.zhCn);
     //创建控制器
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LScEntitiesDetailViewController" bundle:nil];
     LScEntitiesDetailViewController *entitiesDetailVc = storyboard.instantiateInitialViewController;
+    //传值
+    entitiesDetailVc.entities = entities;
+    //控制器压栈
     [self.navigationController pushViewController:entitiesDetailVc animated:YES];
 }
 

@@ -8,6 +8,10 @@
 
 #import "LScEntitiesDetailViewController.h"
 
+#import "LSmEntities.h"
+#import "LSmEntitiesPicture.h"
+#import "LSmName.h"
+
 @implementation LScEntitiesDetailViewController
 
 #pragma mark - 工厂方法
@@ -16,13 +20,24 @@
 {
     return [[self alloc] init];
 }
-- (instancetype)init
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    if (self = [super init]) {
-        self.controllerAttribute = LSSingletonControllerAttributes(LSkControllerTypeEntities);
-        self.hidesBottomBarWhenPushed = YES;
+    if (self = [super initWithCoder:aDecoder]) {
+        [self setup];
     }
     return self;
+}
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        [self setup];
+    }
+    return self;
+}
+- (void)setup
+{
+    self.controllerAttribute = LSSingletonControllerAttributes(LSkControllerTypeEntities);
+    self.hidesBottomBarWhenPushed = YES;
 }
 
 #pragma mark - controller生命周期方法
@@ -32,6 +47,15 @@
     [super viewDidLoad];
     
 
+}
+
+#pragma mark - 重写set方法
+
+- (void)setEntities:(LSmEntities *)entities
+{
+    _entities = entities;
+    
+    self.title = entities.name.zhCn;
 }
 
 @end //LScEntitiesDetailViewController

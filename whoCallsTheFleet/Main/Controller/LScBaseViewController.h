@@ -19,8 +19,8 @@
  */
 + (instancetype)baseViewController;
 /**
- *  工厂方法
+ *  设置控制器属性
  */
-- (instancetype)init;
+- (void)setupController;
 
 @end //LScBaseViewController

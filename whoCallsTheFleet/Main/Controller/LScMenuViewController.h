@@ -16,9 +16,5 @@
  *  工厂方法
  */
 + (instancetype)menuViewController;
-/**
- *  工厂方法
- */
-- (instancetype)init;
 
 @end //LScMenuViewController

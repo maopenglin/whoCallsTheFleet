@@ -26,9 +26,5 @@
  *  工厂方法
  */
 + (instancetype)tabChildViewController;
-/**
- *  工厂方法
- */
-- (instancetype)init;
 
 @end //LScTabChildViewController

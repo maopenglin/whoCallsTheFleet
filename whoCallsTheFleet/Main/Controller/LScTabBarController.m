@@ -8,10 +8,6 @@
 
 #import "LScTabBarController.h"
 
-@interface LScTabBarController ()
-
-@end //LScTabBarController
-
 @implementation LScTabBarController
 
 /**
