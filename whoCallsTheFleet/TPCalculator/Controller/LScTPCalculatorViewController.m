@@ -31,20 +31,32 @@
 {
     return [[self alloc] init];
 }
-- (instancetype)init
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    if (self = [super init]) {
-        //创建主体view
-        LSvTPCalculatorView *TPCalculatorView = [LSvTPCalculatorView TPCalculatorView];
-        self.TPCalculatorView = TPCalculatorView;
-        //添加至当前view
-        [self.view addSubview:self.TPCalculatorView];
-        //加载计数View
-        [self loadCountView];
-        //加载底部AttLabel
-        [self loadAttLabel];
+    if (self = [super initWithCoder:aDecoder]) {
+        [self setupController];
     }
     return self;
+}
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        [self setupController];
+    }
+    return self;
+}
+- (void)setupController
+{
+    [super setupController];
+    //创建主体view
+    LSvTPCalculatorView *TPCalculatorView = [LSvTPCalculatorView TPCalculatorView];
+    self.TPCalculatorView = TPCalculatorView;
+    //添加至当前view
+    [self.view addSubview:self.TPCalculatorView];
+    //加载计数View
+    [self loadCountView];
+    //加载底部AttLabel
+    [self loadAttLabel];
 }
 
 #pragma mark - controller生命周期方法

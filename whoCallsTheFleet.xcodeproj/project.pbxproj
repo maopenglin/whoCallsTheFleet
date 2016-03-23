@@ -44,6 +44,7 @@
 		1D2E912C1C8ACC650072FB29 /* LSvOptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E912B1C8ACC650072FB29 /* LSvOptionTableViewCell.m */; };
 		1D2E912F1C8AFC9C0072FB29 /* LSvOptionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E912E1C8AFC9C0072FB29 /* LSvOptionHeaderView.m */; };
 		1D2E91361C8C2AEB0072FB29 /* LScPatchNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E91351C8C2AEB0072FB29 /* LScPatchNoteViewController.m */; };
+		1D3B8FE81CA236F10003DBF9 /* LScEntitiesDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D3B8FE71CA236F10003DBF9 /* LScEntitiesDetailViewController.storyboard */; };
 		1D3E411C1C85853C00FBDB77 /* LScTabChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E411B1C85853C00FBDB77 /* LScTabChildViewController.m */; };
 		1D3E411F1C858A6700FBDB77 /* LScMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E411E1C858A6700FBDB77 /* LScMenuViewController.m */; };
 		1D3E412E1C85939200FBDB77 /* LScAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E412D1C85939200FBDB77 /* LScAboutViewController.m */; };
@@ -51,7 +52,6 @@
 		1D3E41341C8593CF00FBDB77 /* LScTPCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E41331C8593CF00FBDB77 /* LScTPCalculatorViewController.m */; };
 		1D4019E91C871842003D71D3 /* LSvOptionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4019E71C871842003D71D3 /* LSvOptionTableView.m */; };
 		1D406D291C9EA60D00A1D225 /* LScEntitiesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D406D281C9EA60D00A1D225 /* LScEntitiesDetailViewController.m */; };
-		1D406D2B1C9EA61A00A1D225 /* LScEntitiesDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D406D2A1C9EA61A00A1D225 /* LScEntitiesDetailViewController.storyboard */; };
 		1D681D481C830639004B5FAE /* LSvMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D681D471C830639004B5FAE /* LSvMenuView.m */; };
 		1D6FB21B1C821A2B007F9A9F /* LScBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FB21A1C821A2B007F9A9F /* LScBaseViewController.m */; };
 		1D7547931C983D49009AB38C /* LSvTPCalculatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DED6C241C9152A600C90CC2 /* LSvTPCalculatorView.xib */; };
@@ -189,6 +189,7 @@
 		1D2E912E1C8AFC9C0072FB29 /* LSvOptionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvOptionHeaderView.m; sourceTree = "<group>"; };
 		1D2E91341C8C2AEB0072FB29 /* LScPatchNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LScPatchNoteViewController.h; sourceTree = "<group>"; };
 		1D2E91351C8C2AEB0072FB29 /* LScPatchNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScPatchNoteViewController.m; sourceTree = "<group>"; };
+		1D3B8FE71CA236F10003DBF9 /* LScEntitiesDetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LScEntitiesDetailViewController.storyboard; sourceTree = "<group>"; };
 		1D3E411A1C85853C00FBDB77 /* LScTabChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LScTabChildViewController.h; sourceTree = "<group>"; };
 		1D3E411B1C85853C00FBDB77 /* LScTabChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScTabChildViewController.m; sourceTree = "<group>"; };
 		1D3E411D1C858A6700FBDB77 /* LScMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LScMenuViewController.h; sourceTree = "<group>"; };
@@ -203,7 +204,6 @@
 		1D4019E71C871842003D71D3 /* LSvOptionTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvOptionTableView.m; sourceTree = "<group>"; };
 		1D406D271C9EA60D00A1D225 /* LScEntitiesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LScEntitiesDetailViewController.h; sourceTree = "<group>"; };
 		1D406D281C9EA60D00A1D225 /* LScEntitiesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScEntitiesDetailViewController.m; sourceTree = "<group>"; };
-		1D406D2A1C9EA61A00A1D225 /* LScEntitiesDetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LScEntitiesDetailViewController.storyboard; sourceTree = "<group>"; };
 		1D5024251C3FCA120053FA71 /* whoCallsTheFleet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whoCallsTheFleet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D5024341C3FCA120053FA71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D5024491C3FCA120053FA71 /* whoCallsTheFleetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whoCallsTheFleetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2034,7 +2034,7 @@
 				1D0FC6531C81D88E005A1D30 /* LScEntitiesViewController.m */,
 				1D406D271C9EA60D00A1D225 /* LScEntitiesDetailViewController.h */,
 				1D406D281C9EA60D00A1D225 /* LScEntitiesDetailViewController.m */,
-				1D406D2A1C9EA61A00A1D225 /* LScEntitiesDetailViewController.storyboard */,
+				1D3B8FE71CA236F10003DBF9 /* LScEntitiesDetailViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -10858,7 +10858,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DDA3E821C9CF3920078D310 /* LSmOption.plist in Resources */,
-				1D406D2B1C9EA61A00A1D225 /* LScEntitiesDetailViewController.storyboard in Resources */,
+				1D3B8FE81CA236F10003DBF9 /* LScEntitiesDetailViewController.storyboard in Resources */,
 				1DDA3E831C9CF3920078D310 /* LSmTPCalculatorCount.plist in Resources */,
 				1D7547971C983DEF009AB38C /* arsenal_all.json in Resources */,
 				1D7547981C983DF0009AB38C /* arsenal_weekday.json in Resources */,

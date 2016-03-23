@@ -8,16 +8,23 @@
 
 #import "LSvOptionHeaderView.h"
 
+#import "LSmControllerAttributes.h"
+
 @interface LSvOptionHeaderView ()
 
 @property (nonatomic, weak) UILabel *titleLabel;
 @property (nonatomic, weak) UIView *lineView;
 
-@end
+@end //LSvOptionHeaderView
+
 @implementation LSvOptionHeaderView
 
-#pragma mark - 重写构造方法
+#pragma mark - 工厂方法
 
++ (instancetype)optionHeaderView
+{
+    return [[self alloc] init];
+}
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
@@ -31,15 +38,6 @@
         [self setup];
     }
     return self;
-}
-
-#pragma mark - 快速创建
-
-+ (instancetype)optionHeaderView
-{
-    LSvOptionHeaderView *optionHeaderView = [[LSvOptionHeaderView alloc] init];
-    
-    return optionHeaderView;
 }
 - (void)setup
 {
@@ -58,7 +56,12 @@
     UIView *lineView = [[UIView alloc] init];
     self.lineView = lineView;
     [self addSubview:self.lineView];
+    
+    //设置主题色
+    self.titleLabel.textColor     = LSSingletonControllerAttributes(LSkControllerTypeOption).color;
+    self.lineView.backgroundColor = LSSingletonControllerAttributes(LSkControllerTypeOption).color;
 }
+
 
 #pragma mark - 重写布局方法
 
@@ -77,14 +80,6 @@
 
 #pragma mark - 重写Set方法
 
--(void)setColor:(UIColor *)color
-{
-    _color = color;
-    
-    self.titleLabel.textColor     = color;
-    self.lineView.backgroundColor = color;
-}
-
 -(void)setTitle:(NSString *)title
 {
     _title = title;
@@ -94,4 +89,4 @@
     self.titleLabel.textAlignment = NSTextAlignmentLeft;
 }
 
-@end
+@end //LSvOptionHeaderView

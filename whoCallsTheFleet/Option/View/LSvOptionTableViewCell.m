@@ -11,10 +11,6 @@
 #import "LSmOptionItem.h"
 #import "LSmControllerAttributes.h"
 
-@interface LSvOptionTableViewCell ()
-
-@end
-
 @implementation LSvOptionTableViewCell
 
 #pragma mark - 工厂方法
@@ -27,7 +23,6 @@
     }
     return cell;
 }
-
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
@@ -42,7 +37,6 @@
     }
     return self;
 }
-
 - (void)setup
 {
     //设置背景为透明
@@ -163,4 +157,4 @@
     }
 }
 
-@end
+@end //LSvOptionTableViewCell

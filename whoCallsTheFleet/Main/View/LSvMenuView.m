@@ -25,16 +25,29 @@
 
 + (instancetype)menuView
 {
-    NSArray *nibArr=[[NSBundle mainBundle] loadNibNamed:@"LSvMenuView" owner:nil options:nil];
-
-    LSvMenuView *menuView = (LSvMenuView *)nibArr.lastObject;
-    
+    return  (LSvMenuView *)[[NSBundle mainBundle] loadNibNamed:@"LSvMenuView" owner:nil options:nil].lastObject;
+}
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
+        ;
+    }
+    return self;
+}
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder]) {
+        ;
+    }
+    return self;
+}
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
     //添加左滑手势响应 关闭菜单
-    UISwipeGestureRecognizer *swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:menuView action:@selector(menuViewLeftSwipe)];
+    UISwipeGestureRecognizer *swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(menuViewLeftSwipe)];
     swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
-    [menuView addGestureRecognizer:swipeGestureRecognizer];
-    
-    return  menuView;
+    [self addGestureRecognizer:swipeGestureRecognizer];
 }
 
 #pragma mark - 方法连线

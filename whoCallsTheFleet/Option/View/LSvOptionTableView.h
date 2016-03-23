@@ -11,8 +11,8 @@
 @interface LSvOptionTableView : UITableView
 
 /**
- *  快速创建tableView
+ *  工厂方法
  */
 + (instancetype)optionTableView;
 
-@end
+@end //LSvOptionTableView

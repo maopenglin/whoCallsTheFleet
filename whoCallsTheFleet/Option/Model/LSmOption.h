@@ -28,4 +28,4 @@
  */
 + (NSArray<NSDictionary *> *)toDicts:(NSMutableArray<LSmOption *> *)options;
 
-@end
+@end //LSmOption

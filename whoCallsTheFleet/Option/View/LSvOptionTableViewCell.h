@@ -23,8 +23,8 @@
 @property (nonatomic, copy) void (^LSbAccessoryValueChanged)(NSString *value);
 
 /**
- *  快速创建cell
+ *  工厂方法
  */
 + (instancetype)optionTableViewCell:(UITableView *)tableView;
 
-@end
+@end //LSvOptionTableViewCell

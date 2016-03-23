@@ -159,8 +159,7 @@
 - (void)pushEntitiesDetailViewController:(LSmEntities *)entities
 {
     //创建控制器
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LScEntitiesDetailViewController" bundle:nil];
-    LScEntitiesDetailViewController *entitiesDetailVc = storyboard.instantiateInitialViewController;
+    LScEntitiesDetailViewController *entitiesDetailVc = [LScEntitiesDetailViewController entitiesDetailViewController];
     //传值
     entitiesDetailVc.entities = entities;
     //控制器压栈

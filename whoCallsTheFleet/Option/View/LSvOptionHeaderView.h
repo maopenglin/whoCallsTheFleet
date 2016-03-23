@@ -12,12 +12,10 @@
 
 //标题
 @property (nonatomic, copy) NSString *title;
-//主题色
-@property (nonatomic, strong) UIColor *color;
 
 /**
- *  快速创建optionHeaderView
+ *  工厂方法
  */
 + (instancetype)optionHeaderView;
 
-@end
+@end //LSvOptionHeaderView

@@ -14,9 +14,5 @@
  *  工厂方法
  */
 + (instancetype)TPCalculatorViewController;
-/**
- *  工厂方法
- */
-- (instancetype)init;
 
 @end

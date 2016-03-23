@@ -31,19 +31,31 @@
 {
     return [[self alloc] init];
 }
-- (instancetype)init
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    if (self = [super init]) {
-        //创建TableView
-        LSvOptionTableView *tableView = [LSvOptionTableView optionTableView];
-        self.tableView = tableView;
-        //设置代理
-        self.tableView.dataSource = self;
-        self.tableView.delegate   = self;
-        //添加至当前view
-        [self.view addSubview:self.tableView];
+    if (self = [super initWithCoder:aDecoder]) {
+        [self setupController];
     }
     return self;
+}
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        [self setupController];
+    }
+    return self;
+}
+- (void)setupController
+{
+    [super setupController];
+    //创建TableView
+    LSvOptionTableView *tableView = [LSvOptionTableView optionTableView];
+    self.tableView = tableView;
+    //设置代理
+    self.tableView.dataSource = self;
+    self.tableView.delegate   = self;
+    //添加至当前view
+    [self.view addSubview:self.tableView];
 }
 
 #pragma mark - controller布局方法
@@ -97,7 +109,6 @@
 {
     LSvOptionHeaderView *headerView = [LSvOptionHeaderView optionHeaderView];
     
-    headerView.color = self.controllerAttribute.color;
     headerView.title = self.options[section].title;
     
     return headerView;

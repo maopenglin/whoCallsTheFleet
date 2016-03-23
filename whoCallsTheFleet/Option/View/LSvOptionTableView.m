@@ -8,21 +8,13 @@
 
 #import "LSvOptionTableView.h"
 
-@interface LSvOptionTableView ()
-
-@end
-
 @implementation LSvOptionTableView
 
 #pragma mark - 工厂方法
 
 + (instancetype)optionTableView
 {
-    LSvOptionTableView *optionTableView = [[LSvOptionTableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStyleGrouped];
-    //禁止弹簧（也即禁止滚动）
-    optionTableView.bounces = NO;
-    
-    return optionTableView;
+    return [[self alloc] initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStyleGrouped];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style
@@ -47,6 +39,7 @@
     self.backgroundColor = [UIColor clearColor];
     self.allowsSelection = NO;
     self.separatorStyle  = UITableViewCellSeparatorStyleNone;
+    self.bounces         = NO;
     
     //设置cell行高
     self.rowHeight = 55;
@@ -63,4 +56,4 @@
     [self endEditing:YES];
 }
 
-@end
+@end //LSvOptionTableView

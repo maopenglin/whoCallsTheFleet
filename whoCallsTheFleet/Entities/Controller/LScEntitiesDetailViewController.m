@@ -23,19 +23,22 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     if (self = [super initWithCoder:aDecoder]) {
-        [self setup];
+        [self setupController];
     }
     return self;
 }
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        [self setup];
+        [self setupController];
     }
     return self;
 }
-- (void)setup
+
+- (void)setupController
 {
+    [super setupController];
+    
     self.controllerAttribute = LSSingletonControllerAttributes(LSkControllerTypeEntities);
     self.hidesBottomBarWhenPushed = YES;
 }

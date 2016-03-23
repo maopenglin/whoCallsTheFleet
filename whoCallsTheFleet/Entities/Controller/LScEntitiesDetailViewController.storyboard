@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Xfd-XT-bpN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,7 +8,7 @@
         <!--Sc Entities Detail View Controller-->
         <scene sceneID="WLp-lF-ah6">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="Xfd-XT-bpN" customClass="LScEntitiesDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="entitiesDetailViewController" hidesBottomBarWhenPushed="YES" id="Xfd-XT-bpN" customClass="LScEntitiesDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TuF-PL-D3F"/>
                         <viewControllerLayoutGuide type="bottom" id="Z4u-0n-kEN"/>

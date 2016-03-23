@@ -47,13 +47,8 @@
 }
 - (void)awakeFromNib
 {
-    [self setup];
-}
-/**
- *  设置属性
- */
-- (void)setup
-{
+    [super awakeFromNib];
+    
     self.titleLbl.textColor = LSSingletonControllerAttributes(LSkControllerTypeTPCalculator).color;
     self.countLbl.textColor = LSSingletonControllerAttributes(LSkControllerTypeTPCalculator).color;
     

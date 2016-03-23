@@ -45,13 +45,8 @@
 }
 - (void)awakeFromNib
 {
-    [self setup];
-}
-/**
- *  设置属性
- */
-- (void)setup
-{
+    [super awakeFromNib];
+    
     self.topLabel.textColor    = LSSingletonControllerAttributes(LSkControllerTypeTPCalculator).color;
     self.resultLabel.textColor = LSSingletonControllerAttributes(LSkControllerTypeTPCalculator).color;
 }
