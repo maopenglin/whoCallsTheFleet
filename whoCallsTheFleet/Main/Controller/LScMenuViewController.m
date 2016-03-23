@@ -19,14 +19,12 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     if (self = [super initWithCoder:aDecoder]) {
-        [self setupController];
     }
     return self;
 }
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        [self setupController];
     }
     return self;
 }

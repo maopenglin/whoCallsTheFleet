@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  用于表示声优或是画师的枚举
+ */
+typedef NS_OPTIONS(NSUInteger, LSkEntitiesType) {
+    LSkEntitiesTypeCV          = 1 << 0,//声优
+    LSkEntitiesTypeIllustrator = 1 << 1,//画师
+};
+
 @class LSmName, LSmEntitiesPicture, LSmEntitiesRelation, LSmLink;
 
 @interface LSmEntities : NSObject

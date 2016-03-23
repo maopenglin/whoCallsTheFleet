@@ -24,10 +24,7 @@
 
 + (instancetype)TPCalculatorView
 {
-    NSArray *nibArr = [[NSBundle mainBundle] loadNibNamed:@"LSvTPCalculatorView" owner:nil options:nil];
-    LSvTPCalculatorView *TPCalculatorView = (LSvTPCalculatorView *)nibArr.lastObject;
-    
-    return TPCalculatorView;
+    return (LSvTPCalculatorView *)[[NSBundle mainBundle] loadNibNamed:@"LSvTPCalculatorView" owner:nil options:nil].lastObject;
 }
 - (instancetype)initWithFrame:(CGRect)frame
 {

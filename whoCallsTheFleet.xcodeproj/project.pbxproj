@@ -44,7 +44,8 @@
 		1D2E912C1C8ACC650072FB29 /* LSvOptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E912B1C8ACC650072FB29 /* LSvOptionTableViewCell.m */; };
 		1D2E912F1C8AFC9C0072FB29 /* LSvOptionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E912E1C8AFC9C0072FB29 /* LSvOptionHeaderView.m */; };
 		1D2E91361C8C2AEB0072FB29 /* LScPatchNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E91351C8C2AEB0072FB29 /* LScPatchNoteViewController.m */; };
-		1D3B8FE81CA236F10003DBF9 /* LScEntitiesDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D3B8FE71CA236F10003DBF9 /* LScEntitiesDetailViewController.storyboard */; };
+		1D3B90031CA271900003DBF9 /* LSvEntitiesDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3B90021CA271900003DBF9 /* LSvEntitiesDetailView.m */; };
+		1D3B90051CA2719A0003DBF9 /* LSvEntitiesDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3B90041CA2719A0003DBF9 /* LSvEntitiesDetailView.xib */; };
 		1D3E411C1C85853C00FBDB77 /* LScTabChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E411B1C85853C00FBDB77 /* LScTabChildViewController.m */; };
 		1D3E411F1C858A6700FBDB77 /* LScMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E411E1C858A6700FBDB77 /* LScMenuViewController.m */; };
 		1D3E412E1C85939200FBDB77 /* LScAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E412D1C85939200FBDB77 /* LScAboutViewController.m */; };
@@ -189,7 +190,9 @@
 		1D2E912E1C8AFC9C0072FB29 /* LSvOptionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvOptionHeaderView.m; sourceTree = "<group>"; };
 		1D2E91341C8C2AEB0072FB29 /* LScPatchNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LScPatchNoteViewController.h; sourceTree = "<group>"; };
 		1D2E91351C8C2AEB0072FB29 /* LScPatchNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScPatchNoteViewController.m; sourceTree = "<group>"; };
-		1D3B8FE71CA236F10003DBF9 /* LScEntitiesDetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LScEntitiesDetailViewController.storyboard; sourceTree = "<group>"; };
+		1D3B90011CA271900003DBF9 /* LSvEntitiesDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvEntitiesDetailView.h; sourceTree = "<group>"; };
+		1D3B90021CA271900003DBF9 /* LSvEntitiesDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvEntitiesDetailView.m; sourceTree = "<group>"; };
+		1D3B90041CA2719A0003DBF9 /* LSvEntitiesDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSvEntitiesDetailView.xib; sourceTree = "<group>"; };
 		1D3E411A1C85853C00FBDB77 /* LScTabChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LScTabChildViewController.h; sourceTree = "<group>"; };
 		1D3E411B1C85853C00FBDB77 /* LScTabChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScTabChildViewController.m; sourceTree = "<group>"; };
 		1D3E411D1C858A6700FBDB77 /* LScMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LScMenuViewController.h; sourceTree = "<group>"; };
@@ -2034,7 +2037,6 @@
 				1D0FC6531C81D88E005A1D30 /* LScEntitiesViewController.m */,
 				1D406D271C9EA60D00A1D225 /* LScEntitiesDetailViewController.h */,
 				1D406D281C9EA60D00A1D225 /* LScEntitiesDetailViewController.m */,
-				1D3B8FE71CA236F10003DBF9 /* LScEntitiesDetailViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2059,6 +2061,9 @@
 				1DE477131CA06F1500D26AE7 /* LSvIllustratorsViewCell.h */,
 				1DE477141CA06F1500D26AE7 /* LSvIllustratorsViewCell.m */,
 				1DE477151CA06F1500D26AE7 /* LSvIllustratorsViewCell.xib */,
+				1D3B90011CA271900003DBF9 /* LSvEntitiesDetailView.h */,
+				1D3B90021CA271900003DBF9 /* LSvEntitiesDetailView.m */,
+				1D3B90041CA2719A0003DBF9 /* LSvEntitiesDetailView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -10858,7 +10863,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DDA3E821C9CF3920078D310 /* LSmOption.plist in Resources */,
-				1D3B8FE81CA236F10003DBF9 /* LScEntitiesDetailViewController.storyboard in Resources */,
 				1DDA3E831C9CF3920078D310 /* LSmTPCalculatorCount.plist in Resources */,
 				1D7547971C983DEF009AB38C /* arsenal_all.json in Resources */,
 				1D7547981C983DF0009AB38C /* arsenal_weekday.json in Resources */,
@@ -10874,6 +10878,7 @@
 				1D7547A11C983DF0009AB38C /* ship_type_order.json in Resources */,
 				1D7547A21C983DF0009AB38C /* ship_types.json in Resources */,
 				1D7547A31C983DF0009AB38C /* ships.json in Resources */,
+				1D3B90051CA2719A0003DBF9 /* LSvEntitiesDetailView.xib in Resources */,
 				1D7547A41C983DF0009AB38C /* updates.json in Resources */,
 				1D7547961C983D86009AB38C /* Assets.xcassets in Resources */,
 				1DE477171CA06F1500D26AE7 /* LSvIllustratorsViewCell.xib in Resources */,
@@ -10993,6 +10998,7 @@
 				1D0FBF891C81D501005A1D30 /* LSmItemTypeCollections.m in Sources */,
 				1D0FBF781C81D501005A1D30 /* LScFleetViewController.m in Sources */,
 				1D0FBF791C81D501005A1D30 /* NSArray+LSJson.m in Sources */,
+				1D3B90031CA271900003DBF9 /* LSvEntitiesDetailView.m in Sources */,
 				1DE4770B1CA0656E00D26AE7 /* LSvIllustratorsView.m in Sources */,
 				1D3E41311C8593B400FBDB77 /* LScOptionViewController.m in Sources */,
 				1DED6C251C9152A600C90CC2 /* LSvTPCalculatorView.m in Sources */,

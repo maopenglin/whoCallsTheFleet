@@ -8,9 +8,17 @@
 
 #import "LScEntitiesDetailViewController.h"
 
+#import "LSvEntitiesDetailView.h"
+
 #import "LSmEntities.h"
 #import "LSmEntitiesPicture.h"
 #import "LSmName.h"
+
+@interface LScEntitiesDetailViewController ()
+
+@property (nonatomic, weak) LSvEntitiesDetailView *entitiesDetailView;
+
+@end
 
 @implementation LScEntitiesDetailViewController
 
@@ -23,33 +31,41 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     if (self = [super initWithCoder:aDecoder]) {
-        [self setupController];
     }
     return self;
 }
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        [self setupController];
     }
     return self;
 }
-
 - (void)setupController
 {
     [super setupController];
     
     self.controllerAttribute = LSSingletonControllerAttributes(LSkControllerTypeEntities);
     self.hidesBottomBarWhenPushed = YES;
+    
+    //创建主体View
+    LSvEntitiesDetailView *entitiesDetailView = [LSvEntitiesDetailView entitiesDetailView];
+    self.entitiesDetailView = entitiesDetailView;
+    //添加至当前view
+    [self.view addSubview:self.entitiesDetailView];
 }
 
-#pragma mark - controller生命周期方法
+#pragma mark - 重写布局方法
 
-- (void)viewDidLoad
+- (void)viewDidLayoutSubviews
 {
-    [super viewDidLoad];
+    [super viewDidLayoutSubviews];
     
-
+    CGFloat entitiesDetailViewX = 0;
+    CGFloat entitiesDetailViewY = CGRectGetMaxY(self.navigationController.navigationBar.frame);
+    CGFloat entitiesDetailViewW = CGRectGetWidth(self.view.frame);
+    CGFloat entitiesDetailViewH = CGRectGetHeight(self.view.frame) - entitiesDetailViewY;
+    
+    self.entitiesDetailView.frame = CGRectMake(entitiesDetailViewX, entitiesDetailViewY, entitiesDetailViewW, entitiesDetailViewH);
 }
 
 #pragma mark - 重写set方法
@@ -59,6 +75,10 @@
     _entities = entities;
     
     self.title = entities.name.zhCn;
+    
+    self.entitiesDetailView.zhNameLbl.text = entities.name.zhCn;
+    self.entitiesDetailView.jaNameLbl.text = entities.name.jaJp;
+    self.entitiesDetailView.iconView.image = [UIImage imageWithData:entities.picture.avatar];
 }
 
 @end //LScEntitiesDetailViewController

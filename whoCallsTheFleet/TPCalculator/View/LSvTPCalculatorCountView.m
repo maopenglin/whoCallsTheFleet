@@ -26,10 +26,7 @@
 
 + (instancetype)TPCalculatorCountView
 {
-    NSArray *nibArr = [[NSBundle mainBundle] loadNibNamed:@"LSvTPCalculatorCountView" owner:nil options:nil];
-    LSvTPCalculatorCountView *TPCalculatorCountView = (LSvTPCalculatorCountView *)nibArr.lastObject;
-    
-    return TPCalculatorCountView;
+    return (LSvTPCalculatorCountView *)[[NSBundle mainBundle] loadNibNamed:@"LSvTPCalculatorCountView" owner:nil options:nil].lastObject;
 }
 - (instancetype)initWithFrame:(CGRect)frame
 {

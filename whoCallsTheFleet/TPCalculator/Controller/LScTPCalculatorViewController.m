@@ -34,14 +34,12 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     if (self = [super initWithCoder:aDecoder]) {
-        [self setupController];
     }
     return self;
 }
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        [self setupController];
     }
     return self;
 }
@@ -78,7 +76,7 @@
     CGFloat TPCalculatorViewX = 0;
     CGFloat TPCalculatorViewY = CGRectGetMaxY(self.navigationController.navigationBar.frame);
     CGFloat TPCalculatorViewW = CGRectGetWidth(self.view.frame);
-    CGFloat TPCalculatorViewH = CGRectGetHeight(self.view.frame) - TPCalculatorViewX;
+    CGFloat TPCalculatorViewH = CGRectGetHeight(self.view.frame) - TPCalculatorViewY;
     
     self.TPCalculatorView.frame = CGRectMake(TPCalculatorViewX, TPCalculatorViewY, TPCalculatorViewW, TPCalculatorViewH);
 }

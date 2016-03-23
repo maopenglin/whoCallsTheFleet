@@ -35,10 +35,15 @@
 {
     return [[self alloc] init];
 }
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder]) {
+    }
+    return self;
+}
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        [self setupController];
     }
     return self;
 }

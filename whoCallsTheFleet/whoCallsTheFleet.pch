@@ -36,7 +36,6 @@
 #define LSIdentifierEntitiesMainCell @"entitiesMainCell"
 #define LSIdentifierEntitiesCVCell @"entitiesCVCell"
 #define LSIdentifierEntitiesIllustratorCell @"entitiesIllustratorCell"
-#define LSIdentifireEntitiesDetailViewController @"entitiesDetailViewController"
 
 //Singleton
 #define LSSingletonControllerAttributes(controllerType) [LSmControllerAttributes sharedControllerAttributes][controllerType]
