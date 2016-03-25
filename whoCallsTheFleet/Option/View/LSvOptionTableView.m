@@ -36,7 +36,7 @@
 - (void)setup
 {
     //设置属性
-    self.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = LSColorClear;
     self.allowsSelection = NO;
     self.separatorStyle  = UITableViewCellSeparatorStyleNone;
     self.bounces         = NO;

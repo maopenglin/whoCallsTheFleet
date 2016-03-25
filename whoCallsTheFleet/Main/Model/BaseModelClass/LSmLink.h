@@ -8,9 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  用于表示URL类型的枚举
+ */
+typedef NS_ENUM(NSUInteger, LSkLinkType) {
+    LSkLinkTypeWikipedia = 0, //维基百科
+    LSkLinkTypeTwitter   = 1, //推特
+    LSkLinkTypeHomepage  = 2, //主页
+    LSkLinkTypePixiv     = 3, //Pixiv
+};
+
 @interface LSmLink : NSObject
 
-@property (copy, nonatomic) NSString *name;
+@property (assign, nonatomic) LSkLinkType type;
 @property (strong, nonatomic) NSURL *url;
 
 //生成模型

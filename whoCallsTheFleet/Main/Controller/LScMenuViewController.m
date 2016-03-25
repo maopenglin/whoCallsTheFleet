@@ -8,6 +8,8 @@
 
 #import "LScMenuViewController.h"
 
+#import "LSvBarButtonItem.h"
+
 @implementation LScMenuViewController
 
 #pragma mark - 工厂方法
@@ -41,8 +43,9 @@
     //隐藏tabBar
     self.hidesBottomBarWhenPushed = YES;
     
-    //添加返回按钮
-    UIBarButtonItem * dismissItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(dismissItemDidClick)];
+    //创建返回按钮并绑定回调方法
+    LSvBarButtonItem *dismissItem = [LSvBarButtonItem barButtonItemForBack:self action:@selector(dismissItemDidClick)];
+    //添加至导航栏
     self.navigationItem.leftBarButtonItem = dismissItem;
 }
 

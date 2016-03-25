@@ -19,7 +19,6 @@
 		1D0FBF821C81D501005A1D30 /* LSmArsenalWeekday.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FB5611C81D4F6005A1D30 /* LSmArsenalWeekday.m */; };
 		1D0FBF831C81D501005A1D30 /* LSmEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FB5641C81D4F6005A1D30 /* LSmEntities.m */; };
 		1D0FBF841C81D501005A1D30 /* LSmEntitiesPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FB5661C81D4F6005A1D30 /* LSmEntitiesPicture.m */; };
-		1D0FBF851C81D501005A1D30 /* LSmEntitiesRelation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FB5681C81D4F6005A1D30 /* LSmEntitiesRelation.m */; };
 		1D0FBF861C81D501005A1D30 /* LSmItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FB56B1C81D4F6005A1D30 /* LSmItems.m */; };
 		1D0FBF871C81D501005A1D30 /* LSmItemsImprovement.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FB56D1C81D4F6005A1D30 /* LSmItemsImprovement.m */; };
 		1D0FBF881C81D501005A1D30 /* LSmItemsStat.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FB56F1C81D4F6005A1D30 /* LSmItemsStat.m */; };
@@ -53,6 +52,7 @@
 		1D3E41341C8593CF00FBDB77 /* LScTPCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E41331C8593CF00FBDB77 /* LScTPCalculatorViewController.m */; };
 		1D4019E91C871842003D71D3 /* LSvOptionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4019E71C871842003D71D3 /* LSvOptionTableView.m */; };
 		1D406D291C9EA60D00A1D225 /* LScEntitiesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D406D281C9EA60D00A1D225 /* LScEntitiesDetailViewController.m */; };
+		1D64C5021CA4C49500421A48 /* LSvBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D64C5011CA4C49500421A48 /* LSvBarButtonItem.m */; };
 		1D681D481C830639004B5FAE /* LSvMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D681D471C830639004B5FAE /* LSvMenuView.m */; };
 		1D6FB21B1C821A2B007F9A9F /* LScBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FB21A1C821A2B007F9A9F /* LScBaseViewController.m */; };
 		1D7547931C983D49009AB38C /* LSvTPCalculatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DED6C241C9152A600C90CC2 /* LSvTPCalculatorView.xib */; };
@@ -75,8 +75,6 @@
 		1D7547A41C983DF0009AB38C /* updates.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D0FB59F1C81D4F6005A1D30 /* updates.json */; };
 		1DDA3E821C9CF3920078D310 /* LSmOption.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D2E91221C89B1A10072FB29 /* LSmOption.plist */; };
 		1DDA3E831C9CF3920078D310 /* LSmTPCalculatorCount.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DE61CA31C92E7B800C81882 /* LSmTPCalculatorCount.plist */; };
-		1DE477081CA0644600D26AE7 /* LSvCVsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE477071CA0644600D26AE7 /* LSvCVsView.m */; };
-		1DE4770B1CA0656E00D26AE7 /* LSvIllustratorsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE4770A1CA0656E00D26AE7 /* LSvIllustratorsView.m */; };
 		1DE477111CA06CF700D26AE7 /* LSvCVsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE4770F1CA06CF700D26AE7 /* LSvCVsViewCell.m */; };
 		1DE477121CA06CF700D26AE7 /* LSvCVsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DE477101CA06CF700D26AE7 /* LSvCVsViewCell.xib */; };
 		1DE477161CA06F1500D26AE7 /* LSvIllustratorsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE477141CA06F1500D26AE7 /* LSvIllustratorsViewCell.m */; };
@@ -122,8 +120,6 @@
 		1D0FB5641C81D4F6005A1D30 /* LSmEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSmEntities.m; sourceTree = "<group>"; };
 		1D0FB5651C81D4F6005A1D30 /* LSmEntitiesPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSmEntitiesPicture.h; sourceTree = "<group>"; };
 		1D0FB5661C81D4F6005A1D30 /* LSmEntitiesPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSmEntitiesPicture.m; sourceTree = "<group>"; };
-		1D0FB5671C81D4F6005A1D30 /* LSmEntitiesRelation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSmEntitiesRelation.h; sourceTree = "<group>"; };
-		1D0FB5681C81D4F6005A1D30 /* LSmEntitiesRelation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSmEntitiesRelation.m; sourceTree = "<group>"; };
 		1D0FB56A1C81D4F6005A1D30 /* LSmItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSmItems.h; sourceTree = "<group>"; };
 		1D0FB56B1C81D4F6005A1D30 /* LSmItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSmItems.m; sourceTree = "<group>"; };
 		1D0FB56C1C81D4F6005A1D30 /* LSmItemsImprovement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSmItemsImprovement.h; sourceTree = "<group>"; };
@@ -210,9 +206,11 @@
 		1D5024251C3FCA120053FA71 /* whoCallsTheFleet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whoCallsTheFleet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D5024341C3FCA120053FA71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D5024491C3FCA120053FA71 /* whoCallsTheFleetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whoCallsTheFleetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D64C5001CA4C49500421A48 /* LSvBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvBarButtonItem.h; sourceTree = "<group>"; };
+		1D64C5011CA4C49500421A48 /* LSvBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvBarButtonItem.m; sourceTree = "<group>"; };
 		1D681D461C830639004B5FAE /* LSvMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvMenuView.h; sourceTree = "<group>"; };
 		1D681D471C830639004B5FAE /* LSvMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvMenuView.m; sourceTree = "<group>"; };
-		1D681D491C830D34004B5FAE /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		1D681D491C830D34004B5FAE /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		1D6FB2191C821A2B007F9A9F /* LScBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LScBaseViewController.h; sourceTree = "<group>"; };
 		1D6FB21A1C821A2B007F9A9F /* LScBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScBaseViewController.m; sourceTree = "<group>"; };
 		1D7547AA1C9857D4009AB38C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -1926,10 +1924,6 @@
 		1DD9EDE81C95F53900E72634 /* 9.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = 9.webp; sourceTree = "<group>"; };
 		1DD9EDEA1C95F53900E72634 /* 8.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8.webp; sourceTree = "<group>"; };
 		1DD9EDEB1C95F53900E72634 /* 9.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = 9.webp; sourceTree = "<group>"; };
-		1DE477061CA0644600D26AE7 /* LSvCVsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvCVsView.h; sourceTree = "<group>"; };
-		1DE477071CA0644600D26AE7 /* LSvCVsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvCVsView.m; sourceTree = "<group>"; };
-		1DE477091CA0656E00D26AE7 /* LSvIllustratorsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvIllustratorsView.h; sourceTree = "<group>"; };
-		1DE4770A1CA0656E00D26AE7 /* LSvIllustratorsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvIllustratorsView.m; sourceTree = "<group>"; };
 		1DE4770E1CA06CF700D26AE7 /* LSvCVsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvCVsViewCell.h; sourceTree = "<group>"; };
 		1DE4770F1CA06CF700D26AE7 /* LSvCVsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvCVsViewCell.m; sourceTree = "<group>"; };
 		1DE477101CA06CF700D26AE7 /* LSvCVsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSvCVsViewCell.xib; sourceTree = "<group>"; };
@@ -2051,13 +2045,9 @@
 		1D0FB53B1C81D4F6005A1D30 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1DE477061CA0644600D26AE7 /* LSvCVsView.h */,
-				1DE477071CA0644600D26AE7 /* LSvCVsView.m */,
 				1DE4770E1CA06CF700D26AE7 /* LSvCVsViewCell.h */,
 				1DE4770F1CA06CF700D26AE7 /* LSvCVsViewCell.m */,
 				1DE477101CA06CF700D26AE7 /* LSvCVsViewCell.xib */,
-				1DE477091CA0656E00D26AE7 /* LSvIllustratorsView.h */,
-				1DE4770A1CA0656E00D26AE7 /* LSvIllustratorsView.m */,
 				1DE477131CA06F1500D26AE7 /* LSvIllustratorsViewCell.h */,
 				1DE477141CA06F1500D26AE7 /* LSvIllustratorsViewCell.m */,
 				1DE477151CA06F1500D26AE7 /* LSvIllustratorsViewCell.xib */,
@@ -2236,8 +2226,6 @@
 				1D0FB5641C81D4F6005A1D30 /* LSmEntities.m */,
 				1D0FB5651C81D4F6005A1D30 /* LSmEntitiesPicture.h */,
 				1D0FB5661C81D4F6005A1D30 /* LSmEntitiesPicture.m */,
-				1D0FB5671C81D4F6005A1D30 /* LSmEntitiesRelation.h */,
-				1D0FB5681C81D4F6005A1D30 /* LSmEntitiesRelation.m */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -2609,6 +2597,8 @@
 				1D681D461C830639004B5FAE /* LSvMenuView.h */,
 				1D681D471C830639004B5FAE /* LSvMenuView.m */,
 				1D133DC91C84173E007D4F13 /* LSvMenuView.xib */,
+				1D64C5001CA4C49500421A48 /* LSvBarButtonItem.h */,
+				1D64C5011CA4C49500421A48 /* LSvBarButtonItem.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -10962,6 +10952,7 @@
 				1D0FBF871C81D501005A1D30 /* LSmItemsImprovement.m in Sources */,
 				1D0FBF911C81D501005A1D30 /* LSmShipTypeCollections.m in Sources */,
 				1D0FC65D1C81D8D3005A1D30 /* LScShipsViewController.m in Sources */,
+				1D64C5021CA4C49500421A48 /* LSvBarButtonItem.m in Sources */,
 				1DE61CA01C92A9B700C81882 /* LSvTPCalculatorCountView.m in Sources */,
 				1D0FBF841C81D501005A1D30 /* LSmEntitiesPicture.m in Sources */,
 				1D0FBF921C81D501005A1D30 /* LSmShipTypeOrder.m in Sources */,
@@ -10982,13 +10973,11 @@
 				1D0FBF7C1C81D501005A1D30 /* LScBaseNavigationController.m in Sources */,
 				1D0FC6571C81D8A6005A1D30 /* LScArsenalViewController.m in Sources */,
 				1D0FC6541C81D88E005A1D30 /* LScEntitiesViewController.m in Sources */,
-				1DE477081CA0644600D26AE7 /* LSvCVsView.m in Sources */,
 				1DE477161CA06F1500D26AE7 /* LSvIllustratorsViewCell.m in Sources */,
 				1D133DD01C8428E9007D4F13 /* LSmControllerAttributes.m in Sources */,
 				1D0FBF7A1C81D501005A1D30 /* NSString+LSExtension.m in Sources */,
 				1D0FBF901C81D501005A1D30 /* LSmShipSeriesShips.m in Sources */,
 				1D0FC65A1C81D8BF005A1D30 /* LScItemsViewController.m in Sources */,
-				1D0FBF851C81D501005A1D30 /* LSmEntitiesRelation.m in Sources */,
 				1D0FBF8B1C81D501005A1D30 /* LSmLink.m in Sources */,
 				1D2E91261C89B69D0072FB29 /* LSmOption.m in Sources */,
 				1D2E912F1C8AFC9C0072FB29 /* LSvOptionHeaderView.m in Sources */,
@@ -10999,7 +10988,6 @@
 				1D0FBF781C81D501005A1D30 /* LScFleetViewController.m in Sources */,
 				1D0FBF791C81D501005A1D30 /* NSArray+LSJson.m in Sources */,
 				1D3B90031CA271900003DBF9 /* LSvEntitiesDetailView.m in Sources */,
-				1DE4770B1CA0656E00D26AE7 /* LSvIllustratorsView.m in Sources */,
 				1D3E41311C8593B400FBDB77 /* LScOptionViewController.m in Sources */,
 				1DED6C251C9152A600C90CC2 /* LSvTPCalculatorView.m in Sources */,
 				1DE61CA71C92E8BD00C81882 /* LSmTPCalculatorCount.m in Sources */,

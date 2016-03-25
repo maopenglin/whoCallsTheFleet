@@ -9,12 +9,13 @@
 #import "LScEntitiesDetailViewController.h"
 
 #import "LSvEntitiesDetailView.h"
+#import "LSvBarButtonItem.h"
 
 #import "LSmEntities.h"
 #import "LSmEntitiesPicture.h"
 #import "LSmName.h"
 
-@interface LScEntitiesDetailViewController ()
+@interface LScEntitiesDetailViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) LSvEntitiesDetailView *entitiesDetailView;
 
@@ -47,9 +48,17 @@
     self.controllerAttribute = LSSingletonControllerAttributes(LSkControllerTypeEntities);
     self.hidesBottomBarWhenPushed = YES;
     
+    //创建左上角返回按钮
+    LSvBarButtonItem *popItem = [LSvBarButtonItem barButtonItemForBack:self action:@selector(popItemDidClick)];
+    //添加至导航条
+    self.navigationItem.leftBarButtonItem = popItem;
+    
     //创建主体View
     LSvEntitiesDetailView *entitiesDetailView = [LSvEntitiesDetailView entitiesDetailView];
     self.entitiesDetailView = entitiesDetailView;
+    //设置代理
+    self.entitiesDetailView.shipTableView.dataSource = self;
+    self.entitiesDetailView.shipTableView.delegate   = self;
     //添加至当前view
     [self.view addSubview:self.entitiesDetailView];
 }
@@ -68,17 +77,69 @@
     self.entitiesDetailView.frame = CGRectMake(entitiesDetailViewX, entitiesDetailViewY, entitiesDetailViewW, entitiesDetailViewH);
 }
 
+#pragma mark - 回调方法
+
+- (void)popItemDidClick
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - Table View Data Source
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.entities.relation.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:LSIdentifierEntitiesDetailCell];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:LSIdentifierEntitiesDetailCell];
+    }
+    
+    cell.textLabel.text      = self.entities.relation[indexPath.row].lastObject.description;
+    cell.textLabel.textColor = LSSingletonControllerAttributes(LSkControllerTypeEntities).color;
+    cell.backgroundColor     = LSColorRandom;
+    
+    return cell;
+}
+
+#pragma mark - Table View Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    LSLog(@"%s", __FUNCTION__);
+}
+
 #pragma mark - 重写set方法
 
 - (void)setEntities:(LSmEntities *)entities
 {
     _entities = entities;
     
-    self.title = entities.name.zhCn;
-    
     self.entitiesDetailView.zhNameLbl.text = entities.name.zhCn;
-    self.entitiesDetailView.jaNameLbl.text = entities.name.jaJp;
+    if (![entities.name.jaJp isEqualToString:entities.name.zhCn]) {
+        self.entitiesDetailView.jaNameLbl.text = entities.name.jaJp;
+    } else {
+        self.entitiesDetailView.jaNameLbl.text = @"";
+    }
+    
     self.entitiesDetailView.iconView.image = [UIImage imageWithData:entities.picture.avatar];
+    
+    switch (entities.type) {
+        case LSkEntitiesTypeCV:
+            self.title = @"声优";
+            self.entitiesDetailView.typeLbl.text = [NSString stringWithFormat:@"配音:%zd",self.entities.relation.count];
+            break;
+        case LSkEntitiesTypeIllustrator:
+            self.title = @"画师";
+            self.entitiesDetailView.typeLbl.text = [NSString stringWithFormat:@"绘制:%zd",self.entities.relation.count];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 @end //LScEntitiesDetailViewController

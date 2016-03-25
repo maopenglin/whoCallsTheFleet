@@ -61,7 +61,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
+    [super viewWillAppear:animated];
     
     //显示计算结果
     [self reloadCalculatorResult];

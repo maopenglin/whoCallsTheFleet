@@ -10,6 +10,8 @@
 #import "LScMenuViewController.h"
 #import "LScBaseNavigationController.h"
 
+#import "LSvBarButtonItem.h"
+
 @interface LScTabChildViewController ()<LSpMenuViewDelegate>
 
 /**
@@ -66,17 +68,8 @@
     screenEdgePanGestureRecognizer.edges = UIRectEdgeLeft;
     self.screenEdgePanGestureRecognizer = screenEdgePanGestureRecognizer;
     
-    //创建左上角按钮
-    UIButton *menuBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    menuBtn.frame = CGRectMake(0, 0, 20, 15);
-    //拒绝无效时变暗效果
-    menuBtn.adjustsImageWhenDisabled = NO;
-    //设置背景图片及渲染方式
-    [menuBtn setBackgroundImage:[[UIImage imageNamed:@"menuIcon"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-    //绑定事件回调
-    [menuBtn addTarget:self action:@selector(menuBtnItemDidClick) forControlEvents:UIControlEventTouchUpInside];
-    //包装为UIBarButtonItem
-    UIBarButtonItem *menuBtnItem = [[UIBarButtonItem alloc] initWithCustomView:menuBtn];
+    //创建左上角菜单按钮并绑定回调方法
+    LSvBarButtonItem *menuBtnItem = [LSvBarButtonItem barButtonItemForMenu:self action:@selector(menuBtnItemDidClick)];
     self.menuBtnItem = menuBtnItem;
     //关联该按钮至导航栏
     self.navigationItem.leftBarButtonItem = self.menuBtnItem;
@@ -211,7 +204,7 @@
   */
 - (LScBaseNavigationController *)navVCWithType:(LSkControllerType)controllerType{
     //创建控制器
-    LScMenuViewController *vc = [[LSSingletonControllerAttributes(controllerType).controllerClass alloc] init];
+    LScMenuViewController *vc = [[LSSingletonControllerAttributes(controllerType).class alloc] init];
     //包装于导航控制器内
     LScBaseNavigationController *navVc = [[LScBaseNavigationController alloc] initWithRootViewController:vc];
     //赋值

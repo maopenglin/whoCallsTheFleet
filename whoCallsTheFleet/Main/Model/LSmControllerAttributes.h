@@ -32,9 +32,9 @@ typedef NS_ENUM (NSUInteger, LSkControllerType){
 @interface LSmControllerAttributes : NSObject
 
 //控制器类型
-@property (nonatomic, assign, readonly) LSkControllerType controllerType;
+@property (nonatomic, assign, readonly) LSkControllerType type;
 //控制器的类
-@property (nonatomic, assign, readonly) Class controllerClass;
+@property (nonatomic, assign, readonly) Class class;
 //控制器的标题
 @property (nonatomic, copy, readonly) NSString *title;
 //控制器的主题色

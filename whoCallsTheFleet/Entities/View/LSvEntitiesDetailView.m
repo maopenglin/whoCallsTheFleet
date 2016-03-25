@@ -34,9 +34,16 @@
 {
     [super awakeFromNib];
     
+    //设置属性
+    self.shipTableView.separatorStyle               = UITableViewCellSeparatorStyleNone;
+    self.shipTableView.showsVerticalScrollIndicator = NO;
+    //设置主题色
     UIColor *color = LSSingletonControllerAttributes(LSkControllerTypeEntities).color;
     self.jaNameLbl.textColor = color;
     self.zhNameLbl.textColor = color;
+    self.typeLbl.textColor   = color;
+    
+    
 }
 
 @end

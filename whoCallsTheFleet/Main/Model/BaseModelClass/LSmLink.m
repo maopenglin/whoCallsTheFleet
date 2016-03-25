@@ -28,8 +28,16 @@
 -(instancetype)initWithDict:(NSDictionary *)dict
 {
     if (self = [super init]) {
-        self.name = dict[@"name"];
-        self.url  = [NSURL URLWithString:dict[@"url"]];
+        if ([dict[@"name"] isEqualToString:@"Wikipedia"]) {
+            self.type = LSkLinkTypeWikipedia;
+        } else if ([dict[@"name"] isEqualToString:@"Twitter"]) {
+            self.type = LSkLinkTypeTwitter;
+        } else if ([dict[@"name"] isEqualToString:@"Homepage"]) {
+            self.type = LSkLinkTypeHomepage;
+        } else if ([dict[@"name"] isEqualToString:@"Pixiv"]) {
+            self.type = LSkLinkTypePixiv;
+        }
+        self.url = dict[@"url"];
     }
     return self;
 }

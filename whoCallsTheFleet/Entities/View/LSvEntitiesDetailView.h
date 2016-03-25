@@ -14,7 +14,11 @@
 @property (nonatomic, weak) IBOutlet UIImageView *iconView;
 @property (nonatomic, weak) IBOutlet UILabel *zhNameLbl;
 @property (nonatomic, weak) IBOutlet UILabel *jaNameLbl;
-@property (nonatomic, weak) IBOutlet UIButton *linkBtn;
+@property (nonatomic, weak) IBOutlet UILabel *typeLbl;
+@property (nonatomic, weak) IBOutlet UIButton *linkWikipediaBtn;
+@property (nonatomic, weak) IBOutlet UIButton *linkTwitterBtn;
+@property (nonatomic, weak) IBOutlet UIButton *linkHomepageBtn;
+@property (nonatomic, weak) IBOutlet UIButton *linkPixivBtn;
 /**
  *  工厂方法
  */

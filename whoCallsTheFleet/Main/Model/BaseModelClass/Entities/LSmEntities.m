@@ -10,7 +10,6 @@
 #import "LSmName.h"
 #import "LSmEntitiesPicture.h"
 #import "LSmLink.h"
-#import "LSmEntitiesRelation.h"
 #import "NSArray+LSJson.h"
 
 @interface LSmEntities ()
@@ -19,7 +18,8 @@
 @property (strong, nonatomic) NSNumber *id;
 @property (strong, nonatomic) LSmEntitiesPicture *picture;
 @property (strong, nonatomic) NSArray<LSmLink *> *links;
-@property (strong, nonatomic) LSmEntitiesRelation *relation;
+@property (strong, nonatomic) NSArray<NSArray<NSNumber *> *> *relation;
+@property (assign, nonatomic) LSkEntitiesType type;
 
 @end
 
@@ -54,7 +54,13 @@
         self.id       = dict[@"id"];
         self.picture  = [LSmEntitiesPicture entitiesPictureWithDict:dict[@"picture"]];
         self.links    = [LSmLink link:dict[@"links"]];
-        self.relation = [LSmEntitiesRelation entitiesRelationWithDict:dict[@"relation"]];
+        if (dict[@"relation"][@"cv"]) {
+            self.type = LSkEntitiesTypeCV;
+            self.relation = dict[@"relation"][@"cv"];
+        } else if (dict[@"relation"][@"illustrator"]) {
+            self.type = LSkEntitiesTypeIllustrator;
+            self.relation = dict[@"relation"][@"illustrator"];
+        }
     }
     return self;
 }

@@ -25,6 +25,7 @@
 
 //Color
 #define LSColorWithRGBA(Red, Green, Blue, Alpha) [UIColor colorWithRed:Red/255.0 green:Green/255.0 blue:Blue/255.0 alpha:Alpha]
+#define LSColorClear [UIColor clearColor]
 #define LSColorRandom [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0]
 
 //Path
@@ -33,9 +34,9 @@
 #define LSPathUserTPCalculatorCountPlist [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"userTPCalculatorCount.plist"]
 
 //Identifier
-#define LSIdentifierEntitiesMainCell @"entitiesMainCell"
 #define LSIdentifierEntitiesCVCell @"entitiesCVCell"
 #define LSIdentifierEntitiesIllustratorCell @"entitiesIllustratorCell"
+#define LSIdentifierEntitiesDetailCell @"entitiesDetailCell"
 
 //Singleton
 #define LSSingletonControllerAttributes(controllerType) [LSmControllerAttributes sharedControllerAttributes][controllerType]

@@ -11,12 +11,12 @@
 /**
  *  用于表示声优或是画师的枚举
  */
-typedef NS_OPTIONS(NSUInteger, LSkEntitiesType) {
-    LSkEntitiesTypeCV          = 1 << 0,//声优
-    LSkEntitiesTypeIllustrator = 1 << 1,//画师
+typedef NS_ENUM(NSUInteger, LSkEntitiesType) {
+    LSkEntitiesTypeCV          = 0,//声优
+    LSkEntitiesTypeIllustrator = 1,//画师
 };
 
-@class LSmName, LSmEntitiesPicture, LSmEntitiesRelation, LSmLink;
+@class LSmName, LSmEntitiesPicture, LSmLink;
 
 @interface LSmEntities : NSObject
 
@@ -24,7 +24,8 @@ typedef NS_OPTIONS(NSUInteger, LSkEntitiesType) {
 @property (strong, nonatomic, readonly) NSNumber *id;
 @property (strong, nonatomic, readonly) LSmEntitiesPicture *picture;
 @property (strong, nonatomic, readonly) NSArray<LSmLink *> *links;
-@property (strong, nonatomic, readonly) LSmEntitiesRelation *relation;
+@property (strong, nonatomic, readonly) NSArray<NSArray<NSNumber *> *> *relation;
+@property (assign, nonatomic, readonly) LSkEntitiesType type;
 
 //生成模型（单例
 + (NSArray<LSmEntities *> *)sharedEntities;

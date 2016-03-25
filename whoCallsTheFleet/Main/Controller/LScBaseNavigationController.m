@@ -30,7 +30,7 @@
     //获取数据模型
     LSmControllerAttributes *controllerAttribute = LSSingletonControllerAttributes(controllerType);
     //创建子控制器
-    LScBaseViewController *vc = [[controllerAttribute.controllerClass alloc] init];
+    LScBaseViewController *vc = [[controllerAttribute.class alloc] init];
     //包装于导航控制器内
     LScBaseNavigationController *navVc = [[LScBaseNavigationController alloc] initWithRootViewController:vc];
     //为子控制器赋值

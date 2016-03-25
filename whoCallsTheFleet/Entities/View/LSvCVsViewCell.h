@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class LSmEntities, LSvCVsView;
+@class LSmEntities;
 
 @interface LSvCVsViewCell : UICollectionViewCell
 
