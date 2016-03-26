@@ -14,6 +14,7 @@
 #import "LSmEntities.h"
 #import "LSmEntitiesPicture.h"
 #import "LSmName.h"
+#import "LSmLink.h"
 
 @interface LScEntitiesDetailViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -140,6 +141,49 @@
         default:
             break;
     }
+    
+    self.entitiesDetailView.linkTwitterBtn.enabled   = NO;
+    self.entitiesDetailView.linkWikipediaBtn.enabled = NO;
+    self.entitiesDetailView.linkPixivBtn.enabled     = NO;
+    self.entitiesDetailView.linkHomepageBtn.enabled  = NO;
+    
+    //根据链接情况启用对应按钮
+    [entities.links enumerateObjectsUsingBlock:^(LSmLink * _Nonnull link, NSUInteger idx, BOOL * _Nonnull stop) {
+        switch (link.type) {
+            case LSkLinkTypeTwitter:
+                if (![link.URL isEqual:@""]) {
+                    self.entitiesDetailView.linkTwitterBtn.enabled   = YES;
+                }
+                break;
+            case LSkLinkTypeWikipedia:
+                if (![link.URL isEqual:@""]) {
+                    self.entitiesDetailView.linkWikipediaBtn.enabled = YES;
+                }
+                break;
+            case LSkLinkTypePixiv:
+                if (![link.URL isEqual:@""]) {
+                    self.entitiesDetailView.linkPixivBtn.enabled     = YES;
+                }
+                break;
+            case LSkLinkTypeHomepage:
+                if (![link.URL isEqual:@""]) {
+                    self.entitiesDetailView.linkHomepageBtn.enabled  = YES;
+                }
+                break;
+                
+            default:
+                break;
+        };
+    }];
+    
+    //赋值回调Block
+    self.entitiesDetailView.LSbLinkBtnDidClick = ^(LSkLinkType linkType){
+        [entities.links enumerateObjectsUsingBlock:^(LSmLink * _Nonnull link, NSUInteger idx, BOOL * _Nonnull stop) {
+            if (link.type == linkType) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:link.URL]];
+            };
+        }];
+    };
 }
 
 @end //LScEntitiesDetailViewController

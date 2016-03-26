@@ -124,7 +124,6 @@
     }
     //若菜单栏关闭
     else {
-//        [self.view bringSubviewToFront:self.menuView];
         //菜单按钮不可用
         self.menuBtnItem.enabled = NO;
         //动画
@@ -138,7 +137,6 @@
             self.menuMaskBtn.backgroundColor = [UIColor redColor];
             [self.view addSubview:self.menuMaskBtn];
 
-//            [self.view bringSubviewToFront:self.menuMaskBtn];
             //设置遮罩按钮frame
             CGFloat menuMaskBtnX = self.menuView.frame.size.width;
             CGFloat menuMaskBtnY = self.menuView.frame.origin.y;

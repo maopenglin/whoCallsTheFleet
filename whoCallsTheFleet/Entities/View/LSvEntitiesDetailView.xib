@@ -11,77 +11,99 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="aDE-Ct-3eB" customClass="LSvEntitiesDetailView">
-            <rect key="frame" x="0.0" y="0.0" width="384" height="542"/>
+            <rect key="frame" x="0.0" y="0.0" width="428" height="542"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="khQ-Wh-XH2">
-                    <rect key="frame" x="222.5" y="23" width="153.5" height="153.5"/>
+                    <rect key="frame" x="249" y="23" width="171" height="171"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="khQ-Wh-XH2" secondAttribute="height" multiplier="1:1" id="Yia-x0-kfJ"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="加水放空间拉萨的回复哈看" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJo-Of-3vA">
-                    <rect key="frame" x="8" y="60" width="192" height="14.5"/>
+                    <rect key="frame" x="8" y="60" width="214" height="14.5"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wK2-xc-QcO">
-                    <rect key="frame" x="8" y="186.5" width="214.5" height="332.5"/>
+                    <rect key="frame" x="8" y="204" width="241.5" height="315"/>
                     <color key="backgroundColor" red="0.96246699859999996" green="1" blue="0.9995977157" alpha="1" colorSpace="calibratedRGB"/>
                 </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PA5-lL-hDU">
-                    <rect key="frame" x="19" y="155.5" width="192" height="21"/>
+                    <rect key="frame" x="21.5" y="173" width="214" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="奥斯丁啊按说大神按" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzi-ac-eZg">
-                    <rect key="frame" x="8" y="23" width="192" height="27.5"/>
+                    <rect key="frame" x="8" y="23" width="214" height="27.5"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylf-Ht-zod">
-                    <rect key="frame" x="232.5" y="490" width="28.5" height="28.5"/>
-                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="259" y="486.5" width="32.5" height="32.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="ylf-Ht-zod" secondAttribute="height" id="IU1-Iy-Tge"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <state key="normal" title="sina"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9P-W1-k8M">
-                    <rect key="frame" x="309.5" y="490" width="28.5" height="28.5"/>
-                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <state key="normal" title="Wiki"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHL-gs-OI3">
-                    <rect key="frame" x="347.5" y="490" width="28.5" height="28.5"/>
-                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <state key="normal" title="home"/>
+                    <state key="normal" title="Pixiv"/>
+                    <connections>
+                        <action selector="pixivLinkBtnDidClick" destination="aDE-Ct-3eB" eventType="touchUpInside" id="fha-BN-zIC"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNK-Wu-VM3">
-                    <rect key="frame" x="271" y="490.5" width="28.5" height="28.5"/>
-                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="302" y="486.5" width="32.5" height="32.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="Twi"/>
+                    <connections>
+                        <action selector="twitterLinkBtnDidClick" destination="aDE-Ct-3eB" eventType="touchUpInside" id="WIH-NF-ViL"/>
+                    </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9P-W1-k8M">
+                    <rect key="frame" x="344.5" y="486.5" width="33" height="32.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="Wiki"/>
+                    <connections>
+                        <action selector="wikipediaLinkBtnDidClick" destination="aDE-Ct-3eB" eventType="touchUpInside" id="ZFT-G7-mO4"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHL-gs-OI3">
+                    <rect key="frame" x="387.5" y="486.5" width="32.5" height="32.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="home"/>
+                    <connections>
+                        <action selector="homepageLinkBtnDidClick" destination="aDE-Ct-3eB" eventType="touchUpInside" id="0n8-Ra-EUA"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="访问更多链接" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0K5-E7-w8X">
+                    <rect key="frame" x="259" y="449.5" width="161" height="32"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Rzi-ac-eZg" firstAttribute="width" secondItem="aDE-Ct-3eB" secondAttribute="width" multiplier="0.5" id="2yg-oS-xhQ"/>
                 <constraint firstItem="eHL-gs-OI3" firstAttribute="trailing" secondItem="khQ-Wh-XH2" secondAttribute="trailing" id="3MA-0y-k43"/>
                 <constraint firstItem="ylf-Ht-zod" firstAttribute="bottom" secondItem="wK2-xc-QcO" secondAttribute="bottom" id="3qa-jD-AJY"/>
+                <constraint firstItem="0K5-E7-w8X" firstAttribute="trailing" secondItem="eHL-gs-OI3" secondAttribute="trailing" id="3xT-Xh-MsG"/>
+                <constraint firstItem="0K5-E7-w8X" firstAttribute="height" secondItem="ylf-Ht-zod" secondAttribute="height" id="6SX-Vp-iS6"/>
                 <constraint firstItem="H9P-W1-k8M" firstAttribute="width" secondItem="ylf-Ht-zod" secondAttribute="width" id="9Wb-3R-Xgz"/>
                 <constraint firstItem="H9P-W1-k8M" firstAttribute="centerY" secondItem="ylf-Ht-zod" secondAttribute="centerY" id="Byc-rb-bTJ"/>
                 <constraint firstItem="khQ-Wh-XH2" firstAttribute="leading" secondItem="wK2-xc-QcO" secondAttribute="trailing" id="FRn-RJ-ZW1"/>
                 <constraint firstItem="wK2-xc-QcO" firstAttribute="top" secondItem="PA5-lL-hDU" secondAttribute="bottom" constant="10" id="FVH-mh-SnB"/>
+                <constraint firstItem="0K5-E7-w8X" firstAttribute="leading" secondItem="ylf-Ht-zod" secondAttribute="leading" id="Gxp-fw-ZNb"/>
                 <constraint firstItem="eHL-gs-OI3" firstAttribute="width" secondItem="ylf-Ht-zod" secondAttribute="width" id="HdV-7M-1cA"/>
                 <constraint firstItem="khQ-Wh-XH2" firstAttribute="width" secondItem="aDE-Ct-3eB" secondAttribute="width" multiplier="0.4" id="LGv-mf-BLF"/>
                 <constraint firstItem="MNK-Wu-VM3" firstAttribute="centerY" secondItem="ylf-Ht-zod" secondAttribute="centerY" id="MaJ-ES-L2J"/>
@@ -101,6 +123,7 @@
                 <constraint firstItem="khQ-Wh-XH2" firstAttribute="trailing" secondItem="aDE-Ct-3eB" secondAttribute="trailingMargin" id="kcG-aj-FYF"/>
                 <constraint firstItem="eHL-gs-OI3" firstAttribute="leading" secondItem="H9P-W1-k8M" secondAttribute="trailing" constant="10" id="l13-bA-kZ0"/>
                 <constraint firstItem="CJo-Of-3vA" firstAttribute="leading" secondItem="Rzi-ac-eZg" secondAttribute="leading" id="lcU-Sa-ydL"/>
+                <constraint firstItem="ylf-Ht-zod" firstAttribute="top" secondItem="0K5-E7-w8X" secondAttribute="bottom" constant="5" id="m2O-lr-SGS"/>
                 <constraint firstItem="H9P-W1-k8M" firstAttribute="height" secondItem="ylf-Ht-zod" secondAttribute="height" id="mS3-kj-hWR"/>
                 <constraint firstItem="PA5-lL-hDU" firstAttribute="centerX" secondItem="wK2-xc-QcO" secondAttribute="centerX" id="mjx-ay-iDv"/>
                 <constraint firstItem="PA5-lL-hDU" firstAttribute="bottom" secondItem="khQ-Wh-XH2" secondAttribute="bottom" id="oRg-At-cQK"/>
@@ -111,11 +134,16 @@
             <connections>
                 <outlet property="iconView" destination="khQ-Wh-XH2" id="psd-NK-Sue"/>
                 <outlet property="jaNameLbl" destination="CJo-Of-3vA" id="47d-qI-7FF"/>
+                <outlet property="linkHomepageBtn" destination="eHL-gs-OI3" id="vqu-Yt-XJq"/>
+                <outlet property="linkPixivBtn" destination="ylf-Ht-zod" id="Z0c-GV-Th0"/>
+                <outlet property="linkTwitterBtn" destination="MNK-Wu-VM3" id="DaZ-lS-oPG"/>
+                <outlet property="linkWikipediaBtn" destination="H9P-W1-k8M" id="h4w-uU-r9O"/>
                 <outlet property="shipTableView" destination="wK2-xc-QcO" id="0TE-5D-Fak"/>
+                <outlet property="tipsLbl" destination="0K5-E7-w8X" id="5mQ-qT-Ois"/>
                 <outlet property="typeLbl" destination="PA5-lL-hDU" id="vt3-7b-awj"/>
                 <outlet property="zhNameLbl" destination="Rzi-ac-eZg" id="jaF-dV-O3H"/>
             </connections>
-            <point key="canvasLocation" x="107" y="353"/>
+            <point key="canvasLocation" x="129" y="353"/>
         </view>
     </objects>
 </document>

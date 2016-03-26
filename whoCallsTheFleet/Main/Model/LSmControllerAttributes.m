@@ -131,10 +131,10 @@
         /*** 赋值共有属性 ***/
         //随机选取背景图片
         int rndNum = arc4random()%15;
-        NSString *imageName = [NSString stringWithFormat:@"tbg%d",rndNum];
+        UIImage *backgroundImage = [UIImage imageNamed:[NSString stringWithFormat:@"tbg%d",rndNum]];
         //设置背景图
         [controllerAttributes enumerateObjectsUsingBlock:^(LSmControllerAttributes * _Nonnull controllerAtt, NSUInteger idx, BOOL * _Nonnull stop) {
-            controllerAtt.backgroundImage = [UIImage imageNamed:imageName];
+            controllerAtt.backgroundImage = backgroundImage;
         }];
     });
     

@@ -22,6 +22,7 @@
 
 //Font
 #define LSFontWithSize(LSSize) [UIFont systemFontOfSize:LSSize]
+#define LSFontIconSize(LSSize) [UIFont fontWithName:@"iconfont" size:LSSize]
 
 //Color
 #define LSColorWithRGBA(Red, Green, Blue, Alpha) [UIColor colorWithRed:Red/255.0 green:Green/255.0 blue:Blue/255.0 alpha:Alpha]
@@ -33,11 +34,6 @@
 
 #define LSPathUserTPCalculatorCountPlist [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"userTPCalculatorCount.plist"]
 
-//Identifier
-#define LSIdentifierEntitiesCVCell @"entitiesCVCell"
-#define LSIdentifierEntitiesIllustratorCell @"entitiesIllustratorCell"
-#define LSIdentifierEntitiesDetailCell @"entitiesDetailCell"
-
 //Singleton
 #define LSSingletonControllerAttributes(controllerType) [LSmControllerAttributes sharedControllerAttributes][controllerType]
 #define LSSingletonEntities [LSmEntities sharedEntities]
@@ -46,6 +42,25 @@
 //Masonry
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
+
+//Identifier
+#define LSIdentifierEntitiesCVCell @"entitiesCVCell"
+#define LSIdentifierEntitiesIllustratorCell @"entitiesIllustratorCell"
+#define LSIdentifierEntitiesDetailCell @"entitiesDetailCell"
+
+//Iconfont
+#define LSIconfontArrowUp @"\U0000e60a"
+#define LSIconfontArrowDown @"\U0000e609"
+#define LSIconfontArrowLeft @"\U0000e608"
+#define LSIconfontArrowRight @"\U0000e607"
+#define LSIconfontGooglePlus @"\U0000e60b"
+#define LSIconfontTwitter @"\U0000e601"
+#define LSIconfontWikipedia @"\U0000e604"
+#define LSIconfontWeibo @"\U0000e602"
+#define LSIconfontPixiv @"\U0000e605"
+#define LSIconfontHomepage @"\U0000e603"
+#define LSIconfontMenu @"\U0000e606"
+#define LSIconfontHome @"\U0000e600"
 
 
 #endif /* Objective-C define */

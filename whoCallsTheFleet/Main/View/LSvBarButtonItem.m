@@ -33,6 +33,9 @@
     itemBtn.adjustsImageWhenDisabled = NO;
     //设置背景图片及渲染方式
     [itemBtn setBackgroundImage:[[UIImage imageNamed:@"menuIcon"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+//    NSDictionary *attDict = @{NSForegroundColorAttributeName: itemBtn.tintColor, NSFontAttributeName: LSFontIconSize(20)};
+//    NSAttributedString *attString = [[NSAttributedString alloc] initWithString:LSIconfontMenu attributes:attDict];
+//    [itemBtn setAttributedTitle:attString forState:UIControlStateNormal];
     //绑定回调方法
     [itemBtn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     

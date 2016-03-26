@@ -21,7 +21,7 @@ typedef NS_ENUM(NSUInteger, LSkLinkType) {
 @interface LSmLink : NSObject
 
 @property (assign, nonatomic) LSkLinkType type;
-@property (strong, nonatomic) NSURL *url;
+@property (strong, nonatomic) NSString *URL;
 
 //生成模型
 + (NSArray<LSmLink *> *)link:(NSArray<__kindof NSDictionary *> *)dictArr;

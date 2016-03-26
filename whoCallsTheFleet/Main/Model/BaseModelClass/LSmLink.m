@@ -37,7 +37,7 @@
         } else if ([dict[@"name"] isEqualToString:@"Pixiv"]) {
             self.type = LSkLinkTypePixiv;
         }
-        self.url = dict[@"url"];
+        self.URL = dict[@"url"];
     }
     return self;
 }

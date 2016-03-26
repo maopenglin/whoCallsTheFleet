@@ -73,6 +73,7 @@
 		1D7547A21C983DF0009AB38C /* ship_types.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D0FB59D1C81D4F6005A1D30 /* ship_types.json */; };
 		1D7547A31C983DF0009AB38C /* ships.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D0FB59E1C81D4F6005A1D30 /* ships.json */; };
 		1D7547A41C983DF0009AB38C /* updates.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D0FB59F1C81D4F6005A1D30 /* updates.json */; };
+		1D839D5C1CA631FD00AD152F /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D839D5B1CA631FD00AD152F /* iconfont.ttf */; };
 		1DDA3E821C9CF3920078D310 /* LSmOption.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D2E91221C89B1A10072FB29 /* LSmOption.plist */; };
 		1DDA3E831C9CF3920078D310 /* LSmTPCalculatorCount.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DE61CA31C92E7B800C81882 /* LSmTPCalculatorCount.plist */; };
 		1DE477111CA06CF700D26AE7 /* LSvCVsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE4770F1CA06CF700D26AE7 /* LSvCVsViewCell.m */; };
@@ -214,6 +215,7 @@
 		1D6FB2191C821A2B007F9A9F /* LScBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LScBaseViewController.h; sourceTree = "<group>"; };
 		1D6FB21A1C821A2B007F9A9F /* LScBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScBaseViewController.m; sourceTree = "<group>"; };
 		1D7547AA1C9857D4009AB38C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1D839D5B1CA631FD00AD152F /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		1D8671171C9D82E80021495A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DD9E41B1C95F52F00E72634 /* card.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = card.webp; sourceTree = "<group>"; };
 		1DD9E41D1C95F52F00E72634 /* card.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = card.webp; sourceTree = "<group>"; };
@@ -2584,6 +2586,7 @@
 		1D5024281C3FCA120053FA71 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1D839D5B1CA631FD00AD152F /* iconfont.ttf */,
 				1D0FB5131C8167F6005A1D30 /* whoCallsTheFleet.pch */,
 				1D8671171C9D82E80021495A /* Info.plist */,
 				1D5024341C3FCA120053FA71 /* Assets.xcassets */,
@@ -10860,6 +10863,7 @@
 				1D75479A1C983DF0009AB38C /* item_type_collections.json in Resources */,
 				1D75479B1C983DF0009AB38C /* item_types.json in Resources */,
 				1D75479C1C983DF0009AB38C /* items.json in Resources */,
+				1D839D5C1CA631FD00AD152F /* iconfont.ttf in Resources */,
 				1D75479D1C983DF0009AB38C /* ship_classes.json in Resources */,
 				1D75479E1C983DF0009AB38C /* ship_namesuffix.json in Resources */,
 				1DE477121CA06CF700D26AE7 /* LSvCVsViewCell.xib in Resources */,
