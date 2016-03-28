@@ -45,8 +45,9 @@
     self.shipTableView.showsVerticalScrollIndicator = NO;
     //设置主题色
     UIColor *color = LSSingletonControllerAttributes(LSkControllerTypeEntities).color;
-    self.jaNameLbl.textColor = color;
+
     self.zhNameLbl.textColor = color;
+    self.jaNameLbl.textColor = color;
     self.typeLbl.textColor   = color;
     self.tipsLbl.textColor   = color;
     

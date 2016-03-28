@@ -54,6 +54,11 @@
     //添加至导航条
     self.navigationItem.leftBarButtonItem = popItem;
     
+    //创建右上角返回按钮
+    LSvBarButtonItem *homeItem = [LSvBarButtonItem barButtonItemForHome:self action:@selector(homeItenDidClick)];
+    //添加至导航条
+    self.navigationItem.rightBarButtonItem = homeItem;
+    
     //创建主体View
     LSvEntitiesDetailView *entitiesDetailView = [LSvEntitiesDetailView entitiesDetailView];
     self.entitiesDetailView = entitiesDetailView;
@@ -84,6 +89,10 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
+- (void)homeItenDidClick
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 #pragma mark - Table View Data Source
 
@@ -102,6 +111,7 @@
     cell.textLabel.text      = self.entities.relation[indexPath.row].lastObject.description;
     cell.textLabel.textColor = LSSingletonControllerAttributes(LSkControllerTypeEntities).color;
     cell.backgroundColor     = LSColorRandom;
+    cell.selectionStyle      = UITableViewCellSelectionStyleNone;
     
     return cell;
 }
@@ -119,15 +129,17 @@
 {
     _entities = entities;
     
+    //设置中文姓名板
     self.entitiesDetailView.zhNameLbl.text = entities.name.zhCn;
+    //根据情况设置日文姓名板
     if (![entities.name.jaJp isEqualToString:entities.name.zhCn]) {
         self.entitiesDetailView.jaNameLbl.text = entities.name.jaJp;
     } else {
         self.entitiesDetailView.jaNameLbl.text = @"";
     }
-    
+    //设置头像
     self.entitiesDetailView.iconView.image = [UIImage imageWithData:entities.picture.avatar];
-    
+    //设置标题和数量描述
     switch (entities.type) {
         case LSkEntitiesTypeCV:
             self.title = @"声优";
@@ -141,7 +153,7 @@
         default:
             break;
     }
-    
+    //设置链接默认不可用
     self.entitiesDetailView.linkTwitterBtn.enabled   = NO;
     self.entitiesDetailView.linkWikipediaBtn.enabled = NO;
     self.entitiesDetailView.linkPixivBtn.enabled     = NO;
@@ -176,7 +188,7 @@
         };
     }];
     
-    //赋值回调Block
+    //赋值点击链接的回调Block
     self.entitiesDetailView.LSbLinkBtnDidClick = ^(LSkLinkType linkType){
         [entities.links enumerateObjectsUsingBlock:^(LSmLink * _Nonnull link, NSUInteger idx, BOOL * _Nonnull stop) {
             if (link.type == linkType) {
@@ -184,6 +196,14 @@
             };
         }];
     };
+    //赋值姓名版的富文本(暂时不用
+//    UIColor *color = LSSingletonControllerAttributes(LSkControllerTypeEntities).color;
+//    NSDictionary *attDict = @{NSStrokeColorAttributeName: [color colorWithAlphaComponent:1],
+//                              NSStrokeWidthAttributeName: @-3,
+//                              NSForegroundColorAttributeName: [[UIColor whiteColor] colorWithAlphaComponent:0.7],
+//                              NSFontAttributeName: LSFontWithSize(30)};
+//    
+//    self.entitiesDetailView.zhNameLbl.attributedText = [[NSAttributedString alloc] initWithString:entities.name.zhCn attributes:attDict];
 }
 
 @end //LScEntitiesDetailViewController

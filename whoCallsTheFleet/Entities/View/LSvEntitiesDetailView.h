@@ -23,7 +23,14 @@
 @property (nonatomic, weak) IBOutlet UIButton *linkPixivBtn;
 
 //回调Block
+/**
+ *  点击链接按钮的回调Block
+ */
 @property (nonatomic, copy) void (^LSbLinkBtnDidClick)(LSkLinkType);
+/**
+ *  设置中文姓名富文本的回调Block
+ */
+//@property (nonatomic, copy) NSAttributedString *(^LSbSetZhNameLblAttText)();
 
 /**
  *  工厂方法

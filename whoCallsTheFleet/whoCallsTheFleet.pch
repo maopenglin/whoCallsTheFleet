@@ -38,11 +38,6 @@
 #define LSSingletonControllerAttributes(controllerType) [LSmControllerAttributes sharedControllerAttributes][controllerType]
 #define LSSingletonEntities [LSmEntities sharedEntities]
 
-//Third Party
-//Masonry
-#define MAS_SHORTHAND
-#define MAS_SHORTHAND_GLOBALS
-
 //Identifier
 #define LSIdentifierEntitiesCVCell @"entitiesCVCell"
 #define LSIdentifierEntitiesIllustratorCell @"entitiesIllustratorCell"
