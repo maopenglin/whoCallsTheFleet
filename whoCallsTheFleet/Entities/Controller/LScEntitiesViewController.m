@@ -16,6 +16,8 @@
 #import "LSvCVsViewCell.h"
 #import "LSvIllustratorsViewCell.h"
 
+#import <Masonry/Masonry.h>
+
 @interface LScEntitiesViewController () <UIScrollViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) UISegmentedControl *segmentedControl;
@@ -35,18 +37,7 @@
 {
     return [[self alloc] init];
 }
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
-{
-    if (self = [super initWithCoder:aDecoder]) {
-    }
-    return self;
-}
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-    }
-    return self;
-}
+
 - (void)setupController
 {
     [super setupController];
@@ -75,6 +66,8 @@
     //创建声优页面View
     UICollectionView *CVsView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) collectionViewLayout:CVsViewLayout];
     self.CVsView = CVsView;
+    //添加至scrollView
+    [self.scrollView addSubview:self.CVsView];
     //设置代理
     self.CVsView.dataSource = self;
     self.CVsView.delegate   = self;
@@ -84,12 +77,12 @@
     [self.CVsView registerNib:[UINib nibWithNibName:@"LSvCVsViewCell" bundle:nil] forCellWithReuseIdentifier:LSIdentifierEntitiesCVCell];
     //设置背景色
     CVsView.backgroundColor = LSColorClear;
-    //添加至scrollView
-    [self.scrollView addSubview:self.CVsView];
     
     //创建画师页面View
     UITableView *illustratorsView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStylePlain];
     self.illustratorsView = illustratorsView;
+    //添加至scrollView
+    [self.scrollView addSubview:self.illustratorsView];
     //设置代理
     self.illustratorsView.dataSource = self;
     self.illustratorsView.delegate   = self;
@@ -102,8 +95,6 @@
     [self.illustratorsView registerNib:[UINib nibWithNibName:@"LSvIllustratorsViewCell" bundle:nil] forCellReuseIdentifier:LSIdentifierEntitiesIllustratorCell];
     //设置背景色
     illustratorsView.backgroundColor = LSColorClear;
-    //添加至scrollView
-    [self.scrollView addSubview:self.illustratorsView];
 }
 
 #pragma mark - controller生命周期方法
@@ -139,14 +130,14 @@
     //计算需要使用的尺寸数值
     CGFloat viewX = 0;
     CGFloat viewY = 0;
-    CGFloat viewW = self.view.frame.size.width * 2;
+    CGFloat viewW = self.view.frame.size.width;
     CGFloat viewH = self.view.frame.size.height;
     //布局scrollView
     self.scrollView.frame       = self.view.frame;
     //布局CVsView
-    self.CVsView.frame          = CGRectMake(viewX, viewY, viewW * 0.5, viewH);
+    self.CVsView.frame          = CGRectMake(viewX, viewY, viewW, viewH);
     //布局illustratorsView
-    self.illustratorsView.frame = CGRectMake(viewW * 0.5, 0, viewW * 0.5, viewH);
+    self.illustratorsView.frame = CGRectMake(viewW, viewY, viewW, viewH);
 
     [self.view bringSubviewToFront:self.menuView];
 }

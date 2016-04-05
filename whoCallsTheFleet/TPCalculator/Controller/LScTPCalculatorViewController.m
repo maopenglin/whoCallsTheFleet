@@ -31,21 +31,11 @@
 {
     return [[self alloc] init];
 }
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
-{
-    if (self = [super initWithCoder:aDecoder]) {
-    }
-    return self;
-}
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-    }
-    return self;
-}
+
 - (void)setupController
 {
     [super setupController];
+    
     //创建主体view
     LSvTPCalculatorView *TPCalculatorView = [LSvTPCalculatorView TPCalculatorView];
     self.TPCalculatorView = TPCalculatorView;

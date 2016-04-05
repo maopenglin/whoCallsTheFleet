@@ -11,6 +11,7 @@
 #import "LSmControllerAttributes.h"
 
 #import "LSvVerticalSegmentedControlCell.h"
+#import "LScTestTableViewController.h"
 
 #import <Masonry/Masonry.h>
 
@@ -18,8 +19,6 @@
 
 @property (nonatomic, weak) UISegmentedControl *segmentedControl;
 @property (nonatomic, weak) UIScrollView *scrollView;
-
-//测试
 @property (nonatomic, strong) NSArray *weekdays;
 
 @end
@@ -32,18 +31,7 @@
 {
     return [[self alloc] init];
 }
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
-{
-    if (self = [super initWithCoder:aDecoder]) {
-    }
-    return self;
-}
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-    }
-    return self;
-}
+
 - (void)setupController
 {
     [super setupController];
@@ -71,10 +59,12 @@
         make.width.mas_equalTo(30);
         make.height.mas_equalTo(210);
     }];
+    
+    //设置代理
+    verticalSegmentedControl.dataSource = self;
+    verticalSegmentedControl.delegate   = self;
     //设置属性
-    verticalSegmentedControl.dataSource                   = self;
-    verticalSegmentedControl.delegate                     = self;
-    verticalSegmentedControl.backgroundColor              = LSColorClear;
+    verticalSegmentedControl.backgroundColor              = [UIColor clearColor];
     verticalSegmentedControl.showsVerticalScrollIndicator = NO;
     verticalSegmentedControl.separatorStyle               = UITableViewCellSelectionStyleNone;
     verticalSegmentedControl.bounces                      = NO;
@@ -84,9 +74,15 @@
     verticalSegmentedControl.layer.borderWidth            = 1.0f;
     verticalSegmentedControl.layer.borderColor            = LSSingletonControllerAttributes(LSkControllerTypeArsenal).color.CGColor;
     
-    
+    //设置第一格为选中
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [verticalSegmentedControl selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
+    
+    //测试代码
+    LScTestTableViewController *testVc = [[LScTestTableViewController alloc] init];
+    testVc.tableView.frame = CGRectMake(50, 50, 120, 250);
+    [self.scrollView addSubview:testVc.tableView];
+    
 }
 
 #pragma mark - controller生命周期方法
@@ -120,10 +116,10 @@
     [super viewDidLayoutSubviews];
     
     //计算需要使用的尺寸数值
-    CGFloat viewX = 0;
-    CGFloat viewY = 0;
-    CGFloat viewW = self.view.frame.size.width * 2;
-    CGFloat viewH = self.view.frame.size.height;
+//    CGFloat viewX = 0;
+//    CGFloat viewY = 0;
+//    CGFloat viewW = self.view.frame.size.width * 2;
+//    CGFloat viewH = self.view.frame.size.height;
     //布局scrollView
     self.scrollView.frame       = self.view.frame;
     [self.view bringSubviewToFront:self.menuView];
@@ -147,7 +143,7 @@
     }];
 }
 
-#pragma mark - Table View Data Source
+#pragma mark - Vertical Segmented Control Data Source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -156,24 +152,25 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    LSvVerticalSegmentedControlCell *cell = [tableView dequeueReusableCellWithIdentifier:@"test"];
+    LSvVerticalSegmentedControlCell *cell = [tableView dequeueReusableCellWithIdentifier:LSIdentifierArsenalWeekdayCell];
     if (!cell) {
-        cell = [[LSvVerticalSegmentedControlCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"test"];
+        cell = [[LSvVerticalSegmentedControlCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:LSIdentifierArsenalWeekdayCell];
     }
-    
+
     cell.lable.text = ((NSNumber *)self.weekdays[indexPath.row]).description;
     cell.color = LSSingletonControllerAttributes(LSkControllerTypeArsenal).color;
     
     if (indexPath.row == 0) {
         cell.lable.textColor = LSColorWithRGBA(30, 30, 30, 1);
     }
-    
+
     return cell;
 }
 
-#pragma mark - Table View Delegate
+#pragma mark - Vertical Segmented Control Delegate
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     return 30.0f;
 }
 
@@ -181,7 +178,9 @@
 {
     LSvVerticalSegmentedControlCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
-    cell.lable.textColor = LSColorWithRGBA(30, 30, 30, 1);;
+    cell.lable.textColor = LSColorWithRGBA(30, 30, 30, 1);
+    
+    LSLog(@"%zd",indexPath.row);
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(nonnull NSIndexPath *)indexPath

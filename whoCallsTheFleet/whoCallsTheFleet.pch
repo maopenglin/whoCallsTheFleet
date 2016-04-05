@@ -42,6 +42,7 @@
 #define LSIdentifierEntitiesCVCell @"entitiesCVCell"
 #define LSIdentifierEntitiesIllustratorCell @"entitiesIllustratorCell"
 #define LSIdentifierEntitiesDetailCell @"entitiesDetailCell"
+#define LSIdentifierArsenalWeekdayCell @"arsenalWeekdayCell"
 
 //Iconfont
 #define LSIconfontArrowUp @"\U0000e60a"

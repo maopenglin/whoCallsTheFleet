@@ -43,7 +43,6 @@
 		1D2E912C1C8ACC650072FB29 /* LSvOptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E912B1C8ACC650072FB29 /* LSvOptionTableViewCell.m */; };
 		1D2E912F1C8AFC9C0072FB29 /* LSvOptionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E912E1C8AFC9C0072FB29 /* LSvOptionHeaderView.m */; };
 		1D2E91361C8C2AEB0072FB29 /* LScPatchNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E91351C8C2AEB0072FB29 /* LScPatchNoteViewController.m */; };
-		1D31B6F81CA6CA7400E4160B /* LStCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D31B6F71CA6CA7400E4160B /* LStCell.m */; };
 		1D31B7011CA912E600E4160B /* LSvVerticalSegmentedControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D31B7001CA912E600E4160B /* LSvVerticalSegmentedControlCell.m */; };
 		1D3B90031CA271900003DBF9 /* LSvEntitiesDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3B90021CA271900003DBF9 /* LSvEntitiesDetailView.m */; };
 		1D3B90051CA2719A0003DBF9 /* LSvEntitiesDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3B90041CA2719A0003DBF9 /* LSvEntitiesDetailView.xib */; };
@@ -76,6 +75,7 @@
 		1D7547A31C983DF0009AB38C /* ships.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D0FB59E1C81D4F6005A1D30 /* ships.json */; };
 		1D7547A41C983DF0009AB38C /* updates.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D0FB59F1C81D4F6005A1D30 /* updates.json */; };
 		1D839D5C1CA631FD00AD152F /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D839D5B1CA631FD00AD152F /* iconfont.ttf */; };
+		1D9E165B1CB3D0F8006EF1DC /* LScTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9E165A1CB3D0F8006EF1DC /* LScTestTableViewController.m */; };
 		1DDA3E821C9CF3920078D310 /* LSmOption.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D2E91221C89B1A10072FB29 /* LSmOption.plist */; };
 		1DDA3E831C9CF3920078D310 /* LSmTPCalculatorCount.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DE61CA31C92E7B800C81882 /* LSmTPCalculatorCount.plist */; };
 		1DE477111CA06CF700D26AE7 /* LSvCVsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE4770F1CA06CF700D26AE7 /* LSvCVsViewCell.m */; };
@@ -189,8 +189,6 @@
 		1D2E912E1C8AFC9C0072FB29 /* LSvOptionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvOptionHeaderView.m; sourceTree = "<group>"; };
 		1D2E91341C8C2AEB0072FB29 /* LScPatchNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LScPatchNoteViewController.h; sourceTree = "<group>"; };
 		1D2E91351C8C2AEB0072FB29 /* LScPatchNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScPatchNoteViewController.m; sourceTree = "<group>"; };
-		1D31B6F61CA6CA7400E4160B /* LStCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LStCell.h; sourceTree = "<group>"; };
-		1D31B6F71CA6CA7400E4160B /* LStCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LStCell.m; sourceTree = "<group>"; };
 		1D31B6FF1CA912E600E4160B /* LSvVerticalSegmentedControlCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvVerticalSegmentedControlCell.h; sourceTree = "<group>"; };
 		1D31B7001CA912E600E4160B /* LSvVerticalSegmentedControlCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSvVerticalSegmentedControlCell.m; sourceTree = "<group>"; };
 		1D3B90011CA271900003DBF9 /* LSvEntitiesDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSvEntitiesDetailView.h; sourceTree = "<group>"; };
@@ -223,6 +221,8 @@
 		1D7547AA1C9857D4009AB38C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1D839D5B1CA631FD00AD152F /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		1D8671171C9D82E80021495A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D9E16591CB3D0F8006EF1DC /* LScTestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LScTestTableViewController.h; sourceTree = "<group>"; };
+		1D9E165A1CB3D0F8006EF1DC /* LScTestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LScTestTableViewController.m; sourceTree = "<group>"; };
 		1DD9E41B1C95F52F00E72634 /* card.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = card.webp; sourceTree = "<group>"; };
 		1DD9E41D1C95F52F00E72634 /* card.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = card.webp; sourceTree = "<group>"; };
 		1DD9E41F1C95F52F00E72634 /* card.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = card.webp; sourceTree = "<group>"; };
@@ -2004,6 +2004,8 @@
 			children = (
 				1D0FC6551C81D8A6005A1D30 /* LScArsenalViewController.h */,
 				1D0FC6561C81D8A6005A1D30 /* LScArsenalViewController.m */,
+				1D9E16591CB3D0F8006EF1DC /* LScTestTableViewController.h */,
+				1D9E165A1CB3D0F8006EF1DC /* LScTestTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2018,8 +2020,6 @@
 		1D0FB5371C81D4F6005A1D30 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1D31B6F61CA6CA7400E4160B /* LStCell.h */,
-				1D31B6F71CA6CA7400E4160B /* LStCell.m */,
 				1D31B6FF1CA912E600E4160B /* LSvVerticalSegmentedControlCell.h */,
 				1D31B7001CA912E600E4160B /* LSvVerticalSegmentedControlCell.m */,
 			);
@@ -10965,6 +10965,7 @@
 				1D0FBF831C81D501005A1D30 /* LSmEntities.m in Sources */,
 				1D0FBF871C81D501005A1D30 /* LSmItemsImprovement.m in Sources */,
 				1D0FBF911C81D501005A1D30 /* LSmShipTypeCollections.m in Sources */,
+				1D9E165B1CB3D0F8006EF1DC /* LScTestTableViewController.m in Sources */,
 				1D0FC65D1C81D8D3005A1D30 /* LScShipsViewController.m in Sources */,
 				1D64C5021CA4C49500421A48 /* LSvBarButtonItem.m in Sources */,
 				1DE61CA01C92A9B700C81882 /* LSvTPCalculatorCountView.m in Sources */,
@@ -10987,7 +10988,6 @@
 				1D0FB5281C81D156005A1D30 /* AppDelegate.m in Sources */,
 				1D0FBF7C1C81D501005A1D30 /* LScBaseNavigationController.m in Sources */,
 				1D0FC6571C81D8A6005A1D30 /* LScArsenalViewController.m in Sources */,
-				1D31B6F81CA6CA7400E4160B /* LStCell.m in Sources */,
 				1D0FC6541C81D88E005A1D30 /* LScEntitiesViewController.m in Sources */,
 				1DE477161CA06F1500D26AE7 /* LSvIllustratorsViewCell.m in Sources */,
 				1D133DD01C8428E9007D4F13 /* LSmControllerAttributes.m in Sources */,

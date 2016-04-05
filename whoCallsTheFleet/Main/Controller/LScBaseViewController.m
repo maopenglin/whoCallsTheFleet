@@ -50,9 +50,6 @@
     //设置边缘裁切为yes
     self.backgroundImgView.clipsToBounds = YES;
     
-//    UIView *testView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 150, 150)];
-//    [self.backgroundImgView addSubview:testView];
-//    testView.backgroundColor = [UIColor redColor];
     //添加背景遮罩
     //暗色效果(待定)
     //    UIView *maskView = [[UIView alloc] initWithFrame:vc.view.bounds];
