@@ -30,7 +30,8 @@
 - (instancetype)initWithDict:(NSDictionary *)dict
 {
     if (self = [super init]) {
-        [self setValuesForKeysWithDictionary:dict];
+        self.weekday = ((NSNumber *)dict[@"weekday"]).integerValue;
+        self.improvements = dict[@"improvements"];
     }
     return self;
 }

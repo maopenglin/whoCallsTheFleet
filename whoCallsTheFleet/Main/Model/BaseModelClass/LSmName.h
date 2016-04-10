@@ -10,15 +10,15 @@
 
 @interface LSmName : NSObject
 
-@property (copy, nonatomic) NSString *jaJp;
-@property (copy, nonatomic) NSString *jaKana;
-@property (copy, nonatomic) NSString *jaRomaji;
-@property (copy, nonatomic) NSString *zhCn;
-@property (copy, nonatomic) NSString *game;
-@property (copy, nonatomic) NSString *code;
-@property (copy, nonatomic) NSString *codeGame;
-@property (copy, nonatomic) NSString *full;
-@property (strong, nonatomic) NSNumber *suffix;
+@property (nonatomic, copy  ) NSString *jaJp;
+@property (nonatomic, copy  ) NSString *jaKana;
+@property (nonatomic, copy  ) NSString *jaRomaji;
+@property (nonatomic, copy  ) NSString *zhCn;
+@property (nonatomic, copy  ) NSString *game;
+@property (nonatomic, copy  ) NSString *code;
+@property (nonatomic, copy  ) NSString *codeGame;
+@property (nonatomic, copy  ) NSString *full;
+@property (nonatomic, strong) NSNumber *suffix;
 
 //构造方法
 + (instancetype) nameWithDict:(NSDictionary *)dict;

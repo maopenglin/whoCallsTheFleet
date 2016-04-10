@@ -10,9 +10,8 @@
 
 @interface LSmArsenalAll : NSObject
 
-@property (strong, nonatomic) NSNumber *idLS2016;
+@property (strong, nonatomic) NSNumber *id;
 @property (strong, nonatomic) NSNumber *sort;
-@property (copy, nonatomic) NSString *_id;
 
 //生成模型
 + (NSArray<LSmArsenalAll *> *)arsenalAll;

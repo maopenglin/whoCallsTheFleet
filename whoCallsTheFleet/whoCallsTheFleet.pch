@@ -25,9 +25,9 @@
 #define LSFontIconSize(LSSize) [UIFont fontWithName:@"iconfont" size:LSSize]
 
 //Color
-#define LSColorWithRGBA(Red, Green, Blue, Alpha) [UIColor colorWithRed:Red/255.0 green:Green/255.0 blue:Blue/255.0 alpha:Alpha]
 #define LSColorClear [UIColor clearColor]
 #define LSColorRandom [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0]
+#define LSColorWithRGBA(Red, Green, Blue, Alpha) [UIColor colorWithRed:Red/255.0 green:Green/255.0 blue:Blue/255.0 alpha:Alpha]
 
 //Path
 #define LSPathUserOptionPlist [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"userOption.plist"]
@@ -39,24 +39,25 @@
 #define LSSingletonEntities [LSmEntities sharedEntities]
 
 //Identifier
-#define LSIdentifierEntitiesCVCell @"entitiesCVCell"
+#define LSIdentifierEntitiesCVCell          @"entitiesCVCell"
 #define LSIdentifierEntitiesIllustratorCell @"entitiesIllustratorCell"
-#define LSIdentifierEntitiesDetailCell @"entitiesDetailCell"
-#define LSIdentifierArsenalWeekdayCell @"arsenalWeekdayCell"
+#define LSIdentifierEntitiesDetailCell      @"entitiesDetailCell"
+#define LSIdentifierArsenalWeekdayCell      @"arsenalWeekdayCell"
+#define LSIdentifierArsenalCell             @"arsenalCell"
 
 //Iconfont
-#define LSIconfontArrowUp @"\U0000e60a"
-#define LSIconfontArrowDown @"\U0000e609"
-#define LSIconfontArrowLeft @"\U0000e608"
+#define LSIconfontArrowUp    @"\U0000e60a"
+#define LSIconfontArrowDown  @"\U0000e609"
+#define LSIconfontArrowLeft  @"\U0000e608"
 #define LSIconfontArrowRight @"\U0000e607"
 #define LSIconfontGooglePlus @"\U0000e60b"
-#define LSIconfontTwitter @"\U0000e601"
-#define LSIconfontWikipedia @"\U0000e604"
-#define LSIconfontWeibo @"\U0000e602"
-#define LSIconfontPixiv @"\U0000e605"
-#define LSIconfontHomepage @"\U0000e603"
-#define LSIconfontMenu @"\U0000e606"
-#define LSIconfontHome @"\U0000e600"
+#define LSIconfontTwitter    @"\U0000e601"
+#define LSIconfontWikipedia  @"\U0000e604"
+#define LSIconfontWeibo      @"\U0000e602"
+#define LSIconfontPixiv      @"\U0000e605"
+#define LSIconfontHomepage   @"\U0000e603"
+#define LSIconfontMenu       @"\U0000e606"
+#define LSIconfontHome       @"\U0000e600"
 
 
 #endif /* Objective-C define */

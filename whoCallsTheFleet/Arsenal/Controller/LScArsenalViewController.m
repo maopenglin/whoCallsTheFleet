@@ -8,18 +8,23 @@
 
 #import "LScArsenalViewController.h"
 
+#import "LScArsenalWeekdayViewController.h"
+#import "LScArsenalAllViewController.h"
+
 #import "LSmControllerAttributes.h"
 
 #import "LSvVerticalSegmentedControlCell.h"
-#import "LScTestTableViewController.h"
 
 #import <Masonry/Masonry.h>
 
 @interface LScArsenalViewController () <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, weak) UISegmentedControl *segmentedControl;
-@property (nonatomic, weak) UIScrollView *scrollView;
-@property (nonatomic, strong) NSArray *weekdays;
+@property (nonatomic, weak  ) UISegmentedControl *segmentedControl;
+@property (nonatomic, weak  ) UIScrollView       *scrollView;
+@property (nonatomic, weak  ) UITableView        *verticalSegmentedControl;
+@property (nonatomic, weak  ) UITableView        *weekdayTableView;
+@property (nonatomic, weak  ) UITableView        *allTableView;
+@property (nonatomic, strong) NSArray            *weekdays;
 
 @end
 
@@ -51,9 +56,10 @@
     
     //创建星期选择控件
     UITableView *verticalSegmentedControl = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStylePlain];
-    [self.scrollView addSubview:verticalSegmentedControl];
+    self.verticalSegmentedControl = verticalSegmentedControl;
+    [self.scrollView addSubview:self.verticalSegmentedControl];
     //设置约束
-    [verticalSegmentedControl mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.verticalSegmentedControl mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(self.view.mas_centerY);
         make.leftMargin.mas_equalTo(self.view.mas_left).offset(30);
         make.width.mas_equalTo(30);
@@ -61,28 +67,33 @@
     }];
     
     //设置代理
-    verticalSegmentedControl.dataSource = self;
-    verticalSegmentedControl.delegate   = self;
+    self.verticalSegmentedControl.dataSource                   = self;
+    self.verticalSegmentedControl.delegate                     = self;
     //设置属性
-    verticalSegmentedControl.backgroundColor              = [UIColor clearColor];
-    verticalSegmentedControl.showsVerticalScrollIndicator = NO;
-    verticalSegmentedControl.separatorStyle               = UITableViewCellSelectionStyleNone;
-    verticalSegmentedControl.bounces                      = NO;
+    self.verticalSegmentedControl.backgroundColor              = [UIColor clearColor];
+    self.verticalSegmentedControl.showsVerticalScrollIndicator = NO;
+    self.verticalSegmentedControl.separatorStyle               = UITableViewCellSelectionStyleNone;
+    self.verticalSegmentedControl.bounces                      = NO;
 
-    verticalSegmentedControl.layer.cornerRadius           = 7.0f;
-    verticalSegmentedControl.layer.masksToBounds          = YES;
-    verticalSegmentedControl.layer.borderWidth            = 1.0f;
-    verticalSegmentedControl.layer.borderColor            = LSSingletonControllerAttributes(LSkControllerTypeArsenal).color.CGColor;
+    self.verticalSegmentedControl.layer.cornerRadius           = 7.0f;
+    self.verticalSegmentedControl.layer.masksToBounds          = YES;
+    self.verticalSegmentedControl.layer.borderWidth            = 1.0f;
+    self.verticalSegmentedControl.layer.borderColor            = LSSingletonControllerAttributes(LSkControllerTypeArsenal).color.CGColor;
     
     //设置第一格为选中
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [verticalSegmentedControl selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
+    [self.verticalSegmentedControl selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
     
-    //测试代码
-    LScTestTableViewController *testVc = [[LScTestTableViewController alloc] init];
-    testVc.tableView.frame = CGRectMake(50, 50, 120, 250);
-    [self.scrollView addSubview:testVc.tableView];
+    //创建每日改修TableView
+    LScArsenalWeekdayViewController *weekdayVc = [LScArsenalWeekdayViewController arsenalWeekdayViewController];
+    self.weekdayTableView = weekdayVc.tableView;
+    [self.scrollView addSubview:self.weekdayTableView];
     
+    //创建全部改修列表
+    LScArsenalAllViewController *allVc = [LScArsenalAllViewController arsenalAllViewController];
+    self.allTableView = allVc.tableView;
+    [self.scrollView addSubview:self.allTableView];
+
 }
 
 #pragma mark - controller生命周期方法
@@ -116,12 +127,17 @@
     [super viewDidLayoutSubviews];
     
     //计算需要使用的尺寸数值
-//    CGFloat viewX = 0;
-//    CGFloat viewY = 0;
-//    CGFloat viewW = self.view.frame.size.width * 2;
-//    CGFloat viewH = self.view.frame.size.height;
+    CGFloat viewX = 0;
+    CGFloat viewY = 0;
+    CGFloat viewW = self.view.frame.size.width;
+    CGFloat viewH = self.view.frame.size.height;
     //布局scrollView
     self.scrollView.frame       = self.view.frame;
+    //布局weekdayTableView
+    self.weekdayTableView.frame = CGRectMake(viewX + 60, viewY, viewW, viewH);
+    //布局allTableView
+    self.allTableView.frame     = CGRectMake(viewW, viewY, viewW, viewH);
+    
     [self.view bringSubviewToFront:self.menuView];
 }
 

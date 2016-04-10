@@ -14,7 +14,7 @@
 
 #import "LSmControllerAttributes.h"
 
-@interface AppDelegate ()<UITabBarControllerDelegate>
+@interface AppDelegate ()
 
 @property (nonatomic, strong) LScTabBarController *tabBarVc;
 
@@ -34,23 +34,20 @@
     
     //创建window
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    
     //创建tableBarViewController
     self.tabBarVc = [[LScTabBarController alloc] init];
-    //设置代理
-    self.tabBarVc.delegate = self;
     
     //创建TabBarViewController子控制器
     //舰队
-    [self addchildVCWithType:LSkControllerTypeFleet];
+    [self.tabBarVc addchildVCWithType:LSkControllerTypeFleet];
     //舰娘
-    [self addchildVCWithType:LSkControllerTypeShips];
+    [self.tabBarVc addchildVCWithType:LSkControllerTypeShips];
     //物品
-    [self addchildVCWithType:LSkControllerTypeItems];
+    [self.tabBarVc addchildVCWithType:LSkControllerTypeItems];
     //改修工厂
-    [self addchildVCWithType:LSkControllerTypeArsenal];
+    [self.tabBarVc addchildVCWithType:LSkControllerTypeArsenal];
     //声优&画师
-    [self addchildVCWithType:LSkControllerTypeEntities];
+    [self.tabBarVc addchildVCWithType:LSkControllerTypeEntities];
     
     //设置tabBarVc为window的根控制器
     self.window.rootViewController = self.tabBarVc;
@@ -86,38 +83,6 @@
     }];
     
     return YES;
-}
-
-/**
- *  创建用NavVc包装的子控制器并添加至TabBarVc中
- *
- *  @param controllerType 子控制器类型
- */
-- (void)addchildVCWithType:(LSkControllerType)controllerType{
-    
-    //创建包装好的控制器
-    LScBaseNavigationController *navVc = [[LScBaseNavigationController alloc] initWithType:controllerType];
-    
-    //添加至tabBar控制器
-    [self.tabBarVc addChildViewController:navVc];
-    
-    //启动时显式调用代理方法 选中第一标签页
-    if (controllerType == LSkControllerTypeFleet) {
-        [self tabBarController:self.tabBarVc didSelectViewController:navVc];
-    }
-}
-
-#pragma mark - Tab Bar Controller Delegate
-
-/**
- *  切换tabBar标签的代理方法
- */
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
-{
-    UITabBar *tabBar = tabBarController.tabBar;
-    LSkControllerType controllerType = (LSkControllerType)[tabBar.items indexOfObject:tabBar.selectedItem];
-    //切换标签时切换tabBarItem染色方案
-    tabBar.tintColor = LSSingletonControllerAttributes(controllerType).color;
 }
 
 @end

@@ -30,7 +30,8 @@
 - (instancetype)initWithDict:(NSDictionary *)dict
 {
     if (self = [super init]) {
-        [self setValuesForKeysWithDictionary:dict];
+        self.id = dict[@"id"];
+        self.sort = dict[@"sort"];
     }
     return self;
 }

@@ -1,19 +1,25 @@
 //
-//  LScTestTableViewController.m
+//  LScArsenalAllViewController.m
 //  whoCallsTheFleet
 //
 //  Created by 苏俊良 on 16/4/5.
 //  Copyright © 2016年 LarrySue. All rights reserved.
 //
 
-#import "LScTestTableViewController.h"
+#import "LScArsenalAllViewController.h"
 
-@interface LScTestTableViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface LScArsenalAllViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
-@implementation LScTestTableViewController
+@implementation LScArsenalAllViewController
 
+#pragma mark - 工厂方法
+
++ (instancetype)arsenalAllViewController
+{
+    return [[self alloc] init];
+}
 - (instancetype)init
 {
     if (self = [super init]) {
@@ -24,8 +30,12 @@
     }
     return self;
 }
+
+#pragma mark - controller生命周期方法
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
 }
 
 #pragma mark - Table view data source
@@ -45,7 +55,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"test"];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%zd",indexPath.row];
+    cell.backgroundColor = LSColorRandom;
     
     return cell;
 }

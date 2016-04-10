@@ -1,5 +1,5 @@
 //
-//  LScTestTableViewController.h
+//  LScArsenalWeekdayViewController.h
 //  whoCallsTheFleet
 //
 //  Created by 苏俊良 on 16/4/5.
@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LScTestTableViewController : UIViewController
+@interface LScArsenalWeekdayViewController : UIViewController
 
 @property (nonatomic, strong) UITableView *tableView;
+
+/**
+ *  工厂方法
+ */
++ (instancetype)arsenalWeekdayViewController;
 
 @end
