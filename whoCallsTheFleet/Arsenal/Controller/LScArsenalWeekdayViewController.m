@@ -2,7 +2,7 @@
 //  LScArsenalWeekdayViewController.m
 //  whoCallsTheFleet
 //
-//  Created by 苏俊良 on 16/4/5.
+//  Created by LarrySue on 16/4/5.
 //  Copyright © 2016年 LarrySue. All rights reserved.
 //
 

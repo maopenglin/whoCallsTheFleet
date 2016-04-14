@@ -2,7 +2,7 @@
 //  LSvBarButtonItem.m
 //  whoCallsTheFleet
 //
-//  Created by 苏俊良 on 16/3/25.
+//  Created by LarrySue on 16/3/25.
 //  Copyright © 2016年 LarrySue. All rights reserved.
 //
 
